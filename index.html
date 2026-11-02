@@ -1,818 +1,1768 @@
-<title>Country House by Merlin - Rural Escape with 5 Bedrooms in Buzău</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Country House by Merlin - House in Robești, Buzău with 5 bedrooms, terrace and group dining. Perfect for weekends with friends, team meetings and celebrations.">
-<meta name="keywords" content="country house, weekend escape, Buzău, bedrooms, group dinner, party venue">
-<meta name="lang" content="en">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Country House by Merlin">
-<meta property="og:description" content="A country escape with the soul of the city. Perfect for weekends, celebrations and team retreats.">
-<meta property="og:image" content="https://countryhousebymerlin.com/og-image.jpg">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="ro" href="https://countryhousebymerlin.com/ro/">
-<link rel="alternate" hreflang="en" href="https://countryhousebymerlin.com/">
-<link rel="canonical" href="https://countryhousebymerlin.com/">
-<!-- Google Analytics Placeholder - Replace GA_ID with your ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_ID');
-</script>
-<!-- Google Search Console Verification - Replace with your code -->
-<meta name="google-site-verification" content="VERIFICATION_CODE">
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-:root {
-  --bg: #faf8f6;
-  --fg: #2a2520;
-  --accent: #b8860b;
-  --muted: #8b7d75;
-  --border: #e8e3dd;
-  --card-bg: #ffffff;
-
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1a1815;
-    --fg: #f5f1ed;
-    --accent: #d4af37;
-    --muted: #a89f97;
-    --border: #3a3530;
-    --card-bg: #2a2520;
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #1a1815;
-  --fg: #f5f1ed;
-  --accent: #d4af37;
-  --muted: #a89f97;
-  --border: #3a3530;
-  --card-bg: #2a2520;
-  color-scheme: dark;
-}
-
-* { box-sizing: border-box; }
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  margin: 0;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-img { max-width: 100%; height: auto; display: block; }
-
-h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
-h1 { font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; margin: 0 0 var(--spacing-md) 0; }
-h2 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; margin: var(--spacing-2xl) 0 var(--spacing-lg) 0; }
-h3 { font-size: 1.25rem; margin: var(--spacing-lg) 0 var(--spacing-sm) 0; }
-
-p { margin: 0 0 var(--spacing-md) 0; }
-
-header {
-  position: sticky;
-  top: env(safe-area-inset-top, 0px);
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  z-index: 100;
-  padding-block: var(--spacing-md);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0 0 auto;
-  height: env(safe-area-inset-top, 0px);
-  z-index: 10;
-  background: var(--bg);
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: var(--spacing-sm);
-}
-
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
-nav {
-  display: none;
-  gap: var(--spacing-lg);
-  font-size: 0.95rem;
-}
-
-nav a { color: var(--fg); }
-
-.lang-switch {
-  display: flex;
-  gap: var(--spacing-sm);
-  align-items: center;
-  margin-left: var(--spacing-lg);
-}
-
-.lang-switch a {
-  padding: 0.5rem var(--spacing-sm);
-  border-radius: 4px;
-  color: var(--fg);
-  font-size: 0.9rem;
-  transition: background 0.3s;
-}
-
-.lang-switch a.active {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.lang-switch a:hover:not(.active) {
-  background: var(--border);
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  nav { display: flex; }
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--fg);
-  font-size: 1.5rem;
-  padding: var(--spacing-sm);
-}
-
-@media (max-width: 767px) {
-  .menu-toggle { display: block; }
-  .lang-switch { margin-left: auto; }
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-section {
-  padding-block: var(--spacing-2xl);
-}
-
-.hero {
-  background: linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(184, 134, 11, 0.02) 100%);
-  padding-block: clamp(3rem, 15vh, 5rem);
-  text-align: center;
-}
-
-.hero-image {
-  width: 100%;
-  height: 400px;
-  background: var(--border);
-  border-radius: 8px;
-  margin: var(--spacing-lg) 0;
-  object-fit: cover;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--muted);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: var(--spacing-lg);
-}
-
-.button-group {
-  display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: var(--spacing-lg);
-}
-
-button, .button {
-  display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-button:hover, .button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-button.secondary, .button.secondary {
-  background: var(--border);
-  color: var(--fg);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
-}
-
-.gallery-item {
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 3/4;
-  background: var(--border);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
-}
-
-@media (max-width: 768px) {
-  .info-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.info-item {
-  padding: var(--spacing-lg);
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.info-item:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.1);
-  transform: translateY(-2px);
-}
-
-.info-item i {
-  font-size: 2.5rem;
-  color: var(--accent);
-  margin-bottom: var(--spacing-md);
-  display: block;
-}
-
-.info-item h4 {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  margin: 0 0 var(--spacing-sm) 0;
-  color: var(--fg);
-}
-
-.info-item p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.experiences {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
-}
-
-.experience-card {
-  padding: var(--spacing-lg);
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.experience-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 16px rgba(184, 134, 11, 0.1);
-}
-
-.experience-card i {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: var(--spacing-md);
-  display: block;
-}
-
-.experience-card h3 {
-  margin-top: 0;
-  color: var(--accent);
-}
-
-.experience-card p {
-  color: var(--muted);
-}
-
-.events {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
-}
-
-.event-card {
-  padding: var(--spacing-lg);
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-
-.event-card i {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-right: var(--spacing-sm);
-}
-
-.event-date {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  color: var(--accent);
-  margin-bottom: var(--spacing-sm);
-}
-
-.event-card p {
-  margin: var(--spacing-sm) 0;
-  color: var(--muted);
-}
-
-.by-merlin {
-  display: flex;
-  gap: var(--spacing-xl);
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.by-merlin-image {
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
-  background: var(--border);
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.by-merlin-content {
-  flex: 1;
-  min-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .by-merlin-content {
-    min-width: auto;
-  }
-}
-
-.by-merlin-content p {
-  color: var(--muted);
-}
-
-.faq {
-  max-width: 700px;
-  margin: var(--spacing-lg) auto;
-}
-
-.faq-item {
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--border);
-}
-
-.faq-item h4 {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  font-family: var(--font-display);
-}
-
-.faq-item.active p {
-  display: block;
-}
-
-.faq-item p {
-  display: none;
-  color: var(--muted);
-  margin-top: var(--spacing-sm);
-}
-
-footer {
-  background: var(--card-bg);
-  border-top: 1px solid var(--border);
-  padding-block: var(--spacing-xl);
-  margin-top: var(--spacing-2xl);
-  text-align: center;
-}
-
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-item {
-  padding: var(--spacing-md);
-  background: var(--bg);
-  border-radius: 4px;
-}
-
-.contact-item i {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-right: var(--spacing-sm);
-}
-
-.contact-item h4 {
-  margin-top: 0;
-  font-size: 0.95rem;
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-}
-
-.contact-item p {
-  margin: 0;
-  color: var(--muted);
-  word-break: break-all;
-  user-select: all;
-}
-
-.whatsapp-btn {
-  position: fixed;
-  bottom: max(24px, calc(env(safe-area-inset-bottom, 0px) + 24px));
-  right: max(24px, calc(env(safe-area-inset-right, 0px) + 24px));
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25d366;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 50;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
-}
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--bg);
-  z-index: 99;
-  padding: calc(env(safe-area-inset-top, 0px) + 60px) var(--spacing-lg) var(--spacing-lg);
-}
-
-.mobile-menu.active {
-  display: block;
-}
-
-.mobile-menu a {
-  display: block;
-  padding: var(--spacing-md) 0;
-  font-size: 1.1rem;
-  border-bottom: 1px solid var(--border);
-  color: var(--fg);
-}
-
-.close-menu {
-  position: absolute;
-  top: calc(env(safe-area-inset-top, 0px) + 12px);
-  right: var(--spacing-lg);
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--fg);
-}
-</style>
-
-<header>
-  <div class="header-content">
-    <div class="logo">Country House by Merlin</div>
-    <nav id="mainNav">
-      <a href="#the-house">The House</a>
-      <a href="#your-weekend">Your Weekend</a>
-      <a href="#whats-coming">What's On</a>
-      <a href="#by-merlin">By Merlin</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="lang-switch">
-      <a href="/ro/">RO</a>
-      <a href="/" class="active">EN</a>
-    </div>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <button class="close-menu" id="closeMenu">✕</button>
-  <a href="#the-house" onclick="document.getElementById('mobileMenu').classList.remove('active')">The House</a>
-  <a href="#your-weekend" onclick="document.getElementById('mobileMenu').classList.remove('active')">Your Weekend</a>
-  <a href="#whats-coming" onclick="document.getElementById('mobileMenu').classList.remove('active')">What's On</a>
-  <a href="#by-merlin" onclick="document.getElementById('mobileMenu').classList.remove('active')">By Merlin</a>
-  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('active')">Contact</a>
-</div>
-
-<main>
-  <section class="hero">
-    <h1>Welcome to the House</h1>
-    <div class="hero-image"></div>
-    <p>A country escape with the soul of the city. Five bedrooms in Robești, Buzău, where weekends come alive with friends, celebrations, and stories worth telling.</p>
-    <div class="button-group">
-      <button class="check-availability" onclick="scrollTo('the-house')"><i class="fas fa-home" style="margin-right: 0.5rem;"></i>Explore the House</button>
-      <button class="check-availability secondary" onclick="whatsappMessage('Hi! I\'d like to check availability for Country House by Merlin.')"><i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i>Check Availability</button>
-    </div>
-  </section>
-
-  <section id="the-house">
-    <h2><i class="fas fa-home" style="margin-right: var(--spacing-md); color: var(--accent);"></i>The House</h2>
-    <p style="color: var(--muted); font-size: 1.05rem;">A generously sized home built for gatherings, with everything you need for an unforgettable weekend.</p>
-
-    <div class="gallery">
-      <div class="gallery-item"></div>
-      <div class="gallery-item"></div>
-      <div class="gallery-item"></div>
-      <div class="gallery-item"></div>
-      <div class="gallery-item"></div>
-      <div class="gallery-item"></div>
-    </div>
-
-    <div class="info-grid">
-      <div class="info-item">
-        <i class="fas fa-bed"></i>
-        <h4>Bedrooms</h4>
-        <p>5 comfortable rooms</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-users"></i>
-        <h4>Guests</h4>
-        <p>Up to 10 people</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-bath"></i>
-        <h4>Bathrooms</h4>
-        <p>2 shared bathrooms</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-utensils"></i>
-        <h4>Kitchen</h4>
-        <p>Fully equipped</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-chair"></i>
-        <h4>Spaces</h4>
-        <p>Generous living areas</p>
-      </div>
-      <div class="info-item">
-        <i class="fas fa-paw"></i>
-        <h4>Pets</h4>
-        <p>Welcome</p>
-      </div>
-    </div>
-
-    <h3><i class="fas fa-calendar" style="margin-right: var(--spacing-sm); color: var(--accent);"></i>Booking Options</h3>
-    <p style="color: var(--muted);">Available for full-house rental or by-room bookings depending on the season. Contact us for current availability and pricing.</p>
-  </section>
-
-  <section id="your-weekend">
-    <h2><i class="fas fa-calendar-check" style="margin-right: var(--spacing-md); color: var(--accent);"></i>Make It Your Weekend</h2>
-
-    <div class="experiences">
-      <div class="experience-card">
-        <i class="fas fa-wine-glass-alt"></i>
-        <h3>Stay with Your People</h3>
-        <p>Long tables, home-cooked meals, and nights by the fireplace. This is where friends become family for a weekend.</p>
-        <button class="check-availability" onclick="whatsappMessage('Hi! I\'d like to organize a weekend with friends at Country House by Merlin.')">Plan a Stay</button>
-      </div>
-
-      <div class="experience-card">
-        <i class="fas fa-birthday-cake"></i>
-        <h3>Bring Something to Celebrate</h3>
-        <p>Birthdays, anniversaries, or any milestone deserves a special setting. We can customize the experience for your celebration.</p>
-        <button class="check-availability" onclick="whatsappMessage('Hi! I\'d like to celebrate an occasion at Country House by Merlin.')">Ask About This</button>
-      </div>
-
-      <div class="experience-card">
-        <i class="fas fa-briefcase"></i>
-        <h3>Take the Team Outside</h3>
-        <p>Team retreats and micro-offsite meetings that feel less like work and more like an adventure. Creativity happens here.</p>
-        <button class="check-availability" onclick="whatsappMessage('Hi! I\'d like to organize a team retreat at Country House by Merlin.')">Get in Touch</button>
-      </div>
-    </div>
-
-    <h3 style="margin-top: var(--spacing-2xl);"><i class="fas fa-map" style="margin-right: var(--spacing-sm); color: var(--accent);"></i>Explore the Area</h3>
-    <p style="color: var(--muted);">Located in Robești, Buzău, the house is close to beautiful nature and local experiences. We'll share detailed recommendations when you book.</p>
-  </section>
-
-  <section id="whats-coming">
-    <h2><i class="fas fa-star" style="margin-right: var(--spacing-md); color: var(--accent);"></i>What's Coming Up</h2>
-
-    <div class="events">
-      <div class="event-card">
-        <i class="fas fa-sparkles"></i>
-        <div class="event-date">Coming Soon</div>
-        <h3>Seasonal Offers</h3>
-        <p>Summer brunches, autumn gatherings, winter retreats—stay tuned for curated experiences and special packages.</p>
-        <button class="check-availability" onclick="whatsappMessage('Hi! Can you tell me about upcoming offers and packages?')">Ask About This</button>
-      </div>
-
-      <div class="event-card">
-        <i class="fas fa-check-circle"></i>
-        <div class="event-date">Available Now</div>
-        <h3>Full House Rental</h3>
-        <p>Book the entire house for your next weekend escape. Perfect for groups up to 10 guests.</p>
-        <button class="check-availability" onclick="whatsappMessage('Hi! I\'d like to check availability for a full house rental.')">Check Dates</button>
-      </div>
-
-      <div class="event-card">
-        <i class="fas fa-lightbulb"></i>
-        <div class="event-date">Flexible</div>
-        <h3>Custom Experiences</h3>
-        <p>Have an idea in mind? We can tailor experiences to match your vision and create something truly unique.</p>
-        <button class="check-availability" onclick="whatsappMessage('Hi! I have a specific idea in mind. Can we discuss?')">Let's Talk</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="by-merlin">
-    <h2><i class="fas fa-feather" style="margin-right: var(--spacing-md); color: var(--accent);"></i>By Merlin</h2>
-
-    <div class="by-merlin">
-      <div class="by-merlin-image"></div>
-      <div class="by-merlin-content">
-        <p>This house is more than a rental—it's a reflection of my story. Built on years of entrepreneurship, events, and a deep love for bringing people together.</p>
-        <p style="color: var(--muted);">Discover the journey behind Country House by Merlin, and understand what this space means to those who call it their weekend home.</p>
-        <a href="merlin-story.html" class="button"><i class="fas fa-book" style="margin-right: var(--spacing-sm);"></i>Read My Story</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2><i class="fas fa-question-circle" style="margin-right: var(--spacing-md); color: var(--accent);"></i>Frequently Asked Questions</h2>
-
-    <div class="faq">
-      <div class="faq-item">
-        <h4 onclick="this.parentElement.classList.toggle('active')"><i class="fas fa-calendar"></i> How far in advance should I book? ➜</h4>
-        <p>We recommend booking 4-6 weeks ahead for the best availability, but we accept last-minute bookings depending on the season.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4 onclick="this.parentElement.classList.toggle('active')"><i class="fas fa-clock"></i> What time are check-in and check-out? ➜</h4>
-        <p>Check-in is at 3 PM and check-out at 11 AM. We can discuss flexible timing for special circumstances.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4 onclick="this.parentElement.classList.toggle('active')"><i class="fas fa-paw"></i> Are pets allowed? ➜</h4>
-        <p>Yes! We welcome well-behaved pets. Please mention them when booking so we can prepare accordingly.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4 onclick="this.parentElement.classList.toggle('active')"><i class="fas fa-utensils"></i> Can we prepare meals at the house? ➜</h4>
-        <p>Absolutely. The kitchen is fully equipped, and cooking together is part of the experience. We can also arrange catering for special events.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4 onclick="this.parentElement.classList.toggle('active')"><i class="fas fa-music"></i> What about music and celebrations? ➜</h4>
-        <p>We love celebrations! Reasonable noise levels are welcome until 11 PM. Just let us know what you're planning.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4 onclick="this.parentElement.classList.toggle('active')"><i class="fas fa-file-contract"></i> What's the deposit and cancellation policy? ➜</h4>
-        <p>Details will be provided with your booking inquiry. We work flexibly to accommodate your needs.</p>
-      </div>
-    </div>
-
-    <h2 style="margin-top: var(--spacing-2xl);"><i class="fas fa-envelope" style="margin-right: var(--spacing-md); color: var(--accent);"></i>Get in Touch</h2>
-
-    <div class="contact-info">
-      <div class="contact-item">
-        <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
-        <p>Robești, Buzău, Romania</p>
-      </div>
-      <div class="contact-item">
-        <h4><i class="fab fa-whatsapp"></i> WhatsApp</h4>
-        <p id="whatsapp-text">+40 XXX XXX XXX</p>
-      </div>
-      <div class="contact-item">
-        <h4><i class="fas fa-envelope"></i> Email</h4>
-        <p id="email-text">hello@countryhousebymerlin.com</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2024 Country House by Merlin. All rights reserved.</p>
-  <p style="color: var(--muted); font-size: 0.9rem;">Urban escape • Country living • Weekend well spent</p>
-</footer>
-
-<a href="#" class="whatsapp-btn" id="whatsappBtn" onclick="return false;">💬</a>
-
-<script>
-document.getElementById('menuToggle').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.add('active');
-});
-
-document.getElementById('closeMenu').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.remove('active');
-});
-
-function scrollTo(id) {
-  const element = document.getElementById(id);
-  element?.scrollIntoView({ behavior: 'smooth' });
-}
-
-const WHATSAPP_NUMBER = '+40XXX000000';
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}`;
-
-function whatsappMessage(message) {
-  const url = `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
-  window.open(url, '_blank');
-}
-
-document.getElementById('whatsappBtn').addEventListener('click', (e) => {
-  e.preventDefault();
-  whatsappMessage('Hi! I\'d like to learn more about Country House by Merlin.');
-});
-
-document.querySelectorAll('nav a, #mobileMenu a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      scrollTo(href.slice(1));
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country House by Merlin | Country Living Reinterpretat în Robești, Buzău</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            merlin: {
+              oat: '#F6F3EE',
+              stone: '#EAE5DC',
+              clay: '#85543A',
+              pine: '#192C23',
+              darkForest: '#0E1C15',
+              charcoal: '#1A1C1B',
+              terracotta: '#C86D51',
+              gold: '#D6A660',
+              goldLight: '#F5E6CA'
+            }
+          }
+        }
+      }
     }
-  });
-});
+  </script>
 
-document.querySelectorAll('#mobileMenu a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.remove('active');
-  });
-});
-</script>
+  <style>
+    /* Smooth custom styling */
+    body {
+      background-color: #F6F3EE;
+      color: #1A1C1B;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #D6A660;
+      color: #0E1C15;
+    }
+
+    /* Subtle grain overlay */
+    .bg-grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+
+    /* Modal slide-up animation */
+    .modal-enter {
+      animation: modalFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Lightbox and Accordion smooth transition */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* ---- Motion graphic scenes (ported from animation.html) ---- */
+    .wm-bg {
+      position: absolute; inset: 0;
+      opacity: 0; transform: scale(1.06);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 6s ease-out;
+      pointer-events: none;
+    }
+    .wm-bg.is-active { opacity: 1; transform: scale(1); }
+    @keyframes wmSmokeDrift {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+      50% { transform: translate(12px, -35px) scale(1.6); opacity: 0.4; }
+      100% { transform: translate(25px, -70px) scale(2.4); opacity: 0; }
+    }
+    .wm-smoke-1 { animation: wmSmokeDrift 4s infinite linear; }
+    .wm-smoke-2 { animation: wmSmokeDrift 4s infinite linear 1.4s; }
+    .wm-smoke-3 { animation: wmSmokeDrift 4s infinite linear 2.8s; }
+    @keyframes wmGlitchScan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+    .wm-glitch-line {
+      position: absolute; left: 0; right: 0; height: 2px;
+      background: rgba(255, 40, 100, 0.35);
+      animation: wmGlitchScan 3.5s linear infinite;
+    }
+    @keyframes wmDash { to { stroke-dashoffset: -380; } }
+    .wm-traffic { animation: wmDash 2.4s linear infinite; }
+    .wm-traffic-rev { animation: wmDash 3s linear infinite reverse; }
+    #wm-title, #wm-desc { transition: opacity 0.5s ease, transform 0.5s ease; }
+    .wm-text-out { opacity: 0 !important; transform: translateY(8px); }
+    /* Activity scene animations */
+    @keyframes wmFlame { 0%,100% { transform: scaleY(1) scaleX(1); } 25% { transform: scaleY(1.12) scaleX(0.94); } 50% { transform: scaleY(0.92) scaleX(1.05); } 75% { transform: scaleY(1.08) scaleX(0.97); } }
+    .wm-flame { transform-box: fill-box; transform-origin: 50% 100%; animation: wmFlame 0.9s ease-in-out infinite; }
+    .wm-flame-b { animation-duration: 1.3s; animation-delay: -0.4s; }
+    @keyframes wmGlowPulse { 0%,100% { opacity: 0.55; } 50% { opacity: 0.85; } }
+    .wm-glow-pulse { animation: wmGlowPulse 1.6s ease-in-out infinite; }
+    @keyframes wmSway { 0%,100% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }
+    .wm-sway { transform-box: fill-box; transform-origin: 50% 100%; animation: wmSway 5s ease-in-out infinite; }
+    @keyframes wmWalk { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    .wm-walk { animation: wmWalk 0.8s ease-in-out infinite; }
+    @keyframes wmTrail { to { stroke-dashoffset: -60; } }
+    .wm-trail { animation: wmTrail 2s linear infinite; }
+    @keyframes wmSteam { 0% { transform: translateY(0); opacity: 0.6; } 100% { transform: translateY(-18px); opacity: 0; } }
+    .wm-steam { animation: wmSteam 2.4s ease-out infinite; }
+    .wm-steam-b { animation-delay: 1.2s; }
+    @keyframes wmTwinkle { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+    .wm-twinkle { animation: wmTwinkle 2.5s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .wm-flame, .wm-glow-pulse, .wm-sway, .wm-walk, .wm-trail, .wm-steam, .wm-twinkle { animation: none !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wm-bg, .wm-smoke-1, .wm-smoke-2, .wm-smoke-3, .wm-glitch-line, .wm-traffic, .wm-traffic-rev { animation: none !important; transition: opacity 0.3s !important; }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between bg-merlin-oat text-merlin-charcoal">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 w-full bg-merlin-oat/90 backdrop-blur-md border-b border-merlin-stone/80 transition duration-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="group flex flex-col">
+        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-merlin-pine group-hover:text-merlin-clay transition-colors leading-none">
+          Country House
+        </span>
+        <span class="text-[11px] sm:text-xs font-serif italic text-merlin-clay tracking-wider mt-0.5">
+          by Merlin &bull; Robești
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center space-x-7 text-xs font-semibold uppercase tracking-wider text-merlin-charcoal/80">
+        <a href="#the-house" class="hover:text-merlin-clay transition-colors py-1">The House</a>
+        <a href="#your-weekend" class="hover:text-merlin-clay transition-colors py-1">Your Weekend</a>
+        <a href="#whats-on" class="hover:text-merlin-clay transition-colors py-1">What’s On</a>
+        <button onclick="openMerlinStory()" class="hover:text-merlin-clay text-merlin-clay font-bold transition-colors py-1 flex items-center space-x-1">
+          <span>By Merlin</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-merlin-clay"></span>
+        </button>
+        <a href="#faq-contact" class="hover:text-merlin-clay transition-colors py-1">Contact</a>
+      </nav>
+
+      <!-- Desktop Actions: Motion Graphic Toggle & WhatsApp CTA -->
+      <div class="hidden lg:flex items-center space-x-3">
+        <button onclick="openMotionExperience()" class="px-3.5 py-2 rounded-full border border-merlin-pine/20 hover:border-merlin-pine hover:bg-merlin-pine/5 text-xs font-medium text-merlin-pine flex items-center space-x-2 transition">
+          <svg class="w-3.5 h-3.5 text-merlin-clay" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
+          </svg>
+          <span>Tranziție Oraș &rarr; Natură</span>
+        </button>
+
+        <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20o%20escapad%C4%83%20la%20Country%20House%20by%20Merlin." 
+           target="_blank" rel="noopener noreferrer"
+           class="px-5 py-2.5 rounded-full bg-merlin-pine hover:bg-merlin-darkForest text-merlin-oat text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md flex items-center space-x-2">
+          <span>Check availability</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-merlin-pine focus:outline-none" aria-label="Deschide meniul">
+        <svg id="mobileMenuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pt-3 pb-6 border-b border-merlin-stone bg-merlin-oat">
+      <div class="flex flex-col space-y-3.5 text-sm font-semibold uppercase tracking-wider text-merlin-charcoal">
+        <a href="#the-house" onclick="toggleMobileMenu()" class="py-1 border-b border-merlin-stone/50">The House</a>
+        <a href="#your-weekend" onclick="toggleMobileMenu()" class="py-1 border-b border-merlin-stone/50">Your Weekend</a>
+        <a href="#whats-on" onclick="toggleMobileMenu()" class="py-1 border-b border-merlin-stone/50">What’s On</a>
+        <button onclick="toggleMobileMenu(); openMerlinStory();" class="text-left text-merlin-clay py-1 border-b border-merlin-stone/50 flex items-center justify-between">
+          <span>By Merlin &bull; Povestea</span>
+          <span>&rarr;</span>
+        </button>
+        <a href="#faq-contact" onclick="toggleMobileMenu()" class="py-1">Contact & Locație</a>
+        <button onclick="toggleMobileMenu(); openMotionExperience();" class="text-left py-2 px-3 rounded-lg bg-merlin-stone/60 text-merlin-pine font-medium flex items-center space-x-2">
+          <svg class="w-4 h-4 text-merlin-clay" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+          <span>Trăiește Tranziția (Motion & Sunet)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== 1.1 WELCOME TO THE HOUSE (HERO) ==================== -->
+  <section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-merlin-darkForest text-merlin-oat py-16 sm:py-24">
+    <!-- Atmospheric High-Res Background with warm twilight lighting -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=80" 
+           alt="Country House by Merlin fațadă și dealuri" 
+           class="w-full h-full object-cover object-center brightness-[0.42] scale-105 duration-1000 ease-out transition-transform" />
+      <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest via-merlin-darkForest/30 to-merlin-darkForest/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center flex flex-col items-center">
+      
+      <!-- Tag / Location Pill -->
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-merlin-pine/70 border border-merlin-gold/30 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-merlin-gold animate-pulse"></span>
+        <span class="text-xs uppercase tracking-widest text-merlin-goldLight font-medium">
+          Robești, comuna Pârscov, Buzău
+        </span>
+      </div>
+
+      <!-- Main Catchphrase -->
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-merlin-oat leading-[1.08] mb-6">
+        Country living <span class="italic font-normal text-merlin-goldLight">reinterpretat.</span>
+      </h1>
+
+      <!-- Precise Brief Pitch -->
+      <p class="text-base sm:text-xl font-light text-merlin-stone max-w-2xl mx-auto leading-relaxed mb-8">
+        O casă la țară cu cinci dormitoare în Robești, Buzău — creată pentru escapade cu prietenii, întâlniri autentice, mese lungi și weekenduri petrecute împreună departe de zgomotul orașului.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+        <a href="#the-house" class="w-full sm:w-auto px-8 py-4 rounded-full bg-merlin-gold hover:bg-merlin-goldLight text-merlin-darkForest font-semibold text-xs uppercase tracking-widest transition-all duration-300 shadow-lg shadow-black/30">
+          Explore the house
+        </a>
+        <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20o%20escapad%C4%83%20la%20Country%20House%20by%20Merlin." 
+           target="_blank" rel="noopener noreferrer"
+           class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 backdrop-blur-md text-merlin-oat font-semibold text-xs uppercase tracking-widest transition-all duration-300 flex items-center justify-center space-x-2">
+          <span>Check availability</span>
+          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.539 1.95.824 2.791.825h.002c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.766c0 5.422-4.408 9.83-9.83 9.83-1.66 0-3.262-.42-4.673-1.218L2 22l1.656-5.328C2.81 15.228 2.37 13.639 2.37 11.938 2.37 6.516 6.778 2.108 12.2 2.108s9.8 4.408 9.8 9.83z"/></svg>
+        </a>
+      </div>
+
+      <!-- Quick Highlights Strip -->
+      <div class="mt-14 pt-8 border-t border-white/15 w-full grid grid-cols-2 sm:grid-cols-5 gap-4 text-center">
+        <div>
+          <span class="block text-merlin-gold font-serif text-2xl font-bold">5</span>
+          <span class="text-[11px] uppercase tracking-wider text-merlin-stone/80">Dormitoare</span>
+        </div>
+        <div>
+          <span class="block text-merlin-gold font-serif text-2xl font-bold">10</span>
+          <span class="text-[11px] uppercase tracking-wider text-merlin-stone/80">Oaspeți</span>
+        </div>
+        <div>
+          <span class="block text-merlin-gold font-serif text-2xl font-bold">2</span>
+          <span class="text-[11px] uppercase tracking-wider text-merlin-stone/80">Băi Comune</span>
+        </div>
+        <div>
+          <span class="block text-merlin-gold font-serif text-2xl font-bold">&infin;</span>
+          <span class="text-[11px] uppercase tracking-wider text-merlin-stone/80">Pet Friendly</span>
+        </div>
+        <div class="col-span-2 sm:col-span-1">
+          <span class="block text-merlin-gold font-serif text-2xl font-bold">~1h 45m</span>
+          <span class="text-[11px] uppercase tracking-wider text-merlin-stone/80">din București</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 1.2 THE HOUSE (GALERIE, DOTĂRI & CONDIȚII) ==================== -->
+  <section id="the-house" class="py-20 sm:py-28 px-5 sm:px-8 max-w-7xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-merlin-stone pb-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">1.2 Spațiul & Detaliile</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-merlin-pine tracking-tight mt-2">
+          The House
+        </h2>
+      </div>
+      <p class="text-sm text-merlin-charcoal/70 max-w-md mt-4 md:mt-0 leading-relaxed font-light">
+        Creată pentru conviețuire și intimitate. De la dimineți scăldate în soare pe verandă până la cine lungi preparate împreună în bucătăria deschisă.
+      </p>
+    </div>
+
+    <!-- Gallery Category Filter Tabs -->
+    <div class="flex flex-wrap items-center gap-2 mb-8">
+      <button onclick="filterGallery('all')" id="tab-all" class="filter-btn active-tab px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-merlin-pine text-merlin-oat transition">Toate</button>
+      <button onclick="filterGallery('dormitoare')" id="tab-dormitoare" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-merlin-stone/60 text-merlin-charcoal hover:bg-merlin-stone transition">Dormitoare</button>
+      <button onclick="filterGallery('living')" id="tab-living" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-merlin-stone/60 text-merlin-charcoal hover:bg-merlin-stone transition">Living & Bucătărie</button>
+      <button onclick="filterGallery('curte')" id="tab-curte" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold bg-merlin-stone/60 text-merlin-charcoal hover:bg-merlin-stone transition">Terasă & Curte</button>
+    </div>
+
+    <!-- Gallery Grid with Lightbox Triggers -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+      
+      <!-- Photo 1 -->
+      <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+           data-category="dormitoare" 
+           onclick="openLightbox('https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1600&q=80', 'Dormitor dublu cu lenjerie din bumbac spălat și lumină naturală')">
+        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Dormitor Country House" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Dormitor Principal</span>
+          <h4 class="font-serif text-lg font-semibold">Lumină caldă & lenjerie organică</h4>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+           data-category="living" 
+           onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80', 'Living generos cu șemineu și canapele confortabile pentru seri lungi')">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Living Country House" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Living & Social</span>
+          <h4 class="font-serif text-lg font-semibold">Inima casei, șemineu & vin</h4>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+           data-category="living" 
+           onclick="openLightbox('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80', 'Bucătărie complet utilată, ideală pentru gătit colectiv și brunch-uri')">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Bucătărie utilată Country House" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Bucătărie Complet Echipată</span>
+          <h4 class="font-serif text-lg font-semibold">Mese găsite împreună fără grabă</h4>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+           data-category="curte" 
+           onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80', 'Curtea generoasă cu vedere spre dealurile Buzăului și spațiu de foc de tabără')">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Curte și terasă verde" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Curte & Terasă</span>
+          <h4 class="font-serif text-lg font-semibold">Aer tare de munte & cer liber</h4>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+           data-category="dormitoare" 
+           onclick="openLightbox('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80', 'Dormitor cu accente din lemn natural și vedere spre grădină')">
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Dormitor oaspeți" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Dormitor Dublu</span>
+          <h4 class="font-serif text-lg font-semibold">Odihnă deplină în liniște absolută</h4>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+           data-category="curte" 
+           onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80', 'Zona de cafea și relaxare în aer liber')">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Loc de relaxare exterior" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Terasă de Lemn</span>
+          <h4 class="font-serif text-lg font-semibold">Cafeaua de dimineață la soare</h4>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Essential Amenities Badges -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+        <span class="text-2xl mb-1 block">🛏️</span>
+        <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">5 Dormitoare</h5>
+        <p class="text-[11px] text-merlin-charcoal/70 mt-1">Până la 10 oaspeți</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+        <span class="text-2xl mb-1 block">🚿</span>
+        <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">2 Băi Comune</h5>
+        <p class="text-[11px] text-merlin-charcoal/70 mt-1">Moderne & spațioase</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+        <span class="text-2xl mb-1 block">🍳</span>
+        <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Bucătărie Utilată</h5>
+        <p class="text-[11px] text-merlin-charcoal/70 mt-1">Gătit în voie colectiv</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+        <span class="text-2xl mb-1 block">🍷</span>
+        <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Living Generos</h5>
+        <p class="text-[11px] text-merlin-charcoal/70 mt-1">Spațiu cald de socializare</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+        <span class="text-2xl mb-1 block">🌿</span>
+        <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Grădină & Terasă</h5>
+        <p class="text-[11px] text-merlin-charcoal/70 mt-1">Curte mare și privată</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+        <span class="text-2xl mb-1 block">🐾</span>
+        <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Pet Friendly</h5>
+        <p class="text-[11px] text-merlin-charcoal/70 mt-1">Animalele sunt binevenite</p>
+      </div>
+    </div>
+
+    <!-- Rental Modes & Conditions Card (From Brief) -->
+    <div class="mt-10 p-8 rounded-3xl bg-merlin-stone/50 border border-merlin-stone flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Condiții de închiriere</span>
+        <h3 class="font-serif text-2xl font-bold text-merlin-pine mt-1 mb-2">
+          Închiriere integrală sau pe camere
+        </h3>
+        <p class="text-sm text-merlin-charcoal/80 leading-relaxed font-light">
+          În mod obișnuit, casa se închiriază în <strong>regim integral (exclusivitate pentru grupul tău de până la 10 persoane)</strong> pentru intimitate totală. În anumite perioade sau weekenduri tematice, oferim și posibilitatea <strong>rezervării individuale pe camere</strong>. Întreabă-ne pe WhatsApp despre perioadele deschise.
+        </p>
+      </div>
+      <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20aflu%20detalii%20despre%20condi%C8%9Biile%20de%20%C3%AEnchiriere%20integral%C4%83%20sau%20pe%20camere." 
+         target="_blank" rel="noopener noreferrer"
+         class="whitespace-nowrap px-6 py-3.5 rounded-full bg-merlin-pine hover:bg-merlin-darkForest text-merlin-oat font-semibold text-xs uppercase tracking-wider transition">
+        Întreabă despre opțiuni
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ==================== 1.3 MAKE IT YOUR WEEKEND & LOCAL SURROUNDINGS ==================== -->
+  <section id="your-weekend" class="py-20 sm:py-28 bg-merlin-darkForest text-merlin-oat">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      
+      <!-- Section Intro -->
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-gold">1.3 Experiențe Reinterpretate</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-merlin-oat mt-2">
+          Make it your weekend
+        </h2>
+        <p class="text-sm sm:text-base text-merlin-stone/80 font-light mt-3 leading-relaxed">
+          Urmărește trecerea de la pulsul agitat al orașului la calmul dealurilor din Buzău și descoperă cum poți trăi zilele la Country House by Merlin.
+        </p>
+      </div>
+
+      <!-- INLINE MOTION GRAPHIC SHOWCASE: City to Mountain & Weekend Activities -->
+      <div class="mb-20 rounded-3xl overflow-hidden border border-white/15 bg-merlin-charcoal/80 shadow-2xl relative">
+        
+        <!-- Interactive Canvas & Atmospheric Backdrop -->
+        <div class="relative w-full h-[420px] sm:h-[500px] overflow-hidden bg-slate-950 flex items-center justify-center">
+          <!-- Illustrated scene layers (from animation.html) -->
+          <div class="absolute inset-0 z-0" aria-hidden="true">
+
+            <!-- BG 0: Urban chaos -->
+            <div class="wm-bg is-active" data-wm-bg="0">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#070913] via-[#0d131f] to-[#1a0a14]"></div>
+              <div class="wm-glitch-line"></div>
+              <svg class="absolute bottom-0 w-full h-[78%] opacity-85" preserveAspectRatio="none" viewBox="0 0 1440 600">
+                <path d="M 0 600 L 0 320 L 45 320 L 45 270 L 90 270 L 90 350 L 140 350 L 140 220 L 190 220 L 190 380 L 250 380 L 250 180 L 310 180 L 310 320 L 380 320 L 380 150 L 450 150 L 450 300 L 520 300 L 520 240 L 590 240 L 590 340 L 670 340 L 670 190 L 730 190 L 730 330 L 810 330 L 810 160 L 890 160 L 890 300 L 960 300 L 960 210 L 1020 210 L 1020 350 L 1100 350 L 1100 170 L 1170 170 L 1170 290 L 1250 290 L 1250 200 L 1320 200 L 1320 340 L 1390 340 L 1390 260 L 1440 260 L 1440 600 Z" fill="#0d1527"/>
+                <path d="M 50 600 L 50 290 L 120 290 L 120 250 L 170 250 L 170 340 L 220 340 L 220 160 L 300 160 L 300 310 L 390 310 L 390 230 L 460 230 L 460 350 L 540 350 L 540 180 L 620 180 L 620 360 L 710 360 L 710 220 L 780 220 L 780 370 L 860 370 L 860 140 L 940 140 L 940 320 L 1030 320 L 1030 240 L 1110 240 L 1110 360 L 1200 360 L 1200 190 L 1280 190 L 1280 340 L 1360 340 L 1360 280 L 1440 280 L 1440 600 Z" fill="#131b2e"/>
+                <rect x="250" y="190" width="3" height="40" fill="#EF4444" class="animate-pulse"/>
+                <rect x="580" y="210" width="4" height="65" fill="#3B82F6"/>
+                <rect x="880" y="160" width="3" height="80" fill="#EF4444"/>
+                <rect x="1140" y="210" width="3" height="50" fill="#06B6D4" class="animate-pulse"/>
+                <path d="M 0 460 Q 720 380 1440 460 L 1440 500 Q 720 420 0 500 Z" fill="#1e293b" opacity="0.9"/>
+                <path class="wm-traffic" d="M 0 475 Q 720 395 1440 475" stroke="#ef4444" stroke-width="4" fill="none" opacity="0.85" stroke-dasharray="160, 30"/>
+                <path class="wm-traffic-rev" d="M 1440 488 Q 720 408 0 488" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.8" stroke-dasharray="120, 40"/>
+              </svg>
+              <!-- Floating stress notifications -->
+              <div class="hidden sm:block absolute top-20 right-8 bg-black/60 backdrop-blur-md border border-red-500/40 rounded-lg px-4 py-2 text-[11px] font-mono text-red-300 animate-pulse">18:42 &bull; Deadlines depășite &bull; 99+ mesaje</div>
+              <div class="hidden sm:block absolute top-1/3 left-8 bg-black/60 backdrop-blur-md border border-amber-500/30 rounded-lg px-3 py-1.5 text-[11px] font-mono text-slate-300">Trafic blocat &bull; +45 min</div>
+            </div>
+
+            <!-- BG 1: Road to the hills -->
+            <div class="wm-bg" data-wm-bg="1">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#1a2d36] via-[#2d3a33] to-[#12231c]"></div>
+              <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 800">
+                <defs>
+                  <radialGradient id="wmSunGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#FCD34D" stop-opacity="0.9"/>
+                    <stop offset="40%" stop-color="#F59E0B" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#12231c" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <circle cx="720" cy="300" r="160" fill="url(#wmSunGlow)" opacity="0.8"/>
+                <path d="M 0 520 L 180 340 L 380 430 L 590 270 L 730 360 L 920 220 L 1130 380 L 1320 290 L 1440 370 L 1440 800 L 0 800 Z" fill="#1b3028" opacity="0.6"/>
+                <path d="M 0 570 L 220 420 L 460 500 L 710 370 L 890 470 L 1100 390 L 1340 490 L 1440 440 L 1440 800 L 0 800 Z" fill="#132a22" opacity="0.85"/>
+                <ellipse cx="720" cy="510" rx="600" ry="80" fill="#b9d6c3" opacity="0.15" filter="blur(20px)"/>
+                <path d="M 720 450 Q 770 510 650 580 T 780 680 T 720 800" stroke="#3d493f" stroke-width="65" fill="none" stroke-linecap="round"/>
+                <path class="wm-traffic-rev" d="M 720 450 Q 770 510 650 580 T 780 680 T 720 800" stroke="#e5e7eb" stroke-width="2" stroke-dasharray="14 18" fill="none" opacity="0.6"/>
+                <g fill="#0b1b15">
+                  <polygon points="280,680 250,750 310,750"/><polygon points="280,640 260,700 300,700"/><polygon points="280,610 270,660 290,660"/>
+                  <polygon points="410,630 380,720 440,720"/><polygon points="410,590 390,660 430,660"/>
+                  <polygon points="1020,620 985,730 1055,730"/><polygon points="1020,570 995,650 1045,650"/>
+                  <polygon points="1180,660 1150,760 1210,760"/><polygon points="1180,610 1160,680 1200,680"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- BG 2: Arrival at the house (twilight, smoking chimney) -->
+            <div class="wm-bg" data-wm-bg="2">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#08131d] via-[#102422] to-[#0c1a16]"></div>
+              <div class="absolute inset-0 opacity-70">
+                <div class="absolute top-[12%] left-[18%] w-1.5 h-1.5 bg-white rounded-full animate-ping"></div>
+                <div class="absolute top-[22%] left-[45%] w-1 h-1 bg-amber-200 rounded-full animate-pulse"></div>
+                <div class="absolute top-[15%] right-[25%] w-1 h-1 bg-white rounded-full animate-pulse"></div>
+                <div class="absolute top-[28%] right-[15%] w-1.5 h-1.5 bg-amber-100 rounded-full"></div>
+                <div class="absolute top-[8%] left-[70%] w-1 h-1 bg-white rounded-full"></div>
+              </div>
+              <svg class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[85%]" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMax meet">
+                <defs>
+                  <filter id="wmWindowGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+                <path d="M 0 450 L 150 350 L 350 480 L 520 370 L 780 490 L 950 380 L 1000 420 L 1000 600 L 0 600 Z" fill="#091814"/>
+                <g fill="#07120e">
+                  <polygon points="120,530 80,420 160,420"/><polygon points="120,440 90,360 150,360"/><polygon points="120,380 100,310 140,310"/>
+                  <polygon points="210,540 180,450 240,450"/><polygon points="210,470 190,400 230,400"/>
+                  <polygon points="850,540 810,430 890,430"/><polygon points="850,450 820,370 880,370"/><polygon points="850,390 830,320 870,320"/>
+                  <polygon points="920,550 890,460 950,460"/>
+                </g>
+                <g opacity="0.65" fill="#f1f5f9">
+                  <circle cx="650" cy="210" r="14" class="wm-smoke-1" filter="blur(5px)"/>
+                  <circle cx="650" cy="210" r="18" class="wm-smoke-2" filter="blur(7px)"/>
+                  <circle cx="650" cy="210" r="22" class="wm-smoke-3" filter="blur(9px)"/>
+                </g>
+                <polygon points="340,380 500,240 660,380 660,540 340,540" fill="#382318" stroke="#25160e" stroke-width="4"/>
+                <polygon points="320,385 500,230 680,385 660,395 500,250 340,395" fill="#20130c"/>
+                <rect x="635" y="225" width="28" height="90" fill="#332c28" stroke="#1d1917" stroke-width="2"/>
+                <rect x="631" y="220" width="36" height="10" fill="#231e1c"/>
+                <g stroke="#2b1a12" stroke-width="3">
+                  <line x1="345" y1="410" x2="655" y2="410"/><line x1="345" y1="440" x2="655" y2="440"/>
+                  <line x1="345" y1="470" x2="655" y2="470"/><line x1="345" y1="500" x2="655" y2="500"/>
+                </g>
+                <polygon points="500,290 475,330 525,330" fill="#FCD34D" filter="url(#wmWindowGlow)"/>
+                <rect x="375" y="420" width="70" height="70" rx="4" fill="#FDE68A" filter="url(#wmWindowGlow)"/>
+                <line x1="410" y1="420" x2="410" y2="490" stroke="#382318" stroke-width="3"/>
+                <line x1="375" y1="455" x2="445" y2="455" stroke="#382318" stroke-width="3"/>
+                <rect x="475" y="435" width="45" height="95" rx="3" fill="#1e120a" stroke="#452a1c" stroke-width="2"/>
+                <circle cx="510" cy="485" r="3" fill="#E3B873"/>
+                <rect x="550" y="420" width="70" height="70" rx="4" fill="#FDE68A" filter="url(#wmWindowGlow)"/>
+                <line x1="585" y1="420" x2="585" y2="490" stroke="#382318" stroke-width="3"/>
+                <line x1="550" y1="455" x2="620" y2="455" stroke="#382318" stroke-width="3"/>
+                <polygon points="300,530 700,530 720,570 280,570" fill="#2d1b12" stroke="#1d110b" stroke-width="2"/>
+                <circle cx="465" cy="435" r="5" fill="#FFFBEB" filter="url(#wmWindowGlow)"/>
+                <circle cx="465" cy="435" r="32" fill="#FBBF24" opacity="0.25" filter="blur(8px)"/>
+                <path d="M 0 560 Q 500 535 1000 560 L 1000 600 L 0 600 Z" fill="#0b1712"/>
+              </svg>
+            </div>
+
+            <!-- ===== ACTIVITY SCENES ===== -->
+
+            <!-- BG 3: Drumeții – sunrise ridge, zig-zag trail, hiker reaching the summit -->
+            <div class="wm-bg" data-wm-bg="3">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#f4b65f] via-[#b4573a] to-[#1d3a2e]"></div>
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+                <circle cx="1060" cy="260" r="70" fill="#FDE68A" opacity="0.95"/>
+                <circle cx="1060" cy="260" r="150" fill="#FCD34D" opacity="0.25" filter="blur(20px)"/>
+                <path d="M0 470 L200 330 L380 420 L560 260 L760 380 L980 230 L1200 360 L1440 280 L1440 800 L0 800Z" fill="#7a4a3a" opacity="0.55"/>
+                <path d="M0 560 L260 400 L470 500 L720 300 L940 470 L1180 380 L1440 480 L1440 800 L0 800Z" fill="#3b3a2e"/>
+                <path d="M0 650 L300 520 L560 600 L820 520 L1100 620 L1440 560 L1440 800 L0 800Z" fill="#1d3a2e"/>
+                <!-- Trail up to the summit -->
+                <path class="wm-trail" d="M380 800 L520 700 L430 640 L600 560 L540 480 L700 380 L720 300" stroke="#FBE4B5" stroke-width="4" stroke-dasharray="10 14" fill="none" opacity="0.8" stroke-linecap="round"/>
+                <!-- Summit flag -->
+                <line x1="720" y1="300" x2="720" y2="240" stroke="#1a1a1a" stroke-width="3"/>
+                <polygon class="wm-sway" points="720,240 760,252 720,264" fill="#C86D51"/>
+                <!-- Hiker with backpack & pole -->
+                <g class="wm-walk" transform="translate(686 330)" fill="#111">
+                  <circle cx="0" cy="-46" r="7"/>
+                  <rect x="-6" y="-38" width="12" height="26" rx="4"/>
+                  <rect x="-15" y="-36" width="10" height="20" rx="3"/>
+                  <line x1="-3" y1="-12" x2="-9" y2="8" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="3" y1="-12" x2="10" y2="6" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="8" y1="-30" x2="18" y2="8" stroke="#111" stroke-width="2"/>
+                </g>
+                <!-- Foreground pines -->
+                <g fill="#0f2219">
+                  <polygon points="120,800 70,640 170,640"/><polygon points="120,690 85,570 155,570"/>
+                  <polygon points="1300,800 1250,630 1350,630"/><polygon points="1300,680 1265,560 1335,560"/>
+                  <polygon points="1390,800 1355,690 1425,690"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- BG 4: Lectură la șemineu – cozy interior -->
+            <div class="wm-bg" data-wm-bg="4">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#2a1810] via-[#3a2216] to-[#1c110b]"></div>
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+                <!-- Wall planks -->
+                <g stroke="#24140c" stroke-width="2" opacity="0.6">
+                  <line x1="0" y1="150" x2="1440" y2="150"/><line x1="0" y1="300" x2="1440" y2="300"/><line x1="0" y1="450" x2="1440" y2="450"/>
+                </g>
+                <!-- Window with moon -->
+                <rect x="1020" y="130" width="220" height="260" rx="6" fill="#0b1a2a" stroke="#5C3826" stroke-width="12"/>
+                <circle cx="1170" cy="200" r="26" fill="#F5E6CA"/>
+                <circle class="wm-twinkle" cx="1070" cy="180" r="2" fill="#fff"/><circle class="wm-twinkle" cx="1110" cy="300" r="1.5" fill="#fff" style="animation-delay:1s"/>
+                <line x1="1130" y1="130" x2="1130" y2="390" stroke="#5C3826" stroke-width="8"/><line x1="1020" y1="260" x2="1240" y2="260" stroke="#5C3826" stroke-width="8"/>
+                <!-- Fireplace glow on the wall -->
+                <ellipse class="wm-glow-pulse" cx="360" cy="560" rx="380" ry="260" fill="#F59E0B" opacity="0.35" filter="blur(40px)"/>
+                <!-- Stone fireplace -->
+                <rect x="200" y="300" width="320" height="400" fill="#4a3f38"/>
+                <rect x="180" y="290" width="360" height="28" fill="#2f2722"/>
+                <path d="M250 700 L250 500 Q360 420 470 500 L470 700Z" fill="#120a06"/>
+                <!-- Logs & flames -->
+                <rect x="290" y="670" width="140" height="16" rx="8" fill="#5C3826" transform="rotate(-6 360 678)"/>
+                <rect x="290" y="670" width="140" height="16" rx="8" fill="#4a2c1c" transform="rotate(7 360 678)"/>
+                <path class="wm-flame" d="M360 672 C320 640 330 590 352 560 C356 600 380 600 372 560 C410 600 405 645 360 672Z" fill="#F97316"/>
+                <path class="wm-flame wm-flame-b" d="M362 672 C340 652 342 620 358 600 C362 625 378 625 374 605 C392 630 388 655 362 672Z" fill="#FDE047"/>
+                <!-- Books on the mantel -->
+                <g><rect x="220" y="250" width="14" height="40" fill="#C86D51"/><rect x="236" y="256" width="12" height="34" fill="#D6A660"/><rect x="250" y="246" width="16" height="44" fill="#192C23"/></g>
+                <!-- Armchair with reader -->
+                <g fill="#5a2f22">
+                  <rect x="700" y="470" width="240" height="200" rx="40"/>
+                  <rect x="680" y="540" width="60" height="140" rx="24" fill="#6b3a2a"/>
+                  <rect x="900" y="540" width="60" height="140" rx="24" fill="#6b3a2a"/>
+                  <rect x="720" y="670" width="14" height="40" fill="#2a1810"/><rect x="906" y="670" width="14" height="40" fill="#2a1810"/>
+                </g>
+                <g fill="#1a120d">
+                  <circle cx="820" cy="470" r="26"/>
+                  <rect x="790" y="495" width="60" height="80" rx="20"/>
+                </g>
+                <!-- Open book lit by the fire -->
+                <path d="M785 545 L820 555 L855 545 L855 575 L820 585 L785 575Z" fill="#F5E6CA"/>
+                <line x1="820" y1="555" x2="820" y2="585" stroke="#a08060" stroke-width="2"/>
+                <!-- Side table, tea & steam -->
+                <rect x="990" y="600" width="100" height="12" fill="#3a2216"/><rect x="1035" y="612" width="10" height="90" fill="#3a2216"/>
+                <rect x="1025" y="575" width="28" height="25" rx="4" fill="#EAE5DC"/>
+                <path class="wm-steam" d="M1033 568 q-6 -10 0 -20" stroke="#EAE5DC" stroke-width="2" fill="none"/>
+                <path class="wm-steam wm-steam-b" d="M1045 568 q6 -10 0 -20" stroke="#EAE5DC" stroke-width="2" fill="none"/>
+                <!-- Rug & floor -->
+                <rect x="0" y="700" width="1440" height="100" fill="#24140c"/>
+                <ellipse cx="720" cy="735" rx="420" ry="30" fill="#85543A" opacity="0.7"/>
+              </svg>
+            </div>
+
+            <!-- BG 5: Plimbări – sunny orchard path in Robești -->
+            <div class="wm-bg" data-wm-bg="5">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#a7d3e0] via-[#d9e8c4] to-[#5f7f3a]"></div>
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+                <circle cx="260" cy="150" r="60" fill="#FFF7D6"/>
+                <circle class="wm-glow-pulse" cx="260" cy="150" r="140" fill="#FDE68A" opacity="0.35" filter="blur(25px)"/>
+                <path d="M0 430 Q360 340 720 420 T1440 400 L1440 800 L0 800Z" fill="#8fb36a"/>
+                <path d="M0 520 Q400 440 760 520 T1440 500 L1440 800 L0 800Z" fill="#6d9a48"/>
+                <!-- Winding path -->
+                <path d="M560 800 Q700 680 640 600 T760 470" stroke="#e2c9a0" stroke-width="70" fill="none" stroke-linecap="round"/>
+                <!-- Orchard trees with fruit -->
+                <g>
+                  <g class="wm-sway"><rect x="196" y="470" width="14" height="90" fill="#5C3826"/><circle cx="203" cy="450" r="60" fill="#3f6b2a"/><circle cx="180" cy="440" r="6" fill="#C86D51"/><circle cx="225" cy="465" r="6" fill="#C86D51"/><circle cx="205" cy="420" r="6" fill="#C86D51"/></g>
+                  <g class="wm-sway" style="animation-delay:-2s"><rect x="386" y="440" width="12" height="80" fill="#5C3826"/><circle cx="392" cy="420" r="50" fill="#4d7a32"/><circle cx="375" cy="410" r="5" fill="#E3B873"/><circle cx="410" cy="430" r="5" fill="#E3B873"/></g>
+                  <g class="wm-sway" style="animation-delay:-1s"><rect x="1006" y="440" width="14" height="90" fill="#5C3826"/><circle cx="1013" cy="420" r="62" fill="#3f6b2a"/><circle cx="990" cy="410" r="6" fill="#C86D51"/><circle cx="1035" cy="430" r="6" fill="#C86D51"/><circle cx="1015" cy="385" r="6" fill="#C86D51"/></g>
+                  <g class="wm-sway" style="animation-delay:-3s"><rect x="1236" y="470" width="14" height="100" fill="#5C3826"/><circle cx="1243" cy="450" r="70" fill="#4d7a32"/><circle cx="1220" cy="440" r="6" fill="#E3B873"/><circle cx="1265" cy="470" r="6" fill="#E3B873"/></g>
+                </g>
+                <!-- Two walkers & a dog -->
+                <g class="wm-walk" fill="#2a2a24">
+                  <circle cx="680" cy="560" r="9"/><rect x="672" y="570" width="16" height="38" rx="6"/>
+                  <line x1="676" y1="606" x2="670" y2="634" stroke="#2a2a24" stroke-width="5" stroke-linecap="round"/><line x1="684" y1="606" x2="692" y2="632" stroke="#2a2a24" stroke-width="5" stroke-linecap="round"/>
+                </g>
+                <g class="wm-walk" style="animation-delay:-0.4s" fill="#3a2f28">
+                  <circle cx="712" cy="566" r="8"/><rect x="705" y="575" width="14" height="34" rx="6"/>
+                  <line x1="709" y1="607" x2="704" y2="632" stroke="#3a2f28" stroke-width="5" stroke-linecap="round"/><line x1="716" y1="607" x2="722" y2="630" stroke="#3a2f28" stroke-width="5" stroke-linecap="round"/>
+                </g>
+                <g class="wm-walk" style="animation-delay:-0.2s" fill="#5C3826">
+                  <ellipse cx="748" cy="620" rx="16" ry="8"/><circle cx="764" cy="612" r="6"/>
+                  <line x1="738" y1="626" x2="736" y2="636" stroke="#5C3826" stroke-width="3"/><line x1="758" y1="626" x2="760" y2="636" stroke="#5C3826" stroke-width="3"/>
+                </g>
+                <!-- Wildflowers -->
+                <g><circle cx="300" cy="700" r="5" fill="#F5E6CA"/><circle cx="340" cy="720" r="5" fill="#C86D51"/><circle cx="1100" cy="700" r="5" fill="#F5E6CA"/><circle cx="1150" cy="730" r="5" fill="#E3B873"/><circle cx="900" cy="750" r="5" fill="#C86D51"/></g>
+              </svg>
+            </div>
+
+            <!-- BG 6: Foc de tabără – Milky Way, campfire circle -->
+            <div class="wm-bg" data-wm-bg="6">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#030712] via-[#0b1424] to-[#0a120e]"></div>
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+                <!-- Milky Way band -->
+                <ellipse cx="720" cy="200" rx="800" ry="70" fill="#c7d2fe" opacity="0.12" filter="blur(25px)" transform="rotate(-14 720 200)"/>
+                <g fill="#fff">
+                  <circle class="wm-twinkle" cx="200" cy="120" r="1.6"/><circle class="wm-twinkle" cx="420" cy="80" r="1.2" style="animation-delay:.6s"/>
+                  <circle class="wm-twinkle" cx="640" cy="170" r="2" style="animation-delay:1.2s"/><circle class="wm-twinkle" cx="860" cy="110" r="1.4" style="animation-delay:.3s"/>
+                  <circle class="wm-twinkle" cx="1080" cy="200" r="1.8" style="animation-delay:1.8s"/><circle class="wm-twinkle" cx="1280" cy="90" r="1.3" style="animation-delay:.9s"/>
+                  <circle class="wm-twinkle" cx="540" cy="260" r="1.1" style="animation-delay:2.1s"/><circle class="wm-twinkle" cx="980" cy="290" r="1.2" style="animation-delay:1.5s"/>
+                </g>
+                <!-- Tree line -->
+                <g fill="#06100b">
+                  <path d="M0 560 L60 430 L120 560 L170 400 L240 560 L300 450 L360 560 L1080 560 L1140 440 L1200 560 L1260 410 L1330 560 L1390 450 L1440 520 L1440 800 L0 800Z"/>
+                </g>
+                <rect x="0" y="560" width="1440" height="240" fill="#0c1510"/>
+                <!-- Fire glow on the ground -->
+                <ellipse class="wm-glow-pulse" cx="720" cy="680" rx="360" ry="110" fill="#F97316" opacity="0.35" filter="blur(30px)"/>
+                <!-- Stone ring, logs, flames -->
+                <g fill="#3a3532"><ellipse cx="660" cy="712" rx="16" ry="9"/><ellipse cx="700" cy="720" rx="16" ry="9"/><ellipse cx="740" cy="720" rx="16" ry="9"/><ellipse cx="780" cy="712" rx="16" ry="9"/></g>
+                <rect x="660" y="695" width="120" height="14" rx="7" fill="#5C3826" transform="rotate(-10 720 702)"/>
+                <rect x="660" y="695" width="120" height="14" rx="7" fill="#4a2c1c" transform="rotate(10 720 702)"/>
+                <path class="wm-flame" d="M720 700 C670 660 685 600 712 560 C716 610 745 610 735 565 C785 615 775 665 720 700Z" fill="#F97316"/>
+                <path class="wm-flame wm-flame-b" d="M722 700 C695 678 700 640 718 615 C722 645 742 645 736 620 C760 650 752 682 722 700Z" fill="#FDE047"/>
+                <!-- Friends sitting around the fire -->
+                <g fill="#050505">
+                  <circle cx="520" cy="640" r="14"/><path d="M500 720 L505 660 Q520 650 535 660 L545 720Z"/>
+                  <circle cx="580" cy="650" r="13"/><path d="M562 722 L566 668 Q580 658 594 668 L600 722Z"/>
+                  <circle cx="880" cy="645" r="14"/><path d="M860 722 L865 663 Q880 653 895 663 L902 722Z"/>
+                  <circle cx="940" cy="640" r="13"/><path d="M922 720 L926 660 Q940 650 954 660 L960 720Z"/>
+                  <!-- wooden bench logs -->
+                  <rect x="480" y="718" width="140" height="16" rx="8" fill="#2a1810"/><rect x="840" y="718" width="140" height="16" rx="8" fill="#2a1810"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Readability vignette behind the narrative text -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45),transparent_65%)]"></div>
+          </div>
+
+          <canvas id="weekendMotionCanvas" class="absolute inset-0 w-full h-full z-10 pointer-events-none"></canvas>
+          
+          <!-- Scene Overlays with Rich Narrative Details -->
+          <div id="wm-stage" class="relative z-20 w-full h-full p-6 sm:p-12 flex flex-col justify-between pointer-events-none">
+            
+            <!-- Top Status Bar & Sound Controller -->
+            <div class="flex items-center justify-between">
+              <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[11px] font-mono">
+                <span id="wm-status-dot" class="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
+                <span id="wm-status-text" class="text-merlin-stone">Actul 1: Pulsul Orașului & Ecrane Aglomerate</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="toggleWeekendAudio()" class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-xs font-mono text-merlin-goldLight transition flex items-center space-x-2">
+                  <span id="wm-audio-icon">🔇</span>
+                  <span id="wm-audio-label" class="hidden sm:inline">Sunet: Oprit</span>
+                </button>
+                <button id="wm-fullscreen-btn" onclick="openMotionExperience()" title="Experiența completă" class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-merlin-gold/90 hover:bg-merlin-goldLight text-merlin-darkForest text-xs font-semibold transition flex items-center space-x-1.5">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/></svg>
+                  <span class="hidden sm:inline">Ecran complet</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Narrative Centerpiece -->
+            <div class="max-w-xl mx-auto text-center transform transition-all duration-700">
+              <h3 id="wm-title" class="font-serif text-3xl sm:text-5xl font-bold text-white mb-3 drop-shadow-md">
+                Haosul Urban
+              </h3>
+              <p id="wm-desc" class="text-xs sm:text-base text-merlin-stone/90 font-light leading-relaxed drop-shadow">
+                Trafic bară la bară, termene limită și zgomot neîntrerupt. Deconectează-te și lasă orașul în urmă.
+              </p>
+            </div>
+
+            <!-- Bottom Progress Scrub Indicator -->
+            <div class="w-full max-w-md mx-auto">
+              <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                <div id="wm-progress" class="bg-gradient-to-r from-merlin-gold to-merlin-terracotta h-full w-1/4 transition-all duration-500"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive Journey & Activity Switcher -->
+        <div class="p-6 bg-merlin-pine/90 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex flex-wrap gap-2 text-xs">
+            <button onclick="switchWeekendScene('city')" id="btn-sc-city" class="wm-nav-btn px-4 py-2 rounded-xl bg-white/15 text-white font-semibold transition hover:bg-white/25">
+              1. Orașul
+            </button>
+            <button onclick="switchWeekendScene('transit')" id="btn-sc-transit" class="wm-nav-btn px-4 py-2 rounded-xl bg-white/5 text-merlin-stone font-semibold transition hover:bg-white/15">
+              2. Drumul spre Pârscov
+            </button>
+            <button onclick="switchWeekendScene('house')" id="btn-sc-house" class="wm-nav-btn px-4 py-2 rounded-xl bg-white/5 text-merlin-stone font-semibold transition hover:bg-white/15">
+              3. Cabana Merlin
+            </button>
+          </div>
+
+          <!-- Activity Hotspots Selector -->
+          <div class="flex items-center flex-wrap gap-2 text-xs">
+            <span class="text-[11px] uppercase tracking-wider text-merlin-gold font-mono mr-1">Activități:</span>
+            <button onclick="switchWeekendActivity('hiking')" id="act-hiking" class="wm-act-btn px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:border-merlin-gold text-merlin-stone transition">
+              🥾 Drumeții
+            </button>
+            <button onclick="switchWeekendActivity('reading')" id="act-reading" class="wm-act-btn px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:border-merlin-gold text-merlin-stone transition">
+              📖 Cărți la foc
+            </button>
+            <button onclick="switchWeekendActivity('walks')" id="act-walks" class="wm-act-btn px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:border-merlin-gold text-merlin-stone transition">
+              🌲 Plimbări în natură
+            </button>
+            <button onclick="switchWeekendActivity('firepit')" id="act-firepit" class="wm-act-btn px-3 py-1.5 rounded-lg border border-white/20 bg-white/5 hover:border-merlin-gold text-merlin-stone transition">
+              🔥 Foc de tabără
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3 Signature Experiences Cards with dedicated pre-filled WhatsApp links -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Experience 1 -->
+        <div class="flex flex-col justify-between p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-merlin-gold/50 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-merlin-gold/20 flex items-center justify-center text-merlin-gold mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-merlin-oat mb-3">
+              Stay with your people
+            </h3>
+            <p class="text-sm text-merlin-stone/80 font-light leading-relaxed mb-6">
+              Weekenduri cu prietenii, mese lungi la masă mare din lemn, gătit împreună, vinuri bune și seri prelungite la șemineu sau sub cerul liber.
+            </p>
+          </div>
+          <a href="https://wa.me/40700000000?text=Bun%C4%83!%20Suntem%20un%20grup%20de%20prieteni%20%C8%99i%20am%20dori%20s%C4%83%20%C3%AEnchiriem%20Country%20House%20by%20Merlin%20pentru%20un%20weekend%20%C3%AEmpreun%C4%83." 
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-gold hover:text-merlin-goldLight pt-4 border-t border-white/10 transition">
+            <span>Rezervă weekend cu prietenii</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="flex flex-col justify-between p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-merlin-gold/50 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-merlin-clay/30 flex items-center justify-center text-merlin-terracotta mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h10z"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-merlin-oat mb-3">
+              Bring something to celebrate
+            </h3>
+            <p class="text-sm text-merlin-stone/80 font-light leading-relaxed mb-6">
+              Aniversări intime, petreceri restrânse de zi de naștere și întâlniri private cu suflet, organizate la cerere cu sprijinul nostru pentru aranjamente și detalii.
+            </p>
+          </div>
+          <a href="https://wa.me/40700000000?text=Bun%C4%83!%20Vrem%20s%C4%83%20s%C4%83rb%C4%83torim%20un%20moment%20special%20la%20Country%20House%20by%20Merlin%20%C8%99i%20am%20dori%20detalii%20despre%20organizare." 
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-terracotta hover:text-merlin-goldLight pt-4 border-t border-white/10 transition">
+            <span>Sărbătorește la noi</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="flex flex-col justify-between p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-merlin-gold/50 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-900/40 flex items-center justify-center text-emerald-300 mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-merlin-oat mb-3">
+              Take the team outside
+            </h3>
+            <p class="text-sm text-merlin-stone/80 font-light leading-relaxed mb-6">
+              Micro-offsite-uri de echipă, sesiuni de strategie departe de birou și ecrane aglomerate, brainstorming în grădină și reconectare între oameni.
+            </p>
+          </div>
+          <a href="https://wa.me/40700000000?text=Bun%C4%83!%20Suntem%20interesa%C8%9Bi%20de%20un%20micro-offsite%20pentru%20echipa%20noastr%C4%83%20la%20Country%20House%20by%20Merlin." 
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-emerald-300 hover:text-emerald-200 pt-4 border-t border-white/10 transition">
+            <span>Organizează offsite de echipă</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Verified Surroundings & Distances (Direct from Brief) -->
+      <div class="mt-20 pt-16 border-t border-white/15">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-widest text-merlin-gold">Explorare în zonă</span>
+            <h3 class="font-serif text-3xl font-bold text-merlin-oat mt-1">
+              Împrejurimi & Distanțe Verificate
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-merlin-stone/70 max-w-md mt-2 md:mt-0 font-light">
+            Pentru ca vizitatorii să își poată imagina un weekend complet: aventură, cultură și crame renumite.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+            <span class="text-xs font-mono text-merlin-gold font-bold">~35 min</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Vulcanii Noroioși</h4>
+            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+              Un peisaj selenar unic în Europa (Pâclele Mari și Mici).
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+            <span class="text-xs font-mono text-merlin-gold font-bold">~25 min</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Mănăstirea Ciolanu & Măgura</h4>
+            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+              Tabăra de sculptură în piatră în aer liber și păduri seculare.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+            <span class="text-xs font-mono text-merlin-gold font-bold">~40 min</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Cramele Dealu Mare</h4>
+            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+              Degustări de vinuri premium pe celebrul Drum al Vinului.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+            <span class="text-xs font-mono text-merlin-gold font-bold">Chiar la poartă</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Dealurile Pârscov</h4>
+            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+              Plimbări pe ulițe liniștite, livezi de pomi fructiferi și freamăt de râu.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 1.4 WHAT'S COMING UP (MAX 3 EVENIMENTE / OFERTE) ==================== -->
+  <section id="whats-on" class="py-20 sm:py-28 max-w-7xl mx-auto px-5 sm:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-merlin-stone pb-8">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">1.4 Noutăți & Evenimente</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-merlin-pine tracking-tight mt-2">
+          What’s coming up
+        </h2>
+      </div>
+      <p class="text-sm text-merlin-charcoal/70 max-w-md mt-4 md:mt-0 font-light leading-relaxed">
+        Pachete sezoniere, brunch-uri restrânse, long weekenduri și perioade speciale deschise pentru rezervare.
+      </p>
+    </div>
+
+    <!-- 3 Curated Upcoming Offers -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="group rounded-3xl overflow-hidden bg-white border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80" alt="Slow Sunday Brunch" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-merlin-darkForest/80 backdrop-blur-md text-[10px] uppercase tracking-wider font-semibold text-merlin-gold">
+              Locuri Deschise
+            </span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-mono font-medium text-merlin-clay">Weekend 24 – 26 Martie</span>
+            <h3 class="font-serif text-2xl font-bold text-merlin-pine mt-1 mb-2">
+              Slow Sunday Brunch & Vin Local
+            </h3>
+            <p class="text-xs text-merlin-charcoal/70 leading-relaxed font-light">
+              Meniu creat cu produse din grădinile locale din Buzău, pâine coaptă pe vatră, selecție de vinuri din Dealu Mare și muzică bună pe vinil.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20%C3%AEntreb%20despre%20oferta:%20Slow%20Sunday%20Brunch%20%26%20Vin%20Local." 
+             target="_blank" rel="noopener noreferrer"
+             class="w-full py-3 rounded-full bg-merlin-stone/60 hover:bg-merlin-pine hover:text-merlin-oat text-merlin-pine font-semibold text-xs uppercase tracking-wider transition flex items-center justify-center space-x-2">
+            <span>Ask about this</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group rounded-3xl overflow-hidden bg-white border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80" alt="Long Weekend la Șemineu" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-merlin-darkForest/80 backdrop-blur-md text-[10px] uppercase tracking-wider font-semibold text-merlin-gold">
+              Închiriere Integrală
+            </span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-mono font-medium text-merlin-clay">14 – 17 Aprilie (Paște / Primăvară)</span>
+            <h3 class="font-serif text-2xl font-bold text-merlin-pine mt-1 mb-2">
+              Long Weekend la Șemineu & Curte
+            </h3>
+            <p class="text-xs text-merlin-charcoal/70 leading-relaxed font-light">
+              Pachet complet de 3 nopți pentru grupuri de până la 10 oaspeți. Lemne din belșug pentru foc, bucătărie pregătită pentru mese mari și relaxare deplină.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20%C3%AEntreb%20despre%20oferta:%20Long%20Weekend%20la%20%C8%98emineu%20%C8%99i%20Curte." 
+             target="_blank" rel="noopener noreferrer"
+             class="w-full py-3 rounded-full bg-merlin-stone/60 hover:bg-merlin-pine hover:text-merlin-oat text-merlin-pine font-semibold text-xs uppercase tracking-wider transition flex items-center justify-center space-x-2">
+            <span>Ask about this</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group rounded-3xl overflow-hidden bg-white border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Creative Retreat" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-merlin-darkForest/80 backdrop-blur-md text-[10px] uppercase tracking-wider font-semibold text-merlin-gold">
+              Rezervare pe Camere
+            </span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-mono font-medium text-merlin-clay">Mai 2026 &bull; Data în curând</span>
+            <h3 class="font-serif text-2xl font-bold text-merlin-pine mt-1 mb-2">
+              Nature & Focus Retreat
+            </h3>
+            <p class="text-xs text-merlin-charcoal/70 leading-relaxed font-light">
+              Trei zile dedicate lucrului în liniște, scrierii creative, drumețiilor ușoare și discuțiilor de seară cu oameni din industrii creative.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20%C3%AEntreb%20despre%20oferta:%20Nature%20%26%20Focus%20Retreat." 
+             target="_blank" rel="noopener noreferrer"
+             class="w-full py-3 rounded-full bg-merlin-stone/60 hover:bg-merlin-pine hover:text-merlin-oat text-merlin-pine font-semibold text-xs uppercase tracking-wider transition flex items-center justify-center space-x-2">
+            <span>Ask about this</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== 1.5 BY MERLIN (TEASER SECȚIUNE PE SITE) ==================== -->
+  <section class="py-20 sm:py-28 bg-merlin-stone/40 border-y border-merlin-stone">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+        
+        <!-- Portrait / Lifestyle Frame -->
+        <div class="relative w-64 h-80 sm:w-72 sm:h-96 shrink-0 rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-1 hover:rotate-0 transition duration-500">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+               alt="Merlin portret" 
+               class="w-full h-full object-cover">
+          <div class="absolute bottom-3 left-3 bg-merlin-pine/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white font-mono uppercase tracking-wider">
+            Merlin &bull; Fondator
+          </div>
+        </div>
+
+        <!-- Story Intro -->
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">1.5 Cine se află în spate</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-merlin-pine tracking-tight mt-2 mb-4">
+            By Merlin
+          </h2>
+          <p class="font-serif italic text-lg sm:text-xl text-merlin-clay mb-4">
+            „O casă născută din nevoia de deconectare, transformată într-un loc cald pentru oameni faini.”
+          </p>
+          <p class="text-sm text-merlin-charcoal/80 leading-relaxed font-light mb-6">
+            Country House by Merlin nu este doar un spațiu de cazare. Este extensia unui stil de viață format între zgomotul proiectelor din oraș, munca cu branduri mari și căutarea unei vieți mai așezate, cu picioarele pe pământ și prietenii aproape.
+          </p>
+
+          <!-- Button that opens Chapter 2 (The Real Life of Merlin) -->
+          <button onclick="openMerlinStory()" class="px-7 py-3.5 rounded-full bg-merlin-pine hover:bg-merlin-darkForest text-merlin-oat font-semibold text-xs uppercase tracking-widest transition shadow-md flex items-center space-x-3">
+            <span>By Merlin &bull; Descoperă povestea</span>
+            <svg class="w-4 h-4 text-merlin-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== PRACTICAL INFO, FAQ & CONTACT ==================== -->
+  <section id="faq-contact" class="py-20 sm:py-28 max-w-7xl mx-auto px-5 sm:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      
+      <!-- Left Column: FAQ Accordion -->
+      <div class="lg:col-span-7">
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Claritate & Detalii</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine tracking-tight mt-2 mb-6">
+          Întrebări Frecvente
+        </h2>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+            <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
+              <span>Cum se face rezervarea și care este avansul?</span>
+              <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-merlin-charcoal/70 font-light leading-relaxed">
+              Rezervarea începe cu o discuție simplă pe WhatsApp pentru verificarea disponibilității. Se achită un avans de 50% pentru blocarea datelor, iar restul sumei cu până la 7 zile înainte de check-in sau la sosire.
+            </p>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+            <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
+              <span>Care sunt orele de check-in și check-out?</span>
+              <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-merlin-charcoal/70 font-light leading-relaxed">
+              Check-in-ul se face începând cu ora <strong>15:00</strong>, iar check-out-ul până la ora <strong>11:00</strong>. Oferim flexibilitate (early check-in sau late check-out) ori de câte ori calendarul ne permite.
+            </p>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+            <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
+              <span>Sunt acceptate animalele de companie?</span>
+              <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-merlin-charcoal/70 font-light leading-relaxed">
+              Da, suntem 100% <strong>pet-friendly</strong>! Câinii și pisicile sunt binevenite. Curtea mare este perfectă pentru alergat, rugăm doar respectarea igienei și a bunului simț în interiorul casei.
+            </p>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+            <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
+              <span>Cum procedăm cu mâncarea și mesele?</span>
+              <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-merlin-charcoal/70 font-light leading-relaxed">
+              Bucătăria este complet utilată cu tot ce aveți nevoie (aragaz, cuptor, frigider, veselă, oale mari, aparat de cafea). La cerere, vă putem pune în legătură cu producători locali sau putem asigura opțiuni de catering tradițional/brunch.
+            </p>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+            <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
+              <span>Care sunt regulile pentru muzică și evenimente?</span>
+              <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-merlin-charcoal/70 font-light leading-relaxed">
+              Încurajăm socializarea, poveștile și muzica bună la un volum care să respecte liniștea satului. Nu suntem un club, ci un refugiu relaxat. Evenimentele private se discută în avans.
+            </p>
+          </details>
+
+          <!-- FAQ 6 -->
+          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+            <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
+              <span>Care este politica de anulare?</span>
+              <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
+            </summary>
+            <p class="mt-3 text-xs sm:text-sm text-merlin-charcoal/70 font-light leading-relaxed">
+              Anularea gratuită sau reprogramarea este posibilă cu cel puțin 14 zile înainte de data sosirii. În caz de forță majoră, căutăm întotdeauna o variantă amiabilă de reprogramare a weekendului.
+            </p>
+          </details>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Location & Contact Card -->
+      <div class="lg:col-span-5 flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-merlin-pine text-merlin-oat">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-merlin-gold">Localizare & Contact</span>
+          <h3 class="font-serif text-3xl font-bold mt-2 mb-4">
+            Robești, Buzău
+          </h3>
+          <p class="text-xs sm:text-sm text-merlin-stone font-light leading-relaxed mb-6">
+            Sat Robești, comuna Pârscov, județul Buzău.<br>
+            La doar <strong>1h 45m de București</strong>, 1h de Ploiești și 30 minute de municipiul Buzău.
+          </p>
+
+          <!-- Direct Navigation Links -->
+          <div class="flex flex-wrap gap-2 mb-8">
+            <a href="https://maps.google.com/?q=Robesti+Parscov+Buzau" target="_blank" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs text-merlin-oat transition flex items-center space-x-1.5">
+              <span>📍 Google Maps</span>
+            </a>
+            <a href="https://waze.com/ul?q=Robesti+Buzau" target="_blank" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs text-merlin-oat transition flex items-center space-x-1.5">
+              <span>🚗 Waze</span>
+            </a>
+          </div>
+
+          <!-- Contact details block -->
+          <div class="space-y-3 border-t border-white/15 pt-6 text-xs text-merlin-stone">
+            <div class="flex items-center space-x-3">
+              <span class="text-merlin-gold">WhatsApp:</span>
+              <a href="https://wa.me/40700000000" class="hover:text-white transition font-mono">+40 700 000 000</a>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-merlin-gold">Email:</span>
+              <a href="mailto:contact@countryhousemerlin.ro" class="hover:text-white transition">contact@countryhousemerlin.ro</a>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="text-merlin-gold">Instagram:</span>
+              <a href="https://instagram.com" target="_blank" class="hover:text-white transition">@countryhouse.bymerlin</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Big WhatsApp Button -->
+        <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20Country%20House%20by%20Merlin." 
+           target="_blank" rel="noopener noreferrer"
+           class="mt-8 w-full py-4 rounded-full bg-merlin-gold hover:bg-merlin-goldLight text-merlin-darkForest font-bold text-xs uppercase tracking-widest text-center transition shadow-lg">
+          Scrie-ne pe WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-merlin-darkForest text-merlin-stone py-12 px-5 sm:px-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs">
+      <div>
+        <p class="font-serif text-lg text-merlin-oat font-bold">Country House <span class="italic font-normal text-merlin-gold">by Merlin</span></p>
+        <p class="text-[11px] text-merlin-stone/60 mt-0.5">Robești, comuna Pârscov, jud. Buzău &bull; Country living reinterpretat</p>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <a href="#the-house" class="hover:text-white transition">The House</a>
+        <a href="#your-weekend" class="hover:text-white transition">Your Weekend</a>
+        <a href="#whats-on" class="hover:text-white transition">What’s On</a>
+        <button onclick="openMerlinStory()" class="hover:text-merlin-gold transition text-merlin-gold font-semibold">By Merlin</button>
+      </div>
+
+      <p class="text-[11px] text-merlin-stone/50">
+        &copy; 2026 Country House by Merlin. Toate drepturile rezervate.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ==================== MOBILE FLOATING "CHECK AVAILABILITY" BAR ==================== -->
+  <div class="sm:hidden fixed bottom-4 left-4 right-4 z-40">
+    <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20Country%20House%20by%20Merlin." 
+       target="_blank" rel="noopener noreferrer"
+       class="w-full py-3.5 px-6 rounded-full bg-merlin-pine/95 backdrop-blur-md text-merlin-gold font-bold text-xs uppercase tracking-wider text-center shadow-2xl border border-merlin-gold/40 flex items-center justify-center space-x-2">
+      <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.539 1.95.824 2.791.825h.002c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.766c0 5.422-4.408 9.83-9.83 9.83-1.66 0-3.262-.42-4.673-1.218L2 22l1.656-5.328C2.81 15.228 2.37 13.639 2.37 11.938 2.37 6.516 6.778 2.108 12.2 2.108s9.8 4.408 9.8 9.83z"/></svg>
+      <span>Check availability &bull; WhatsApp</span>
+    </a>
+  </div>
+
+
+  <!-- ==================== 2. THE REAL LIFE OF MERLIN (FULL-SCREEN EXTENSION VIEW) ==================== -->
+  <div id="merlinStoryModal" class="fixed inset-0 z-50 bg-merlin-darkForest/95 backdrop-blur-xl text-merlin-oat overflow-y-auto hidden">
+    
+    <!-- Top Modal Header -->
+    <div class="sticky top-0 z-30 bg-merlin-darkForest/90 backdrop-blur-md border-b border-white/10 px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-merlin-gold"></span>
+        <span class="font-serif text-lg font-bold tracking-wide">The Real Life of Merlin</span>
+      </div>
+      <button onclick="closeMerlinStory()" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs font-semibold uppercase tracking-wider transition">
+        &times; Închide povestea
+      </button>
+    </div>
+
+    <!-- Modal Inner Content -->
+    <div class="max-w-4xl mx-auto px-6 py-16 sm:py-20">
+      
+      <!-- Story Title -->
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest text-merlin-gold font-semibold">Capitolul II &bull; Universul din spatele casei</span>
+        <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white mt-2 mb-4">
+          The Real Life of Merlin
+        </h1>
+        <p class="text-sm sm:text-base text-merlin-stone font-light max-w-xl mx-auto leading-relaxed">
+          Povestea mea, munca cu branduri, antreprenoriatul și felul în care această casă de la țară a devenit ancora mea de liniște.
+        </p>
+      </div>
+
+      <!-- Chapter 1 -->
+      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
+        <span class="text-xs font-mono text-merlin-gold font-bold">01 / ANTREPRENORIAT</span>
+        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Viața între termene limită și viziune</h3>
+        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
+          Ani la rând, ritmul meu a fost dictat de proiecte complexe, telefoane fără oprire, lansări de produse și organizare de festivaluri. Am învățat ce înseamnă să construiești de la zero și cât de important este să ai un loc în care mintea să poată face pauză.
+        </p>
+        <a href="https://instagram.com" target="_blank" class="inline-flex items-center space-x-2 text-xs text-merlin-gold hover:text-white transition">
+          <span>Vezi postare din universul antreprenorial &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Chapter 2 -->
+      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
+        <span class="text-xs font-mono text-merlin-gold font-bold">02 / BRANDURI & EVENIMENTE</span>
+        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Munca din spatele experiențelor memorabile</h3>
+        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
+          Fiecare detaliu contează: de la lumina unei încăperi, până la textura lenjeriei și muzica care curge în fundal. Experiența mea în crearea de evenimente a fost transpusă direct în modul în care este gândită Country House by Merlin: nimic nu este lăsat la voia întâmplării, dar totul pare firesc și relaxat.
+        </p>
+        <a href="https://instagram.com" target="_blank" class="inline-flex items-center space-x-2 text-xs text-merlin-gold hover:text-white transition">
+          <span>Vezi proiectele de pe Instagram &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Chapter 3 -->
+      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
+        <span class="text-xs font-mono text-merlin-gold font-bold">03 / CĂLĂTORII ȘI OAMENI</span>
+        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Căutarea simplității</h3>
+        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
+          Am adunat inspirație din case rurale din Toscana, cabane nordice și sate ascunse din Alpi. Dar farmecul dealurilor din Buzău are o căldură unică: livezi nesfârșite, oameni simpli care te salută la poartă și un cer de noapte fără poluare luminoasă.
+        </p>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
+        <span class="text-xs font-mono text-merlin-gold font-bold">04 / DE CE ROBEȘTI, BUZĂU</span>
+        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Country living reinterpretat</h3>
+        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
+          Nu am vrut o cabană izolată unde să te simți străin, ci o casă deschisă, vie, cu spațiu generos pentru prieteni, vin bun și râsete până târziu. Oricând ai nevoie de o gură de aer, porțile sunt deschise.
+        </p>
+      </div>
+
+      <!-- Close and Back to House CTA -->
+      <div class="text-center pt-8 border-t border-white/15">
+        <button onclick="closeMerlinStory()" class="px-8 py-3.5 rounded-full bg-merlin-gold text-merlin-darkForest font-bold text-xs uppercase tracking-widest hover:bg-merlin-goldLight transition">
+          Înapoi la Country House
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== FULL MOTION GRAPHIC EXPERIENCE (loads animation.html) ==================== -->
+  <div id="motionModal" class="fixed inset-0 z-50 bg-black hidden" role="dialog" aria-modal="true" aria-label="Tranziție Oraș - Natură">
+    <iframe id="motionFrame" title="Country House by Merlin - De la Haos la Liniște" class="absolute inset-0 w-full h-full border-0" allow="autoplay"></iframe>
+    <button id="motionCloseBtn" onclick="closeMotionExperience()" class="absolute bottom-24 right-4 sm:bottom-auto sm:top-20 sm:right-6 z-10 px-4 py-2 rounded-full bg-black/70 hover:bg-merlin-gold hover:text-merlin-darkForest backdrop-blur-md border border-white/20 text-white text-xs font-semibold uppercase tracking-wider transition">
+      &times; Închide
+    </button>
+  </div>
+
+
+  <!-- ==================== IMAGE LIGHTBOX MODAL ==================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="relative max-w-5xl w-full flex flex-col items-center">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl font-light hover:text-merlin-gold">&times;</button>
+      <img id="lightboxImg" src="" alt="Previzualizare" class="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl">
+      <p id="lightboxCaption" class="mt-4 text-xs sm:text-sm text-merlin-stone font-light text-center"></p>
+    </div>
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // --- Mobile Menu Toggle ---
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // --- Gallery Category Filter ---
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const tabs = document.querySelectorAll('.filter-btn');
+      
+      tabs.forEach(btn => {
+        btn.classList.remove('bg-merlin-pine', 'text-merlin-oat');
+        btn.classList.add('bg-merlin-stone/60', 'text-merlin-charcoal');
+      });
+
+      const activeBtn = document.getElementById(`tab-${category}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-merlin-stone/60', 'text-merlin-charcoal');
+        activeBtn.classList.add('bg-merlin-pine', 'text-merlin-oat');
+      }
+
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // --- Lightbox Modal Logic ---
+    function openLightbox(url, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = url;
+      cap.innerText = caption;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // --- The Real Life of Merlin Modal Logic ---
+    function openMerlinStory() {
+      document.getElementById('merlinStoryModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMerlinStory() {
+      document.getElementById('merlinStoryModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // --- INLINE WEEKEND MOTION GRAPHIC & SOUND SYSTEM ---
+    const wmCanvas = document.getElementById('weekendMotionCanvas');
+    const wmCtx = wmCanvas ? wmCanvas.getContext('2d') : null;
+    let wmParticles = [];
+    let currentWmState = 'city'; // 'city', 'transit', 'house', 'hiking', 'reading', 'walks', 'firepit'
+    let wmAudioCtx = null;
+    let wmOsc1 = null;
+    let wmOsc2 = null;
+    let wmAudioPlaying = false;
+
+    function resizeWmCanvas() {
+      if (!wmCanvas) return;
+      wmCanvas.width = wmCanvas.parentElement.clientWidth;
+      wmCanvas.height = wmCanvas.parentElement.clientHeight;
+      generateWmParticles();
+    }
+    window.addEventListener('resize', resizeWmCanvas);
+
+    function generateWmParticles() {
+      setWmBackground();
+      wmParticles = [];
+      if (!wmCanvas) return;
+      const w = wmCanvas.width;
+      const h = wmCanvas.height;
+
+      if (currentWmState === 'city') {
+        for (let i = 0; i < 90; i++) {
+          wmParticles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: 6 + Math.random() * 8, // fast vertical rain
+            size: Math.random() * 2 + 1,
+            color: Math.random() > 0.4 ? 'rgba(239, 68, 68, 0.4)' : 'rgba(56, 189, 248, 0.4)'
+          });
+        }
+      } else if (currentWmState === 'transit') {
+        for (let i = 0; i < 70; i++) {
+          wmParticles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: 3 + Math.random() * 4, // road breeze speed
+            vy: (Math.random() - 0.5) * 1.5,
+            size: Math.random() * 3 + 1,
+            color: 'rgba(214, 166, 96, 0.5)'
+          });
+        }
+      } else if (currentWmState === 'reading' || currentWmState === 'firepit') {
+        // Embers rising from the actual fire in the scene (fireplace left / campfire centre)
+        const isFire = currentWmState === 'firepit';
+        const src = isFire ? { x: 0.5, y: 0.84, spread: 50, top: 0.15 } : { x: 0.25, y: 0.78, spread: 30, top: 0.55 };
+        for (let i = 0; i < (isFire ? 90 : 35); i++) {
+          wmParticles.push({
+            x: w * src.x + (Math.random() - 0.5) * src.spread,
+            y: h * src.y - Math.random() * h * (src.y - src.top),
+            vx: (Math.random() - 0.5) * (isFire ? 1.4 : 0.6),
+            vy: - (0.8 + Math.random() * (isFire ? 2.6 : 1.2)),
+            size: Math.random() * (isFire ? 2.6 : 1.8) + 0.8,
+            color: Math.random() > 0.3 ? 'rgba(249, 115, 22, 0.85)' : 'rgba(253, 224, 71, 0.85)',
+            src: src
+          });
+        }
+      } else if (currentWmState === 'walks') {
+        // Falling orchard leaves & petals in the sunlight
+        const leafColors = ['rgba(200, 109, 81, 0.85)', 'rgba(227, 184, 115, 0.85)', 'rgba(109, 154, 72, 0.85)', 'rgba(245, 230, 202, 0.9)'];
+        for (let i = 0; i < 40; i++) {
+          wmParticles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: 0.4 + Math.random() * 0.8,
+            vy: 0.6 + Math.random() * 0.9,
+            size: Math.random() * 2.5 + 2,
+            color: leafColors[Math.floor(Math.random() * leafColors.length)],
+            sway: Math.random() * Math.PI * 2
+          });
+        }
+      } else if (currentWmState === 'hiking') {
+        // Warm sunrise haze drifting across the ridge
+        for (let i = 0; i < 45; i++) {
+          wmParticles.push({
+            x: Math.random() * w,
+            y: Math.random() * h * 0.7,
+            vx: 0.3 + Math.random() * 0.6,
+            vy: -0.15 + Math.random() * 0.3,
+            size: Math.random() * 2 + 0.8,
+            color: 'rgba(253, 230, 138, 0.6)'
+          });
+        }
+      } else {
+        // Hiking, walks & house: gentle fireflies and forest dust
+        for (let i = 0; i < 60; i++) {
+          wmParticles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 1.2,
+            vy: (Math.random() - 0.5) * 1.2,
+            size: Math.random() * 2.5 + 1,
+            color: 'rgba(245, 230, 202, 0.7)'
+          });
+        }
+      }
+    }
+
+    function renderWmLoop() {
+      if (!wmCtx || !wmCanvas) return;
+      wmCtx.clearRect(0, 0, wmCanvas.width, wmCanvas.height);
+      const w = wmCanvas.width;
+      const h = wmCanvas.height;
+
+      // Backgrounds are now the illustrated SVG layers (see .wm-bg); canvas only draws particles.
+      if (currentWmState === 'city') {
+        // Rain streaks like in animation.html
+        for (let p of wmParticles) {
+          p.x += p.vx; p.y += p.vy;
+          if (p.y > h) { p.y = -20; p.x = Math.random() * w; }
+          wmCtx.beginPath();
+          wmCtx.strokeStyle = p.color;
+          wmCtx.lineWidth = 1.2;
+          wmCtx.moveTo(p.x, p.y);
+          wmCtx.lineTo(p.x + p.vx * 2, p.y + 14 + p.size * 6);
+          wmCtx.stroke();
+        }
+        if (wmVisible) requestAnimationFrame(renderWmLoop); else wmLoopRunning = false;
+        return;
+      }
+
+      // Draw Particles
+      for (let p of wmParticles) {
+        if (p.sway !== undefined) { p.sway += 0.04; p.x += Math.sin(p.sway) * 0.8; }
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Embers respawn at their fire source instead of wrapping around
+        if (p.src && p.y < h * p.src.top) {
+          p.x = w * p.src.x + (Math.random() - 0.5) * p.src.spread;
+          p.y = h * p.src.y;
+          continue;
+        }
+
+        if (p.y > h) p.y = 0;
+        if (p.y < 0) p.y = h;
+        if (p.x > w) p.x = 0;
+        if (p.x < 0) p.x = w;
+
+        wmCtx.beginPath();
+        wmCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        wmCtx.fillStyle = p.color;
+        wmCtx.fill();
+      }
+
+      if (wmVisible) requestAnimationFrame(renderWmLoop); else wmLoopRunning = false;
+    }
+
+    function switchWeekendScene(scene) {
+      currentWmState = scene;
+      const dot = document.getElementById('wm-status-dot');
+      const st = document.getElementById('wm-status-text');
+      const title = document.getElementById('wm-title');
+      const desc = document.getElementById('wm-desc');
+      const prog = document.getElementById('wm-progress');
+
+      // Clear button styles
+      document.querySelectorAll('.wm-nav-btn').forEach(b => {
+        b.classList.remove('bg-white/15', 'text-white');
+        b.classList.add('bg-white/5', 'text-merlin-stone');
+      });
+      document.querySelectorAll('.wm-act-btn').forEach(b => b.classList.remove('border-merlin-gold', 'text-merlin-gold'));
+
+      if (scene === 'city') {
+        document.getElementById('btn-sc-city').classList.add('bg-white/15', 'text-white');
+        dot.className = 'w-2 h-2 rounded-full bg-red-400 animate-ping';
+        st.innerText = 'Actul 1: Pulsul Orașului & Ecrane Aglomerate';
+        title.innerText = 'Haosul Urban';
+        desc.innerText = 'Trafic bară la bară, notificări permanente și zgomot de fond continuu. Simți nevoia de o pauză?';
+        prog.style.width = '25%';
+        adjustAudioTone(110);
+      } else if (scene === 'transit') {
+        document.getElementById('btn-sc-transit').classList.add('bg-white/15', 'text-white');
+        dot.className = 'w-2 h-2 rounded-full bg-amber-400 animate-pulse';
+        st.innerText = 'Tranziție: Drumul spre Robești & Comuna Pârscov';
+        title.innerText = 'Drumul printre Dealuri';
+        desc.innerText = 'La doar 1h 45m de București. Păduri de conifere, aer răcoros de munte și cerul care se deschide.';
+        prog.style.width = '55%';
+        adjustAudioTone(220);
+      } else if (scene === 'house') {
+        document.getElementById('btn-sc-house').classList.add('bg-white/15', 'text-white');
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+        st.innerText = 'Actul 2: Sosirea la Country House by Merlin';
+        title.innerText = 'Oază de Liniște & Lemn Cald';
+        desc.innerText = 'Cinci dormitoare, living primitor, miros de pin și șemineu. Aici timpul curge fără grabă.';
+        prog.style.width = '100%';
+        adjustAudioTone(330);
+      }
+
+      generateWmParticles();
+    }
+
+    function switchWeekendActivity(act) {
+      currentWmState = act;
+      const dot = document.getElementById('wm-status-dot');
+      const st = document.getElementById('wm-status-text');
+      const title = document.getElementById('wm-title');
+      const desc = document.getElementById('wm-desc');
+      const prog = document.getElementById('wm-progress');
+
+      document.querySelectorAll('.wm-act-btn').forEach(b => b.classList.remove('border-merlin-gold', 'text-merlin-gold'));
+      const activeActBtn = document.getElementById(`act-${act}`);
+      if (activeActBtn) activeActBtn.classList.add('border-merlin-gold', 'text-merlin-gold');
+
+      dot.className = 'w-2 h-2 rounded-full bg-merlin-gold animate-pulse';
+      prog.style.width = '100%';
+
+      if (act === 'hiking') {
+        st.innerText = 'Activitate: Drumeții & Explorare pe Dealuri';
+        title.innerText = 'Trasee Montane & Păduri';
+        desc.innerText = 'Poteci domoale prin pădure, panorame spectaculoase și aer curat chiar de la poarta cabanei.';
+        adjustAudioTone(280);
+      } else if (act === 'reading') {
+        st.innerText = 'Activitate: Lectură & Tihnă la Gura Sobei';
+        title.innerText = 'Cărți Bune la Șemineu';
+        desc.innerText = 'Fotolii generoase, trosnetul lemnelor de stejar, ceai cald sau un pahar de vin roșu din Dealu Mare.';
+        adjustAudioTone(190);
+      } else if (act === 'walks') {
+        st.innerText = 'Activitate: Plimbări în Natură & Livezi';
+        title.innerText = 'Respirație în Aer Curat';
+        desc.innerText = 'Plimbări pe ulițele liniștite din Robești, prin livezi parfumate și dealuri scăldate în soare.';
+        adjustAudioTone(310);
+      } else if (act === 'firepit') {
+        st.innerText = 'Activitate: Foc de Tabără sub Stele';
+        title.innerText = 'Seri Lungi la Focul din Curte';
+        desc.innerText = 'Povești alături de cei apropiați, scântei zburând spre cerul senin și vin fiert în răcoarea nopții.';
+        adjustAudioTone(165);
+      }
+
+      generateWmParticles();
+    }
+
+    // Procedural Ambient Synth for the section
+    function toggleWeekendAudio() {
+      if (!wmAudioCtx) {
+        const AudioClass = window.AudioContext || window.webkitAudioContext;
+        wmAudioCtx = new AudioClass();
+        
+        wmOsc1 = wmAudioCtx.createOscillator();
+        wmOsc2 = wmAudioCtx.createOscillator();
+        const gainNode = wmAudioCtx.createGain();
+
+        gainNode.gain.setValueAtTime(0.04, wmAudioCtx.currentTime);
+        wmOsc1.type = 'sine';
+        wmOsc2.type = 'triangle';
+        wmOsc1.frequency.setValueAtTime(160, wmAudioCtx.currentTime);
+        wmOsc2.frequency.setValueAtTime(240, wmAudioCtx.currentTime);
+
+        wmOsc1.connect(gainNode);
+        wmOsc2.connect(gainNode);
+        gainNode.connect(wmAudioCtx.destination);
+
+        wmOsc1.start();
+        wmOsc2.start();
+      }
+
+      if (!wmAudioPlaying) {
+        wmAudioCtx.resume();
+        wmAudioPlaying = true;
+        document.getElementById('wm-audio-icon').innerText = '🔊';
+        document.getElementById('wm-audio-label').innerText = 'Sunet: Pornit';
+      } else {
+        wmAudioCtx.suspend();
+        wmAudioPlaying = false;
+        document.getElementById('wm-audio-icon').innerText = '🔇';
+        document.getElementById('wm-audio-label').innerText = 'Sunet: Oprit';
+      }
+    }
+
+    function adjustAudioTone(freq) {
+      if (wmAudioCtx && wmOsc1) {
+        wmOsc1.frequency.setTargetAtTime(freq, wmAudioCtx.currentTime, 0.2);
+        if (wmOsc2) wmOsc2.frequency.setTargetAtTime(freq * 1.5, wmAudioCtx.currentTime, 0.2);
+      }
+    }
+
+    // Initialize Canvas on load
+    window.addEventListener('load', () => {
+      resizeWmCanvas();
+      initWmAutoplay();
+    });
+
+    // --- Scene layer sync + autoplay (ported from animation.html timeline) ---
+    let wmVisible = false;
+    let wmLoopRunning = false;
+    let wmAutoTimer = null;
+    let wmUserControl = false;
+    const wmSequence = ['city', 'transit', 'house'];
+    const wmBgMap = { city: 0, transit: 1, house: 2, hiking: 3, reading: 4, walks: 5, firepit: 6 };
+
+    function setWmBackground() {
+      const idx = wmBgMap[currentWmState] ?? 0;
+      document.querySelectorAll('.wm-bg').forEach(el => {
+        el.classList.toggle('is-active', Number(el.dataset.wmBg) === idx);
+      });
+      // Soft text swap
+      ['wm-title', 'wm-desc'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.classList.add('wm-text-out');
+        requestAnimationFrame(() => setTimeout(() => el.classList.remove('wm-text-out'), 60));
+      });
+    }
+
+    function startWmLoop() {
+      if (wmLoopRunning) return;
+      wmLoopRunning = true;
+      requestAnimationFrame(renderWmLoop);
+    }
+
+    function startWmAutoplay() {
+      if (wmUserControl || wmAutoTimer) return;
+      wmAutoTimer = setInterval(() => {
+        const i = wmSequence.indexOf(currentWmState);
+        switchWeekendScene(wmSequence[(i + 1) % wmSequence.length]);
+      }, 6000);
+    }
+
+    function stopWmAutoplay() {
+      clearInterval(wmAutoTimer);
+      wmAutoTimer = null;
+    }
+
+    function initWmAutoplay() {
+      // Any manual click on a scene/activity hands control to the visitor
+      document.querySelectorAll('.wm-nav-btn, .wm-act-btn').forEach(btn =>
+        btn.addEventListener('click', () => { wmUserControl = true; stopWmAutoplay(); })
+      );
+
+      const stage = wmCanvas ? wmCanvas.parentElement : null;
+      if (!stage || !('IntersectionObserver' in window)) {
+        wmVisible = true; startWmLoop(); startWmAutoplay();
+        return;
+      }
+      new IntersectionObserver(entries => {
+        wmVisible = entries[0].isIntersecting;
+        if (wmVisible) {
+          startWmLoop();
+          if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) startWmAutoplay();
+        } else {
+          stopWmAutoplay();
+        }
+      }, { threshold: 0.35 }).observe(stage);
+    }
+
+    // --- FULL EXPERIENCE POPUP: loads animation.html in an iframe ---
+    function openMotionExperience() {
+      const modal = document.getElementById('motionModal');
+      const frame = document.getElementById('motionFrame');
+      stopWmAutoplay();
+      if (wmAudioPlaying) toggleWeekendAudio();
+      frame.src = 'animation.html';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('motionCloseBtn').focus();
+    }
+
+    function closeMotionExperience() {
+      const modal = document.getElementById('motionModal');
+      const frame = document.getElementById('motionFrame');
+      modal.classList.add('hidden');
+      frame.src = 'about:blank'; // unload -> stops its audio & timers
+      document.body.style.overflow = 'auto';
+      if (wmVisible) startWmAutoplay();
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !document.getElementById('motionModal').classList.contains('hidden')) {
+        closeMotionExperience();
+      }
+    });
+  </script>
+
+</body>
+</html>

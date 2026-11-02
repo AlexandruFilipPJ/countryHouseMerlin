@@ -335,4 +335,15 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// Language switcher navigation
+document.querySelectorAll('.lang-switch a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    if (href && href !== '#') {
+      window.location.href = href;
+    }
+  });
+});
 </script>

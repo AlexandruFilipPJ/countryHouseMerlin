@@ -563,7 +563,7 @@ footer {
     </nav>
     <div class="lang-switch">
       <a href="/ro/" class="active">RO</a>
-      <a href="/en/">EN</a>
+      <a href="/">EN</a>
     </div>
     <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
@@ -581,7 +581,7 @@ footer {
 <main>
   <section class="hero">
     <h1>Bine ai venit la casă</h1>
-    <div class="hero-image"></div>
+    <iframe src="../animation.html" style="width: 100%; height: 600px; border: none; border-radius: 8px; margin: var(--spacing-lg) 0; display: block;"></iframe>
     <p>O fugă la țară cu sufletul orașului. Cinci dormitoare în Robești, Buzău, unde weekendurile s-au făcut cu prietenii, celebrări și poveștile care merită spuse.</p>
     <div class="button-group">
       <button class="check-availability" onclick="scrollTo('the-house')"><i class="fas fa-home" style="margin-right: 0.5rem;"></i>Explorează casa</button>
@@ -815,4 +815,186 @@ document.querySelectorAll('#mobileMenu a').forEach(link => {
     document.getElementById('mobileMenu').classList.remove('active');
   });
 });
+
+// Language switcher navigation
+document.querySelectorAll('.lang-switch a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    if (href && href !== '#') {
+      window.location.href = href;
+    }
+  });
+});
+
+// Hero Animation: City to Cabin Transition
+const canvas = document.getElementById('heroAnimation');
+if (canvas) {
+  const ctx = canvas.getContext('2d');
+  let animationTime = 0;
+  const totalDuration = 6000; // 6 seconds
+
+  function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  function drawPerson(x, y, stressLevel = 0.5, activity = 'idle') {
+    // Body
+    ctx.fillStyle = '#FFB6C1';
+    ctx.fillRect(x, y, 12, 18);
+
+    // Head
+    ctx.beginPath();
+    ctx.arc(x + 6, y - 3, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Stressed or relaxed expression
+    if (stressLevel > 0.5) {
+      ctx.fillStyle = '#000';
+      ctx.fillRect(x + 3, y - 4, 2, 1);
+      ctx.fillRect(x + 7, y - 4, 2, 1);
+    }
+
+    // Activity-based arms
+    if (activity === 'relax') {
+      ctx.strokeStyle = '#FFB6C1';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(x, y + 5);
+      ctx.lineTo(x - 4, y + 8);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x + 12, y + 5);
+      ctx.lineTo(x + 16, y + 8);
+      ctx.stroke();
+    }
+  }
+
+  function drawBuilding(x, y, width, height) {
+    ctx.fillStyle = '#C0C0C0';
+    ctx.fillRect(x, y, width, height);
+
+    // Windows
+    ctx.fillStyle = '#FFD700';
+    for (let i = 0; i < width / 15; i++) {
+      for (let j = 0; j < height / 20; j++) {
+        ctx.fillRect(x + 5 + i * 15, y + 5 + j * 20, 8, 8);
+      }
+    }
+  }
+
+  function drawCabin(x, y) {
+    // Roof
+    ctx.fillStyle = '#8B4513';
+    ctx.beginPath();
+    ctx.moveTo(x, y + 40);
+    ctx.lineTo(x + 50, y);
+    ctx.lineTo(x + 100, y + 40);
+    ctx.closePath();
+    ctx.fill();
+
+    // Walls
+    ctx.fillStyle = '#D2691E';
+    ctx.fillRect(x + 10, y + 40, 80, 50);
+
+    // Door
+    ctx.fillStyle = '#8B4513';
+    ctx.fillRect(x + 40, y + 70, 20, 20);
+
+    // Windows
+    ctx.fillStyle = '#FFD700';
+    ctx.fillRect(x + 20, y + 50, 15, 15);
+    ctx.fillRect(x + 65, y + 50, 15, 15);
+  }
+
+  function drawTree(x, y) {
+    // Trunk
+    ctx.fillStyle = '#8B4513';
+    ctx.fillRect(x - 3, y, 6, 30);
+
+    // Leaves
+    ctx.fillStyle = '#228B22';
+    ctx.beginPath();
+    ctx.arc(x, y - 5, 20, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function drawFireplace(x, y) {
+    ctx.fillStyle = '#696969';
+    ctx.fillRect(x, y, 30, 25);
+
+    ctx.fillStyle = '#FF4500';
+    ctx.fillRect(x + 5, y + 5, 20, 15);
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const progress = (animationTime % totalDuration) / totalDuration;
+
+    if (progress < 0.5) {
+      // City Scene (0 to 0.5)
+      const cityProgress = progress * 2;
+
+      // Draw buildings
+      drawBuilding(20, 80, 40, 100);
+      drawBuilding(80, 70, 45, 110);
+      drawBuilding(140, 90, 40, 90);
+
+      // Draw stressed people in city
+      for (let i = 0; i < 5; i++) {
+        const stressWalk = Math.sin(animationTime / 200 + i) * 5;
+        drawPerson(40 + i * 30 + stressWalk, 180, 1, 'busy');
+      }
+
+      // City label
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+      ctx.font = 'bold 16px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Scapă din haos', canvas.width / 2, 40);
+
+      // Fade out transition
+      ctx.fillStyle = `rgba(255, 255, 255, ${cityProgress * 0.5})`;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    } else {
+      // Cabin Scene (0.5 to 1)
+      const cabinProgress = (progress - 0.5) * 2;
+
+      // Draw nature
+      drawTree(80, 100);
+      drawTree(220, 110);
+      drawTree(320, 105);
+
+      // Draw cabin
+      drawCabin(120, 120);
+
+      // Draw relaxed people doing activities
+      drawPerson(160, 200, 0.2, 'relax'); // Reading
+      drawPerson(240, 195, 0.1, 'relax'); // Relaxing
+      drawPerson(200, 220, 0.15, 'relax'); // Sitting
+
+      // Draw fireplace inside
+      drawFireplace(135, 155);
+
+      // Cabin label
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+      ctx.font = 'bold 16px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Găsește liniștea', canvas.width / 2, 40);
+
+      // Fade in
+      ctx.fillStyle = `rgba(255, 255, 255, ${(1 - cabinProgress) * 0.3})`;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    animationTime += 16;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
 </script>

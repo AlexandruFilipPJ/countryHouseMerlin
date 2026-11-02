@@ -4,7 +4,7 @@
 <meta name="lang" content="ro">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="ro" href="https://countryhousebymerlin.com/ro/merlin-story.html">
-<link rel="alternate" hreflang="en" href="https://countryhousebymerlin.com/en/merlin-story.html">
+<link rel="alternate" hreflang="en" href="https://countryhousebymerlin.com/merlin-story.html">
 <link rel="canonical" href="https://countryhousebymerlin.com/ro/merlin-story.html">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
@@ -259,7 +259,7 @@ h2 i {
     <a href="index.html" class="back-link"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>Înapoi la casă</a>
     <div class="lang-switch">
       <a href="/ro/merlin-story.html" class="active">RO</a>
-      <a href="/en/merlin-story.html">EN</a>
+      <a href="/merlin-story.html">EN</a>
     </div>
   </div>
 </header>
@@ -332,6 +332,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const href = link.getAttribute('href');
     if (href === '#' || href === '') {
       e.preventDefault();
+    }
+  });
+});
+
+// Language switcher navigation
+document.querySelectorAll('.lang-switch a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    if (href && href !== '#') {
+      window.location.href = href;
     }
   });
 });

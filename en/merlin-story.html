@@ -259,7 +259,7 @@ h2 i {
     <a href="index.html" class="back-link"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>Back to House</a>
     <div class="lang-switch">
       <a href="/ro/merlin-story.html">RO</a>
-      <a href="/en/merlin-story.html" class="active">EN</a>
+      <a href="/merlin-story.html" class="active">EN</a>
     </div>
   </div>
 </header>
@@ -332,6 +332,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const href = link.getAttribute('href');
     if (href === '#' || href === '') {
       e.preventDefault();
+    }
+  });
+});
+
+// Language switcher navigation
+document.querySelectorAll('.lang-switch a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    if (href && href !== '#') {
+      window.location.href = href;
     }
   });
 });
