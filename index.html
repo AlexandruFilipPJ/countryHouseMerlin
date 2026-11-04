@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Country House by Merlin | Country Living Reinterpretat în Robești, Buzău</title>
+  <meta name="description" content="Country House by Merlin – casă la țară cu cinci dormitoare în Robești, comuna Pârscov, Buzău. Pentru weekenduri cu prietenii, aniversări și micro-offsite-uri. Rezervări pe WhatsApp.">
+  <meta name="theme-color" content="#F5EDE1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Country House by Merlin">
+  <meta property="og:description" content="Country living reinterpretat. O casă cu cinci dormitoare în Robești, Buzău, pentru escapade din oraș.">
+  <meta property="og:image" content="assets/img/curte-panorama.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,16 +29,23 @@
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
+            // Paleta "Country House by Merlin" (moodboard): Baby Blue, Antracit, Crem Cald,
+            // Stejar Natur, Piatră Naturală, Vișiniu, Grej
             merlin: {
-              oat: '#F6F3EE',
-              stone: '#EAE5DC',
-              clay: '#85543A',
-              pine: '#192C23',
-              darkForest: '#0E1C15',
-              charcoal: '#1A1C1B',
-              terracotta: '#C86D51',
-              gold: '#D6A660',
-              goldLight: '#F5E6CA'
+              oat: '#F5EDE1',        // Crem Cald – fundal principal
+              card: '#FBF7F0',       // Crem deschis – carduri
+              stone: '#E6D9C6',      // Piatră Naturală – borduri, suprafețe
+              clay: '#7A1F2E',       // Vișiniu – accent principal
+              wineDark: '#5E1622',   // Vișiniu închis – hover
+              pine: '#2F3237',       // Antracit – titluri, butoane secundare
+              darkForest: '#26292D', // Antracit închis – secțiuni întunecate
+              charcoal: '#2B2A28',   // Text
+              terracotta: '#B04A5A', // Vișiniu deschis – accent pe fundal închis
+              gold: '#D6B07C',       // Stejar Natur
+              goldLight: '#EFDFC4',  // Stejar deschis
+              sky: '#C7DBEE',        // Baby Blue
+              skyLight: '#E4EEF7',   // Baby Blue deschis
+              greige: '#8C857A'      // Grej
             }
           }
         }
@@ -42,16 +56,29 @@
   <style>
     /* Smooth custom styling */
     body {
-      background-color: #F6F3EE;
-      color: #1A1C1B;
+      background-color: #F5EDE1;
+      color: #2B2A28;
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
     }
 
+    /* Carusel curte: ascunde bara de scroll */
+    .oc-track { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .oc-track::-webkit-scrollbar { display: none; }
+    .oc-dots .oc-dot { width: 8px; height: 8px; border-radius: 9999px; background-color: #D9C9B2; transition: all .3s; }
+    .oc-dots .oc-dot.is-active { width: 26px; background-color: #7A1F2E; }
+
     ::selection {
-      background: #D6A660;
-      color: #0E1C15;
+      background: #7A1F2E;
+      color: #F5EDE1;
     }
+
+    /* Titlu de secțiune în stilul moodboard-ului: serif cu majuscule, linii fine lateral */
+    .mb-rule { display: inline-flex; align-items: center; gap: .85rem; }
+    .mb-rule::before, .mb-rule::after {
+      content: ""; width: 2.25rem; height: 1px; background: currentColor; opacity: .45;
+    }
+
 
     /* Subtle grain overlay */
     .bg-grain {
@@ -97,7 +124,18 @@
     @keyframes wmDash { to { stroke-dashoffset: -380; } }
     .wm-traffic { animation: wmDash 2.4s linear infinite; }
     .wm-traffic-rev { animation: wmDash 3s linear infinite reverse; }
-    #wm-title, #wm-desc { transition: opacity 0.5s ease, transform 0.5s ease; }
+    #wm-title, #wm-desc { transition: opacity 0.5s ease, transform 0.5s ease, color 0.5s ease; }
+    @keyframes wmSpin { to { transform: rotate(360deg); } }
+    .wm-sun-rays { animation: wmSpin 40s linear infinite; }
+    @keyframes wmCloud { 0%,100% { transform: translateX(0); } 50% { transform: translateX(40px); } }
+    .wm-cloud { animation: wmCloud 18s ease-in-out infinite; }
+    .wm-cloud-b { animation-duration: 24s; animation-delay: -6s; }
+    /* Scene luminoase: text închis, fără vignetă întunecată */
+    #wm-stage.wm-light #wm-title { color: #2F3237; text-shadow: 0 1px 12px rgba(255,255,255,.7); }
+    #wm-stage.wm-light #wm-desc { color: rgba(47,50,55,.88); text-shadow: 0 1px 10px rgba(255,255,255,.8); }
+    #wm-stage.wm-light #wm-text { transform: translateY(-48px); padding-top: .75rem; padding-bottom: .75rem; background: rgba(251,247,240,.78); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(47,50,55,.12); }
+    #wm-stage.wm-light button:not(#wm-fullscreen-btn) { background: rgba(47,50,55,.78); color: #F5EDE1; border-color: transparent; }
+    #wm-vignette.wm-light-vignette { background: radial-gradient(ellipse at center, rgba(255,255,255,.5), transparent 60%); }
     .wm-text-out { opacity: 0 !important; transform: translateY(8px); }
     /* Activity scene animations */
     @keyframes wmFlame { 0%,100% { transform: scaleY(1) scaleX(1); } 25% { transform: scaleY(1.12) scaleX(0.94); } 50% { transform: scaleY(0.92) scaleX(1.05); } 75% { transform: scaleY(1.08) scaleX(0.97); } }
@@ -117,7 +155,7 @@
     @keyframes wmTwinkle { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
     .wm-twinkle { animation: wmTwinkle 2.5s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .wm-flame, .wm-glow-pulse, .wm-sway, .wm-walk, .wm-trail, .wm-steam, .wm-twinkle { animation: none !important; }
+      .wm-flame, .wm-glow-pulse, .wm-sway, .wm-sun-rays, .wm-cloud, .wm-walk, .wm-trail, .wm-steam, .wm-twinkle { animation: none !important; }
     }
     @media (prefers-reduced-motion: reduce) {
       .wm-bg, .wm-smoke-1, .wm-smoke-2, .wm-smoke-3, .wm-glitch-line, .wm-traffic, .wm-traffic-rev { animation: none !important; transition: opacity 0.3s !important; }
@@ -132,11 +170,11 @@
       
       <!-- Brand Logo -->
       <a href="#" class="group flex flex-col">
-        <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-merlin-pine group-hover:text-merlin-clay transition-colors leading-none">
-          Country House
+        <span class="font-serif text-base sm:text-xl font-semibold uppercase tracking-[0.08em] sm:tracking-[0.14em] text-merlin-clay group-hover:text-merlin-wineDark transition-colors leading-none">
+          Country House <span class="normal-case italic font-normal tracking-normal">by</span> Merlin
         </span>
-        <span class="text-[11px] sm:text-xs font-serif italic text-merlin-clay tracking-wider mt-0.5">
-          by Merlin &bull; Robești
+        <span class="text-[11px] sm:text-xs font-serif italic text-merlin-pine/70 tracking-wider mt-1">
+          Robești &bull; Buzău
         </span>
       </a>
 
@@ -163,7 +201,7 @@
 
         <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20o%20escapad%C4%83%20la%20Country%20House%20by%20Merlin." 
            target="_blank" rel="noopener noreferrer"
-           class="px-5 py-2.5 rounded-full bg-merlin-pine hover:bg-merlin-darkForest text-merlin-oat text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md flex items-center space-x-2">
+           class="px-5 py-2.5 rounded-full bg-merlin-clay hover:bg-merlin-wineDark text-merlin-oat text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md flex items-center space-x-2">
           <span>Check availability</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
@@ -201,10 +239,10 @@
   <section class="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-merlin-darkForest text-merlin-oat py-16 sm:py-24">
     <!-- Atmospheric High-Res Background with warm twilight lighting -->
     <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=80" 
-           alt="Country House by Merlin fațadă și dealuri" 
-           class="w-full h-full object-cover object-center brightness-[0.42] scale-105 duration-1000 ease-out transition-transform" />
-      <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest via-merlin-darkForest/30 to-merlin-darkForest/60"></div>
+      <img src="assets/img/curte-panorama.jpg" 
+           alt="Curtea Country House by Merlin: bar circular, zona dining, lounge, jacuzzi, saună și vatra de foc" 
+           class="w-full h-full object-cover object-center brightness-[0.58] scale-105 duration-1000 ease-out transition-transform" />
+      <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/90 via-merlin-darkForest/20 to-merlin-darkForest/50"></div>
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center flex flex-col items-center">
@@ -236,7 +274,7 @@
            target="_blank" rel="noopener noreferrer"
            class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 backdrop-blur-md text-merlin-oat font-semibold text-xs uppercase tracking-widest transition-all duration-300 flex items-center justify-center space-x-2">
           <span>Check availability</span>
-          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.539 1.95.824 2.791.825h.002c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.766c0 5.422-4.408 9.83-9.83 9.83-1.66 0-3.262-.42-4.673-1.218L2 22l1.656-5.328C2.81 15.228 2.37 13.639 2.37 11.938 2.37 6.516 6.778 2.108 12.2 2.108s9.8 4.408 9.8 9.83z"/></svg>
+          <svg class="w-4 h-4 text-merlin-sky" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.539 1.95.824 2.791.825h.002c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.766c0 5.422-4.408 9.83-9.83 9.83-1.66 0-3.262-.42-4.673-1.218L2 22l1.656-5.328C2.81 15.228 2.37 13.639 2.37 11.938 2.37 6.516 6.778 2.108 12.2 2.108s9.8 4.408 9.8 9.83z"/></svg>
         </a>
       </div>
 
@@ -274,7 +312,7 @@
     <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-merlin-stone pb-8">
       <div>
-        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">1.2 Spațiul & Detaliile</span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Spațiul & Detaliile</span>
         <h2 class="font-serif text-4xl sm:text-5xl font-bold text-merlin-pine tracking-tight mt-2">
           The House
         </h2>
@@ -310,8 +348,8 @@
       <!-- Photo 2 -->
       <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
            data-category="living" 
-           onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80', 'Living generos cu șemineu și canapele confortabile pentru seri lungi')">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Living Country House" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+           onclick="openLightbox('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80', 'Living generos cu șemineu și canapele confortabile pentru seri lungi')">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Living Country House" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
           <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Living & Social</span>
@@ -334,12 +372,12 @@
       <!-- Photo 4 -->
       <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
            data-category="curte" 
-           onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80', 'Curtea generoasă cu vedere spre dealurile Buzăului și spațiu de foc de tabără')">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Curte și terasă verde" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+           onclick="openLightbox('assets/img/pergola.jpg', 'Pergola și curtea, cu livada în jur')">
+        <img src="assets/img/pergola.jpg" alt="Curte și terasă verde" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
           <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Curte & Terasă</span>
-          <h4 class="font-serif text-lg font-semibold">Aer tare de munte & cer liber</h4>
+          <h4 class="font-serif text-lg font-semibold">Pergola, livada & cer liber</h4>
         </div>
       </div>
 
@@ -358,45 +396,94 @@
       <!-- Photo 6 -->
       <div class="gallery-item group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
            data-category="curte" 
-           onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80', 'Zona de cafea și relaxare în aer liber')">
-        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Loc de relaxare exterior" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+           onclick="openLightbox('assets/img/terasa-leagan.jpg', 'Leagănul de pe terasă – cafeaua de dimineață')">
+        <img src="assets/img/terasa-leagan.jpg" alt="Loc de relaxare exterior" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
         <div class="absolute inset-0 bg-gradient-to-t from-merlin-darkForest/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-4 left-4 right-4 text-white">
-          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Terasă de Lemn</span>
+          <span class="text-[10px] uppercase tracking-wider text-merlin-goldLight">Terasă & Leagăn</span>
           <h4 class="font-serif text-lg font-semibold">Cafeaua de dimineață la soare</h4>
         </div>
       </div>
 
     </div>
 
+    <!-- Curtea: cele 6 zone din moodboard -->
+    <div class="mt-20">
+      <div class="text-center mb-8">
+        <p class="mb-rule font-serif text-sm sm:text-base uppercase tracking-[0.22em] text-merlin-clay">Curtea & Terasa</p>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine mt-3">Afară e jumătate din casă</h3>
+        <p class="text-sm text-merlin-charcoal/70 max-w-xl mx-auto mt-3 font-light leading-relaxed">
+          Șase colțuri pentru același weekend: aperitive la bar, cină lungă sub pergolă, după-amiezi în lounge și seri între saună, jacuzzi și foc.
+        </p>
+      </div>
+      <!-- Carusel: swipe pe telefon, săgeți + puncte pe desktop, autoplay oprit la hover -->
+      <div id="outdoorCarousel" class="relative" role="region" aria-roledescription="carusel" aria-label="Zonele din curte">
+        <div class="oc-track flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2" tabindex="0">
+        <figure class="oc-slide group cursor-pointer shrink-0 snap-start w-[82%] sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]" onclick="openLightbox('assets/img/bar-circular.jpg', 'Bar circular – aperitive, cafea și povești la apus')">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="assets/img/bar-circular.jpg" alt="Bar circular" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"></div>
+          <figcaption class="mt-2.5 text-center font-serif text-xs sm:text-sm uppercase tracking-[0.16em] text-merlin-pine">Bar circular</figcaption>
+        </figure>
+        <figure class="oc-slide group cursor-pointer shrink-0 snap-start w-[82%] sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]" onclick="openLightbox('assets/img/zona-dining.jpg', 'Zona dining – masă lungă pentru zece, sub pergolă')">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="assets/img/zona-dining.jpg" alt="Zona dining" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"></div>
+          <figcaption class="mt-2.5 text-center font-serif text-xs sm:text-sm uppercase tracking-[0.16em] text-merlin-pine">Zona dining</figcaption>
+        </figure>
+        <figure class="oc-slide group cursor-pointer shrink-0 snap-start w-[82%] sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]" onclick="openLightbox('assets/img/zona-lounge.jpg', 'Zona lounge – pufuri, leagăn și după-amieze lente')">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="assets/img/zona-lounge.jpg" alt="Zona lounge" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"></div>
+          <figcaption class="mt-2.5 text-center font-serif text-xs sm:text-sm uppercase tracking-[0.16em] text-merlin-pine">Zona lounge</figcaption>
+        </figure>
+        <figure class="oc-slide group cursor-pointer shrink-0 snap-start w-[82%] sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]" onclick="openLightbox('assets/img/jacuzzi.jpg', 'Jacuzzi în aer liber')">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="assets/img/jacuzzi.jpg" alt="Jacuzzi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"></div>
+          <figcaption class="mt-2.5 text-center font-serif text-xs sm:text-sm uppercase tracking-[0.16em] text-merlin-pine">Jacuzzi</figcaption>
+        </figure>
+        <figure class="oc-slide group cursor-pointer shrink-0 snap-start w-[82%] sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]" onclick="openLightbox('assets/img/sauna.jpg', 'Saună din lemn, cu vedere spre livadă')">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="assets/img/sauna.jpg" alt="Saună" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"></div>
+          <figcaption class="mt-2.5 text-center font-serif text-xs sm:text-sm uppercase tracking-[0.16em] text-merlin-pine">Saună</figcaption>
+        </figure>
+        <figure class="oc-slide group cursor-pointer shrink-0 snap-start w-[82%] sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]" onclick="openLightbox('assets/img/vatra-de-foc.jpg', 'Vatra de foc din piatră naturală')">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden"><img src="assets/img/vatra-de-foc.jpg" alt="Vatra de foc" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700"></div>
+          <figcaption class="mt-2.5 text-center font-serif text-xs sm:text-sm uppercase tracking-[0.16em] text-merlin-pine">Vatra de foc</figcaption>
+        </figure>
+        </div>
+
+        <button type="button" class="oc-prev hidden sm:flex absolute left-0 top-[38%] -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-merlin-card/95 border border-merlin-stone shadow-md items-center justify-center text-merlin-clay hover:bg-merlin-clay hover:text-merlin-oat transition disabled:opacity-0" aria-label="Imaginea anterioară">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button type="button" class="oc-next hidden sm:flex absolute right-0 top-[38%] translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-merlin-card/95 border border-merlin-stone shadow-md items-center justify-center text-merlin-clay hover:bg-merlin-clay hover:text-merlin-oat transition disabled:opacity-0" aria-label="Imaginea următoare">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="oc-dots mt-6 flex justify-center gap-2"></div>
+      </div>
+    </div>
+
     <!-- Essential Amenities Badges -->
     <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+      <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone text-center">
         <span class="text-2xl mb-1 block">🛏️</span>
         <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">5 Dormitoare</h5>
         <p class="text-[11px] text-merlin-charcoal/70 mt-1">Până la 10 oaspeți</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+      <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone text-center">
         <span class="text-2xl mb-1 block">🚿</span>
         <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">2 Băi Comune</h5>
         <p class="text-[11px] text-merlin-charcoal/70 mt-1">Moderne & spațioase</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+      <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone text-center">
         <span class="text-2xl mb-1 block">🍳</span>
         <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Bucătărie Utilată</h5>
         <p class="text-[11px] text-merlin-charcoal/70 mt-1">Gătit în voie colectiv</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+      <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone text-center">
         <span class="text-2xl mb-1 block">🍷</span>
         <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Living Generos</h5>
         <p class="text-[11px] text-merlin-charcoal/70 mt-1">Spațiu cald de socializare</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+      <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone text-center">
         <span class="text-2xl mb-1 block">🌿</span>
         <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Grădină & Terasă</h5>
         <p class="text-[11px] text-merlin-charcoal/70 mt-1">Curte mare și privată</p>
       </div>
-      <div class="p-5 rounded-2xl bg-white/70 border border-merlin-stone text-center">
+      <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone text-center">
         <span class="text-2xl mb-1 block">🐾</span>
         <h5 class="font-semibold text-xs text-merlin-pine uppercase tracking-wider">Pet Friendly</h5>
         <p class="text-[11px] text-merlin-charcoal/70 mt-1">Animalele sunt binevenite</p>
@@ -425,22 +512,22 @@
 
 
   <!-- ==================== 1.3 MAKE IT YOUR WEEKEND & LOCAL SURROUNDINGS ==================== -->
-  <section id="your-weekend" class="py-20 sm:py-28 bg-merlin-darkForest text-merlin-oat">
+  <section id="your-weekend" class="py-20 sm:py-28 bg-merlin-oat border-y border-merlin-stone">
     <div class="max-w-7xl mx-auto px-5 sm:px-8">
       
       <!-- Section Intro -->
       <div class="max-w-2xl mb-12">
-        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-gold">1.3 Experiențe Reinterpretate</span>
-        <h2 class="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-merlin-oat mt-2">
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Experiențe Reinterpretate</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-merlin-pine mt-2">
           Make it your weekend
         </h2>
-        <p class="text-sm sm:text-base text-merlin-stone/80 font-light mt-3 leading-relaxed">
+        <p class="text-sm sm:text-base text-merlin-charcoal/70 font-light mt-3 leading-relaxed">
           Urmărește trecerea de la pulsul agitat al orașului la calmul dealurilor din Buzău și descoperă cum poți trăi zilele la Country House by Merlin.
         </p>
       </div>
 
       <!-- INLINE MOTION GRAPHIC SHOWCASE: City to Mountain & Weekend Activities -->
-      <div class="mb-20 rounded-3xl overflow-hidden border border-white/15 bg-merlin-charcoal/80 shadow-2xl relative">
+      <div class="mb-20 rounded-3xl overflow-hidden border border-merlin-stone bg-merlin-charcoal shadow-2xl relative text-merlin-oat">
         
         <!-- Interactive Canvas & Atmospheric Backdrop -->
         <div class="relative w-full h-[420px] sm:h-[500px] overflow-hidden bg-slate-950 flex items-center justify-center">
@@ -493,56 +580,80 @@
               </svg>
             </div>
 
-            <!-- BG 2: Arrival at the house (twilight, smoking chimney) -->
+            <!-- BG 2: Sosirea la casă – după-amiază însorită, livadă, flori -->
             <div class="wm-bg" data-wm-bg="2">
-              <div class="absolute inset-0 bg-gradient-to-b from-[#08131d] via-[#102422] to-[#0c1a16]"></div>
-              <div class="absolute inset-0 opacity-70">
-                <div class="absolute top-[12%] left-[18%] w-1.5 h-1.5 bg-white rounded-full animate-ping"></div>
-                <div class="absolute top-[22%] left-[45%] w-1 h-1 bg-amber-200 rounded-full animate-pulse"></div>
-                <div class="absolute top-[15%] right-[25%] w-1 h-1 bg-white rounded-full animate-pulse"></div>
-                <div class="absolute top-[28%] right-[15%] w-1.5 h-1.5 bg-amber-100 rounded-full"></div>
-                <div class="absolute top-[8%] left-[70%] w-1 h-1 bg-white rounded-full"></div>
-              </div>
-              <svg class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[85%]" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMax meet">
-                <defs>
-                  <filter id="wmWindowGlow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur stdDeviation="6" result="blur"/>
-                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-                  </filter>
-                </defs>
-                <path d="M 0 450 L 150 350 L 350 480 L 520 370 L 780 490 L 950 380 L 1000 420 L 1000 600 L 0 600 Z" fill="#091814"/>
-                <g fill="#07120e">
-                  <polygon points="120,530 80,420 160,420"/><polygon points="120,440 90,360 150,360"/><polygon points="120,380 100,310 140,310"/>
-                  <polygon points="210,540 180,450 240,450"/><polygon points="210,470 190,400 230,400"/>
-                  <polygon points="850,540 810,430 890,430"/><polygon points="850,450 820,370 880,370"/><polygon points="850,390 830,320 870,320"/>
-                  <polygon points="920,550 890,460 950,460"/>
+              <div class="absolute inset-0 bg-gradient-to-b from-[#9fc6e8] via-[#cfe2f1] to-[#f6ead6]"></div>
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+                <!-- Soare cu raze care se rotesc lent -->
+                <g transform="translate(20 175)">
+                <circle class="wm-glow-pulse" cx="1150" cy="150" r="190" fill="#FFF3C4" opacity="0.55" filter="blur(30px)"/>
+                <g class="wm-sun-rays" style="transform-origin:1150px 150px">
+                  <g stroke="#FFE7A3" stroke-width="6" stroke-linecap="round" opacity="0.8">
+                    <line x1="1150" y1="40" x2="1150" y2="70"/><line x1="1150" y1="230" x2="1150" y2="260"/>
+                    <line x1="1040" y1="150" x2="1070" y2="150"/><line x1="1230" y1="150" x2="1260" y2="150"/>
+                    <line x1="1072" y1="72" x2="1093" y2="93"/><line x1="1207" y1="207" x2="1228" y2="228"/>
+                    <line x1="1228" y1="72" x2="1207" y2="93"/><line x1="1093" y1="207" x2="1072" y2="228"/>
+                  </g>
                 </g>
-                <g opacity="0.65" fill="#f1f5f9">
-                  <circle cx="650" cy="210" r="14" class="wm-smoke-1" filter="blur(5px)"/>
-                  <circle cx="650" cy="210" r="18" class="wm-smoke-2" filter="blur(7px)"/>
-                  <circle cx="650" cy="210" r="22" class="wm-smoke-3" filter="blur(9px)"/>
+                <circle cx="1150" cy="150" r="62" fill="#FFE08A"/>
+                <circle cx="1150" cy="150" r="50" fill="#FFEDB0"/>
                 </g>
-                <polygon points="340,380 500,240 660,380 660,540 340,540" fill="#382318" stroke="#25160e" stroke-width="4"/>
-                <polygon points="320,385 500,230 680,385 660,395 500,250 340,395" fill="#20130c"/>
-                <rect x="635" y="225" width="28" height="90" fill="#332c28" stroke="#1d1917" stroke-width="2"/>
-                <rect x="631" y="220" width="36" height="10" fill="#231e1c"/>
-                <g stroke="#2b1a12" stroke-width="3">
-                  <line x1="345" y1="410" x2="655" y2="410"/><line x1="345" y1="440" x2="655" y2="440"/>
-                  <line x1="345" y1="470" x2="655" y2="470"/><line x1="345" y1="500" x2="655" y2="500"/>
+                <g transform="translate(0 170)">
+                <!-- Nori care plutesc -->
+                <g class="wm-cloud" fill="#ffffff" opacity="0.92">
+                  <ellipse cx="260" cy="150" rx="90" ry="30"/><ellipse cx="320" cy="130" rx="60" ry="34"/><ellipse cx="210" cy="140" rx="50" ry="26"/>
                 </g>
-                <polygon points="500,290 475,330 525,330" fill="#FCD34D" filter="url(#wmWindowGlow)"/>
-                <rect x="375" y="420" width="70" height="70" rx="4" fill="#FDE68A" filter="url(#wmWindowGlow)"/>
-                <line x1="410" y1="420" x2="410" y2="490" stroke="#382318" stroke-width="3"/>
-                <line x1="375" y1="455" x2="445" y2="455" stroke="#382318" stroke-width="3"/>
-                <rect x="475" y="435" width="45" height="95" rx="3" fill="#1e120a" stroke="#452a1c" stroke-width="2"/>
-                <circle cx="510" cy="485" r="3" fill="#E3B873"/>
-                <rect x="550" y="420" width="70" height="70" rx="4" fill="#FDE68A" filter="url(#wmWindowGlow)"/>
-                <line x1="585" y1="420" x2="585" y2="490" stroke="#382318" stroke-width="3"/>
-                <line x1="550" y1="455" x2="620" y2="455" stroke="#382318" stroke-width="3"/>
-                <polygon points="300,530 700,530 720,570 280,570" fill="#2d1b12" stroke="#1d110b" stroke-width="2"/>
-                <circle cx="465" cy="435" r="5" fill="#FFFBEB" filter="url(#wmWindowGlow)"/>
-                <circle cx="465" cy="435" r="32" fill="#FBBF24" opacity="0.25" filter="blur(8px)"/>
-                <path d="M 0 560 Q 500 535 1000 560 L 1000 600 L 0 600 Z" fill="#0b1712"/>
+                <g class="wm-cloud wm-cloud-b" fill="#ffffff" opacity="0.8">
+                  <ellipse cx="760" cy="95" rx="70" ry="22"/><ellipse cx="805" cy="80" rx="46" ry="26"/>
+                </g>
+                <!-- Păsări -->
+                <g fill="none" stroke="#2F3237" stroke-width="2.5" stroke-linecap="round" opacity="0.55">
+                  <path d="M560 200 q10 -10 20 0 q10 -10 20 0"/><path d="M610 175 q8 -8 16 0 q8 -8 16 0"/>
+                </g>
+                </g>
+                <!-- Dealuri -->
+                <path d="M0 470 Q260 360 520 430 T1040 400 T1440 420 L1440 800 L0 800Z" fill="#b8d39a"/>
+                <path d="M0 540 Q320 450 700 520 T1440 500 L1440 800 L0 800Z" fill="#9cc27a"/>
+                <path d="M0 620 Q480 570 960 610 T1440 600 L1440 800 L0 800Z" fill="#86b265"/>
+                <!-- Livadă -->
+                <g class="wm-sway"><rect x="186" y="470" width="14" height="90" fill="#7a5638"/><circle cx="193" cy="450" r="62" fill="#5f9440"/><circle cx="170" cy="440" r="7" fill="#E9C46A"/><circle cx="215" cy="465" r="7" fill="#E9C46A"/><circle cx="195" cy="415" r="7" fill="#E9C46A"/></g>
+                <g class="wm-sway" style="animation-delay:-2s"><rect x="356" y="500" width="12" height="70" fill="#7a5638"/><circle cx="362" cy="485" r="46" fill="#6fa34c"/><circle cx="345" cy="478" r="6" fill="#7A1F2E"/><circle cx="380" cy="495" r="6" fill="#7A1F2E"/></g>
+                <g class="wm-sway" style="animation-delay:-1s"><rect x="1080" y="480" width="14" height="90" fill="#7a5638"/><circle cx="1087" cy="460" r="64" fill="#5f9440"/><circle cx="1060" cy="450" r="7" fill="#E9C46A"/><circle cx="1110" cy="470" r="7" fill="#E9C46A"/><circle cx="1090" cy="420" r="7" fill="#E9C46A"/></g>
+                <g class="wm-sway" style="animation-delay:-3s"><rect x="1260" y="500" width="12" height="80" fill="#7a5638"/><circle cx="1266" cy="482" r="50" fill="#6fa34c"/><circle cx="1250" cy="475" r="6" fill="#7A1F2E"/><circle cx="1285" cy="490" r="6" fill="#7A1F2E"/></g>
+                <!-- Casa: pereți baby blue, acoperiș vișiniu, pergolă antracit -->
+                <g transform="translate(560 540) scale(0.74)">
+                  <rect x="-20" y="250" width="540" height="14" rx="4" fill="#d8c7ab"/>
+                  <rect x="0" y="110" width="360" height="145" fill="#C7DBEE" stroke="#a9c3dc" stroke-width="3"/>
+                  <polygon points="-25,115 180,20 385,115" fill="#7A1F2E"/>
+                  <polygon points="-25,115 180,20 385,115 375,125 180,36 -15,125" fill="#5E1622"/>
+                  <rect x="285" y="40" width="26" height="60" fill="#8C857A"/>
+                  <!-- Pergolă -->
+                  <rect x="360" y="135" width="150" height="10" fill="#2F3237"/>
+                  <rect x="372" y="145" width="9" height="110" fill="#2F3237"/><rect x="492" y="145" width="9" height="110" fill="#2F3237"/>
+                  <g fill="#2F3237"><rect x="380" y="128" width="6" height="10"/><rect x="410" y="128" width="6" height="10"/><rect x="440" y="128" width="6" height="10"/><rect x="470" y="128" width="6" height="10"/></g>
+                  <path d="M405 145 v22 M445 145 v22" stroke="#2F3237" stroke-width="1.5"/>
+                  <path d="M395 167 q10 14 20 0 Z M435 167 q10 14 20 0 Z" fill="#D6B07C"/>
+                  <!-- Masă sub pergolă -->
+                  <rect x="398" y="215" width="80" height="7" rx="2" fill="#D6B07C"/><rect x="404" y="222" width="5" height="32" fill="#b8925e"/><rect x="467" y="222" width="5" height="32" fill="#b8925e"/>
+                  <!-- Ferestre cu rame vișinii -->
+                  <g><rect x="35" y="145" width="62" height="62" fill="#F7F1E6" stroke="#7A1F2E" stroke-width="6"/><line x1="66" y1="145" x2="66" y2="207" stroke="#7A1F2E" stroke-width="4"/><line x1="35" y1="176" x2="97" y2="176" stroke="#7A1F2E" stroke-width="4"/></g>
+                  <g><rect x="263" y="145" width="62" height="62" fill="#F7F1E6" stroke="#7A1F2E" stroke-width="6"/><line x1="294" y1="145" x2="294" y2="207" stroke="#7A1F2E" stroke-width="4"/><line x1="263" y1="176" x2="325" y2="176" stroke="#7A1F2E" stroke-width="4"/></g>
+                  <!-- Ușă -->
+                  <rect x="150" y="160" width="60" height="95" rx="3" fill="#7A1F2E"/><rect x="158" y="170" width="44" height="40" fill="#C7DBEE" opacity="0.55"/><circle cx="198" cy="215" r="3.5" fill="#D6B07C"/>
+                  <!-- Ghivece & flori -->
+                  <rect x="104" y="228" width="32" height="24" rx="6" fill="#d9a070"/>
+                  <g fill="#a98bd6"><circle cx="112" cy="222" r="6"/><circle cx="124" cy="216" r="6"/><circle cx="132" cy="224" r="5"/></g>
+                  <rect x="228" y="228" width="32" height="24" rx="6" fill="#d9a070"/>
+                  <g fill="#ffffff"><circle cx="236" cy="222" r="6"/><circle cx="248" cy="216" r="6"/><circle cx="254" cy="225" r="5"/></g>
+                </g>
+                <!-- Alee de piatră -->
+                <path d="M712 800 Q722 768 693 730" stroke="#e4d4b8" stroke-width="54" fill="none" stroke-linecap="round"/>
+                <!-- Lavandă & flori în prim-plan -->
+                <g stroke="#8a6fc4" stroke-width="5" stroke-linecap="round">
+                  <path d="M120 790 v-50"/><path d="M135 790 v-62"/><path d="M150 790 v-46"/><path d="M165 790 v-58"/><path d="M180 790 v-44"/>
+                  <path d="M1240 790 v-52"/><path d="M1255 790 v-64"/><path d="M1270 790 v-48"/><path d="M1285 790 v-58"/><path d="M1300 790 v-42"/>
+                </g>
+                <g><circle cx="420" cy="720" r="6" fill="#fff"/><circle cx="460" cy="745" r="6" fill="#7A1F2E"/><circle cx="880" cy="725" r="6" fill="#fff"/><circle cx="930" cy="750" r="6" fill="#E9C46A"/><circle cx="1000" cy="715" r="5" fill="#fff"/></g>
               </svg>
             </div>
 
@@ -561,7 +672,7 @@
                 <path class="wm-trail" d="M380 800 L520 700 L430 640 L600 560 L540 480 L700 380 L720 300" stroke="#FBE4B5" stroke-width="4" stroke-dasharray="10 14" fill="none" opacity="0.8" stroke-linecap="round"/>
                 <!-- Summit flag -->
                 <line x1="720" y1="300" x2="720" y2="240" stroke="#1a1a1a" stroke-width="3"/>
-                <polygon class="wm-sway" points="720,240 760,252 720,264" fill="#C86D51"/>
+                <polygon class="wm-sway" points="720,240 760,252 720,264" fill="#7A1F2E"/>
                 <!-- Hiker with backpack & pole -->
                 <g class="wm-walk" transform="translate(686 330)" fill="#111">
                   <circle cx="0" cy="-46" r="7"/>
@@ -605,7 +716,7 @@
                 <path class="wm-flame" d="M360 672 C320 640 330 590 352 560 C356 600 380 600 372 560 C410 600 405 645 360 672Z" fill="#F97316"/>
                 <path class="wm-flame wm-flame-b" d="M362 672 C340 652 342 620 358 600 C362 625 378 625 374 605 C392 630 388 655 362 672Z" fill="#FDE047"/>
                 <!-- Books on the mantel -->
-                <g><rect x="220" y="250" width="14" height="40" fill="#C86D51"/><rect x="236" y="256" width="12" height="34" fill="#D6A660"/><rect x="250" y="246" width="16" height="44" fill="#192C23"/></g>
+                <g><rect x="220" y="250" width="14" height="40" fill="#7A1F2E"/><rect x="236" y="256" width="12" height="34" fill="#D6B07C"/><rect x="250" y="246" width="16" height="44" fill="#2F3237"/></g>
                 <!-- Armchair with reader -->
                 <g fill="#5a2f22">
                   <rect x="700" y="470" width="240" height="200" rx="40"/>
@@ -622,12 +733,12 @@
                 <line x1="820" y1="555" x2="820" y2="585" stroke="#a08060" stroke-width="2"/>
                 <!-- Side table, tea & steam -->
                 <rect x="990" y="600" width="100" height="12" fill="#3a2216"/><rect x="1035" y="612" width="10" height="90" fill="#3a2216"/>
-                <rect x="1025" y="575" width="28" height="25" rx="4" fill="#EAE5DC"/>
-                <path class="wm-steam" d="M1033 568 q-6 -10 0 -20" stroke="#EAE5DC" stroke-width="2" fill="none"/>
-                <path class="wm-steam wm-steam-b" d="M1045 568 q6 -10 0 -20" stroke="#EAE5DC" stroke-width="2" fill="none"/>
+                <rect x="1025" y="575" width="28" height="25" rx="4" fill="#F5EDE1"/>
+                <path class="wm-steam" d="M1033 568 q-6 -10 0 -20" stroke="#F5EDE1" stroke-width="2" fill="none"/>
+                <path class="wm-steam wm-steam-b" d="M1045 568 q6 -10 0 -20" stroke="#F5EDE1" stroke-width="2" fill="none"/>
                 <!-- Rug & floor -->
                 <rect x="0" y="700" width="1440" height="100" fill="#24140c"/>
-                <ellipse cx="720" cy="735" rx="420" ry="30" fill="#85543A" opacity="0.7"/>
+                <ellipse cx="720" cy="735" rx="420" ry="30" fill="#8C857A" opacity="0.7"/>
               </svg>
             </div>
 
@@ -643,9 +754,9 @@
                 <path d="M560 800 Q700 680 640 600 T760 470" stroke="#e2c9a0" stroke-width="70" fill="none" stroke-linecap="round"/>
                 <!-- Orchard trees with fruit -->
                 <g>
-                  <g class="wm-sway"><rect x="196" y="470" width="14" height="90" fill="#5C3826"/><circle cx="203" cy="450" r="60" fill="#3f6b2a"/><circle cx="180" cy="440" r="6" fill="#C86D51"/><circle cx="225" cy="465" r="6" fill="#C86D51"/><circle cx="205" cy="420" r="6" fill="#C86D51"/></g>
+                  <g class="wm-sway"><rect x="196" y="470" width="14" height="90" fill="#5C3826"/><circle cx="203" cy="450" r="60" fill="#3f6b2a"/><circle cx="180" cy="440" r="6" fill="#7A1F2E"/><circle cx="225" cy="465" r="6" fill="#7A1F2E"/><circle cx="205" cy="420" r="6" fill="#7A1F2E"/></g>
                   <g class="wm-sway" style="animation-delay:-2s"><rect x="386" y="440" width="12" height="80" fill="#5C3826"/><circle cx="392" cy="420" r="50" fill="#4d7a32"/><circle cx="375" cy="410" r="5" fill="#E3B873"/><circle cx="410" cy="430" r="5" fill="#E3B873"/></g>
-                  <g class="wm-sway" style="animation-delay:-1s"><rect x="1006" y="440" width="14" height="90" fill="#5C3826"/><circle cx="1013" cy="420" r="62" fill="#3f6b2a"/><circle cx="990" cy="410" r="6" fill="#C86D51"/><circle cx="1035" cy="430" r="6" fill="#C86D51"/><circle cx="1015" cy="385" r="6" fill="#C86D51"/></g>
+                  <g class="wm-sway" style="animation-delay:-1s"><rect x="1006" y="440" width="14" height="90" fill="#5C3826"/><circle cx="1013" cy="420" r="62" fill="#3f6b2a"/><circle cx="990" cy="410" r="6" fill="#7A1F2E"/><circle cx="1035" cy="430" r="6" fill="#7A1F2E"/><circle cx="1015" cy="385" r="6" fill="#7A1F2E"/></g>
                   <g class="wm-sway" style="animation-delay:-3s"><rect x="1236" y="470" width="14" height="100" fill="#5C3826"/><circle cx="1243" cy="450" r="70" fill="#4d7a32"/><circle cx="1220" cy="440" r="6" fill="#E3B873"/><circle cx="1265" cy="470" r="6" fill="#E3B873"/></g>
                 </g>
                 <!-- Two walkers & a dog -->
@@ -662,7 +773,7 @@
                   <line x1="738" y1="626" x2="736" y2="636" stroke="#5C3826" stroke-width="3"/><line x1="758" y1="626" x2="760" y2="636" stroke="#5C3826" stroke-width="3"/>
                 </g>
                 <!-- Wildflowers -->
-                <g><circle cx="300" cy="700" r="5" fill="#F5E6CA"/><circle cx="340" cy="720" r="5" fill="#C86D51"/><circle cx="1100" cy="700" r="5" fill="#F5E6CA"/><circle cx="1150" cy="730" r="5" fill="#E3B873"/><circle cx="900" cy="750" r="5" fill="#C86D51"/></g>
+                <g><circle cx="300" cy="700" r="5" fill="#F5E6CA"/><circle cx="340" cy="720" r="5" fill="#7A1F2E"/><circle cx="1100" cy="700" r="5" fill="#F5E6CA"/><circle cx="1150" cy="730" r="5" fill="#E3B873"/><circle cx="900" cy="750" r="5" fill="#7A1F2E"/></g>
               </svg>
             </div>
 
@@ -704,7 +815,7 @@
             </div>
 
             <!-- Readability vignette behind the narrative text -->
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45),transparent_65%)]"></div>
+            <div id="wm-vignette" class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.45),transparent_65%)]"></div>
           </div>
 
           <canvas id="weekendMotionCanvas" class="absolute inset-0 w-full h-full z-10 pointer-events-none"></canvas>
@@ -716,7 +827,7 @@
             <div class="flex items-center justify-between">
               <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[11px] font-mono">
                 <span id="wm-status-dot" class="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
-                <span id="wm-status-text" class="text-merlin-stone">Actul 1: Pulsul Orașului & Ecrane Aglomerate</span>
+                <span id="wm-status-text" class="text-merlin-stone">Pulsul orașului & ecrane aglomerate</span>
               </div>
               <div class="flex items-center gap-2">
                 <button onclick="toggleWeekendAudio()" class="pointer-events-auto px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-xs font-mono text-merlin-goldLight transition flex items-center space-x-2">
@@ -731,7 +842,7 @@
             </div>
 
             <!-- Dynamic Narrative Centerpiece -->
-            <div class="max-w-xl mx-auto text-center transform transition-all duration-700">
+            <div id="wm-text" class="max-w-xl mx-auto text-center transform transition-all duration-700 rounded-2xl px-6 py-4">
               <h3 id="wm-title" class="font-serif text-3xl sm:text-5xl font-bold text-white mb-3 drop-shadow-md">
                 Haosul Urban
               </h3>
@@ -788,63 +899,63 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Experience 1 -->
-        <div class="flex flex-col justify-between p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-merlin-gold/50 transition-all duration-300">
+        <div class="flex flex-col justify-between p-8 rounded-3xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 hover:shadow-lg transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-merlin-gold/20 flex items-center justify-center text-merlin-gold mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-merlin-gold/25 flex items-center justify-center text-[#8a6a3c] mb-6">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-merlin-oat mb-3">
+            <h3 class="font-serif text-2xl font-bold text-merlin-pine mb-3">
               Stay with your people
             </h3>
-            <p class="text-sm text-merlin-stone/80 font-light leading-relaxed mb-6">
+            <p class="text-sm text-merlin-charcoal/70 font-light leading-relaxed mb-6">
               Weekenduri cu prietenii, mese lungi la masă mare din lemn, gătit împreună, vinuri bune și seri prelungite la șemineu sau sub cerul liber.
             </p>
           </div>
           <a href="https://wa.me/40700000000?text=Bun%C4%83!%20Suntem%20un%20grup%20de%20prieteni%20%C8%99i%20am%20dori%20s%C4%83%20%C3%AEnchiriem%20Country%20House%20by%20Merlin%20pentru%20un%20weekend%20%C3%AEmpreun%C4%83." 
              target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-gold hover:text-merlin-goldLight pt-4 border-t border-white/10 transition">
+             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark pt-4 border-t border-merlin-stone transition">
             <span>Rezervă weekend cu prietenii</span>
             <span>&rarr;</span>
           </a>
         </div>
 
         <!-- Experience 2 -->
-        <div class="flex flex-col justify-between p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-merlin-gold/50 transition-all duration-300">
+        <div class="flex flex-col justify-between p-8 rounded-3xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 hover:shadow-lg transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-merlin-clay/30 flex items-center justify-center text-merlin-terracotta mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-merlin-clay/10 flex items-center justify-center text-merlin-clay mb-6">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h10z"/></svg>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-merlin-oat mb-3">
+            <h3 class="font-serif text-2xl font-bold text-merlin-pine mb-3">
               Bring something to celebrate
             </h3>
-            <p class="text-sm text-merlin-stone/80 font-light leading-relaxed mb-6">
+            <p class="text-sm text-merlin-charcoal/70 font-light leading-relaxed mb-6">
               Aniversări intime, petreceri restrânse de zi de naștere și întâlniri private cu suflet, organizate la cerere cu sprijinul nostru pentru aranjamente și detalii.
             </p>
           </div>
           <a href="https://wa.me/40700000000?text=Bun%C4%83!%20Vrem%20s%C4%83%20s%C4%83rb%C4%83torim%20un%20moment%20special%20la%20Country%20House%20by%20Merlin%20%C8%99i%20am%20dori%20detalii%20despre%20organizare." 
              target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-terracotta hover:text-merlin-goldLight pt-4 border-t border-white/10 transition">
+             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark pt-4 border-t border-merlin-stone transition">
             <span>Sărbătorește la noi</span>
             <span>&rarr;</span>
           </a>
         </div>
 
         <!-- Experience 3 -->
-        <div class="flex flex-col justify-between p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-merlin-gold/50 transition-all duration-300">
+        <div class="flex flex-col justify-between p-8 rounded-3xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 hover:shadow-lg transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-emerald-900/40 flex items-center justify-center text-emerald-300 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-merlin-sky/50 flex items-center justify-center text-merlin-pine mb-6">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-merlin-oat mb-3">
+            <h3 class="font-serif text-2xl font-bold text-merlin-pine mb-3">
               Take the team outside
             </h3>
-            <p class="text-sm text-merlin-stone/80 font-light leading-relaxed mb-6">
+            <p class="text-sm text-merlin-charcoal/70 font-light leading-relaxed mb-6">
               Micro-offsite-uri de echipă, sesiuni de strategie departe de birou și ecrane aglomerate, brainstorming în grădină și reconectare între oameni.
             </p>
           </div>
           <a href="https://wa.me/40700000000?text=Bun%C4%83!%20Suntem%20interesa%C8%9Bi%20de%20un%20micro-offsite%20pentru%20echipa%20noastr%C4%83%20la%20Country%20House%20by%20Merlin." 
              target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-emerald-300 hover:text-emerald-200 pt-4 border-t border-white/10 transition">
+             class="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark pt-4 border-t border-merlin-stone transition">
             <span>Organizează offsite de echipă</span>
             <span>&rarr;</span>
           </a>
@@ -853,49 +964,49 @@
       </div>
 
       <!-- Verified Surroundings & Distances (Direct from Brief) -->
-      <div class="mt-20 pt-16 border-t border-white/15">
+      <div class="mt-20 pt-16 border-t border-merlin-stone">
         <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
           <div>
-            <span class="text-xs font-semibold uppercase tracking-widest text-merlin-gold">Explorare în zonă</span>
-            <h3 class="font-serif text-3xl font-bold text-merlin-oat mt-1">
+            <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Explorare în zonă</span>
+            <h3 class="font-serif text-3xl font-bold text-merlin-pine mt-1">
               Împrejurimi & Distanțe Verificate
             </h3>
           </div>
-          <p class="text-xs sm:text-sm text-merlin-stone/70 max-w-md mt-2 md:mt-0 font-light">
+          <p class="text-xs sm:text-sm text-merlin-charcoal/70 max-w-md mt-2 md:mt-0 font-light">
             Pentru ca vizitatorii să își poată imagina un weekend complet: aventură, cultură și crame renumite.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
-          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <span class="text-xs font-mono text-merlin-gold font-bold">~35 min</span>
-            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Vulcanii Noroioși</h4>
-            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 transition">
+            <span class="text-xs font-mono text-merlin-clay font-bold">~35 min</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-pine mt-1">Vulcanii Noroioși</h4>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 leading-relaxed">
               Un peisaj selenar unic în Europa (Pâclele Mari și Mici).
             </p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <span class="text-xs font-mono text-merlin-gold font-bold">~25 min</span>
-            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Mănăstirea Ciolanu & Măgura</h4>
-            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 transition">
+            <span class="text-xs font-mono text-merlin-clay font-bold">~25 min</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-pine mt-1">Mănăstirea Ciolanu & Măgura</h4>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 leading-relaxed">
               Tabăra de sculptură în piatră în aer liber și păduri seculare.
             </p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <span class="text-xs font-mono text-merlin-gold font-bold">~40 min</span>
-            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Cramele Dealu Mare</h4>
-            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 transition">
+            <span class="text-xs font-mono text-merlin-clay font-bold">~40 min</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-pine mt-1">Cramele Dealu Mare</h4>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 leading-relaxed">
               Degustări de vinuri premium pe celebrul Drum al Vinului.
             </p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
-            <span class="text-xs font-mono text-merlin-gold font-bold">Chiar la poartă</span>
-            <h4 class="font-serif text-lg font-semibold text-merlin-oat mt-1">Dealurile Pârscov</h4>
-            <p class="text-xs text-merlin-stone/80 mt-1 leading-relaxed">
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone hover:border-merlin-clay/40 transition">
+            <span class="text-xs font-mono text-merlin-clay font-bold">Chiar la poartă</span>
+            <h4 class="font-serif text-lg font-semibold text-merlin-pine mt-1">Dealurile Pârscov</h4>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 leading-relaxed">
               Plimbări pe ulițe liniștite, livezi de pomi fructiferi și freamăt de râu.
             </p>
           </div>
@@ -912,7 +1023,7 @@
     
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-merlin-stone pb-8">
       <div>
-        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">1.4 Noutăți & Evenimente</span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Noutăți & Evenimente</span>
         <h2 class="font-serif text-4xl sm:text-5xl font-bold text-merlin-pine tracking-tight mt-2">
           What’s coming up
         </h2>
@@ -922,11 +1033,14 @@
       </p>
     </div>
 
-    <!-- 3 Curated Upcoming Offers -->
+    <!-- 3 Curated Upcoming Offers
+         ACTUALIZARE: maximum 3 carduri. Pentru o ofertă nouă, copiază un card întreg,
+         schimbă fotografia, datele, descrierea, lista "Include" și textul din linkul WhatsApp. -->
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
       <!-- Card 1 -->
-      <div class="group rounded-3xl overflow-hidden bg-white border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+      <div class="group rounded-3xl overflow-hidden bg-merlin-card border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
         <div>
           <div class="relative h-56 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80" alt="Slow Sunday Brunch" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
@@ -942,6 +1056,15 @@
             <p class="text-xs text-merlin-charcoal/70 leading-relaxed font-light">
               Meniu creat cu produse din grădinile locale din Buzău, pâine coaptă pe vatră, selecție de vinuri din Dealu Mare și muzică bună pe vinil.
             </p>
+            <div class="mt-4 pt-4 border-t border-merlin-stone">
+              <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige mb-2">Include</p>
+              <ul class="space-y-1.5 text-xs text-merlin-charcoal/80">
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Brunch pentru tot grupul, duminică la 11:00</span></li>
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Selecție de vinuri din Dealu Mare</span></li>
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Late check-out până la 14:00</span></li>
+              </ul>
+              <p class="mt-4 text-[11px] italic font-serif text-merlin-clay">Prețul și condițiile se publică la confirmarea ofertei.</p>
+            </div>
           </div>
         </div>
         <div class="p-6 pt-0">
@@ -955,7 +1078,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="group rounded-3xl overflow-hidden bg-white border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+      <div class="group rounded-3xl overflow-hidden bg-merlin-card border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
         <div>
           <div class="relative h-56 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80" alt="Long Weekend la Șemineu" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
@@ -971,6 +1094,15 @@
             <p class="text-xs text-merlin-charcoal/70 leading-relaxed font-light">
               Pachet complet de 3 nopți pentru grupuri de până la 10 oaspeți. Lemne din belșug pentru foc, bucătărie pregătită pentru mese mari și relaxare deplină.
             </p>
+            <div class="mt-4 pt-4 border-t border-merlin-stone">
+              <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige mb-2">Include</p>
+              <ul class="space-y-1.5 text-xs text-merlin-charcoal/80">
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>3 nopți, casa în exclusivitate</span></li>
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Lemne pentru șemineu și vatra de foc</span></li>
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Acces la saună și jacuzzi</span></li>
+              </ul>
+              <p class="mt-4 text-[11px] italic font-serif text-merlin-clay">Prețul și condițiile se publică la confirmarea ofertei.</p>
+            </div>
           </div>
         </div>
         <div class="p-6 pt-0">
@@ -984,7 +1116,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="group rounded-3xl overflow-hidden bg-white border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+      <div class="group rounded-3xl overflow-hidden bg-merlin-card border border-merlin-stone shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
         <div>
           <div class="relative h-56 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Creative Retreat" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
@@ -1000,6 +1132,15 @@
             <p class="text-xs text-merlin-charcoal/70 leading-relaxed font-light">
               Trei zile dedicate lucrului în liniște, scrierii creative, drumețiilor ușoare și discuțiilor de seară cu oameni din industrii creative.
             </p>
+            <div class="mt-4 pt-4 border-t border-merlin-stone">
+              <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige mb-2">Include</p>
+              <ul class="space-y-1.5 text-xs text-merlin-charcoal/80">
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Cameră privată (rezervare pe camere)</span></li>
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Mic dejun și cină comune</span></li>
+                <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-merlin-clay shrink-0"></span><span>Spațiu de lucru liniștit & Wi-Fi</span></li>
+              </ul>
+              <p class="mt-4 text-[11px] italic font-serif text-merlin-clay">Prețul și condițiile se publică la confirmarea ofertei.</p>
+            </div>
           </div>
         </div>
         <div class="p-6 pt-0">
@@ -1018,12 +1159,12 @@
 
 
   <!-- ==================== 1.5 BY MERLIN (TEASER SECȚIUNE PE SITE) ==================== -->
-  <section class="py-20 sm:py-28 bg-merlin-stone/40 border-y border-merlin-stone">
+  <section class="py-20 sm:py-28 bg-merlin-skyLight border-y border-merlin-sky">
     <div class="max-w-5xl mx-auto px-5 sm:px-8">
       <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
         
         <!-- Portrait / Lifestyle Frame -->
-        <div class="relative w-64 h-80 sm:w-72 sm:h-96 shrink-0 rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-1 hover:rotate-0 transition duration-500">
+        <div class="relative w-64 h-80 sm:w-72 sm:h-96 shrink-0 rounded-3xl overflow-hidden shadow-2xl border-4 border-merlin-card rotate-1 hover:rotate-0 transition duration-500">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
                alt="Merlin portret" 
                class="w-full h-full object-cover">
@@ -1034,7 +1175,7 @@
 
         <!-- Story Intro -->
         <div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">1.5 Cine se află în spate</span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Cine se află în spate</span>
           <h2 class="font-serif text-3xl sm:text-5xl font-bold text-merlin-pine tracking-tight mt-2 mb-4">
             By Merlin
           </h2>
@@ -1046,7 +1187,7 @@
           </p>
 
           <!-- Button that opens Chapter 2 (The Real Life of Merlin) -->
-          <button onclick="openMerlinStory()" class="px-7 py-3.5 rounded-full bg-merlin-pine hover:bg-merlin-darkForest text-merlin-oat font-semibold text-xs uppercase tracking-widest transition shadow-md flex items-center space-x-3">
+          <button onclick="openMerlinStory()" class="px-7 py-3.5 rounded-full bg-merlin-clay hover:bg-merlin-wineDark text-merlin-oat font-semibold text-xs uppercase tracking-widest transition shadow-md flex items-center space-x-3">
             <span>By Merlin &bull; Descoperă povestea</span>
             <svg class="w-4 h-4 text-merlin-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </button>
@@ -1072,7 +1213,7 @@
         <div class="space-y-4">
           
           <!-- FAQ 1 -->
-          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+          <details class="group bg-merlin-card rounded-2xl border border-merlin-stone p-5 transition-all">
             <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
               <span>Cum se face rezervarea și care este avansul?</span>
               <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
@@ -1083,7 +1224,7 @@
           </details>
 
           <!-- FAQ 2 -->
-          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+          <details class="group bg-merlin-card rounded-2xl border border-merlin-stone p-5 transition-all">
             <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
               <span>Care sunt orele de check-in și check-out?</span>
               <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
@@ -1094,7 +1235,7 @@
           </details>
 
           <!-- FAQ 3 -->
-          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+          <details class="group bg-merlin-card rounded-2xl border border-merlin-stone p-5 transition-all">
             <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
               <span>Sunt acceptate animalele de companie?</span>
               <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
@@ -1105,7 +1246,7 @@
           </details>
 
           <!-- FAQ 4 -->
-          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+          <details class="group bg-merlin-card rounded-2xl border border-merlin-stone p-5 transition-all">
             <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
               <span>Cum procedăm cu mâncarea și mesele?</span>
               <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
@@ -1116,7 +1257,7 @@
           </details>
 
           <!-- FAQ 5 -->
-          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+          <details class="group bg-merlin-card rounded-2xl border border-merlin-stone p-5 transition-all">
             <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
               <span>Care sunt regulile pentru muzică și evenimente?</span>
               <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
@@ -1127,7 +1268,7 @@
           </details>
 
           <!-- FAQ 6 -->
-          <details class="group bg-white rounded-2xl border border-merlin-stone p-5 transition-all">
+          <details class="group bg-merlin-card rounded-2xl border border-merlin-stone p-5 transition-all">
             <summary class="flex justify-between items-center font-serif text-lg font-bold text-merlin-pine cursor-pointer list-none">
               <span>Care este politica de anulare?</span>
               <span class="text-merlin-clay group-open:rotate-180 transition-transform">&darr;</span>
@@ -1189,26 +1330,61 @@
 
     </div>
 
+    <!-- Condiții de rezervare + Hartă -->
+    <div class="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-7">
+        <span class="text-xs font-semibold uppercase tracking-widest text-merlin-clay">Pe scurt</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-merlin-pine mt-2 mb-6">Condiții de rezervare</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone">
+            <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige">Sejur minim</p>
+            <p class="font-serif text-xl font-bold text-merlin-pine mt-1">2 nopți</p>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 font-light">3 nopți în minivacanțe și sărbători legale.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone">
+            <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige">Check-in / Check-out</p>
+            <p class="font-serif text-xl font-bold text-merlin-pine mt-1">15:00 / 11:00</p>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 font-light">Flexibil, când calendarul permite.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone">
+            <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige">Avans</p>
+            <p class="font-serif text-xl font-bold text-merlin-pine mt-1">50%</p>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 font-light">Restul cu 7 zile înainte de sosire.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-merlin-card border border-merlin-stone">
+            <p class="text-[10px] uppercase tracking-widest font-semibold text-merlin-greige">Anulare</p>
+            <p class="font-serif text-xl font-bold text-merlin-pine mt-1">Gratuită cu 14 zile înainte</p>
+            <p class="text-xs text-merlin-charcoal/70 mt-1 font-light">Sau reprogramare, de comun acord.</p>
+          </div>
+        </div>
+        <p class="mt-4 text-[11px] italic font-serif text-merlin-greige">* Condițiile sunt orientative și se confirmă înainte de publicare.</p>
+      </div>
+      <div class="lg:col-span-5 rounded-3xl overflow-hidden border border-merlin-stone min-h-[320px] bg-merlin-stone/40">
+        <iframe title="Hartă Robești, comuna Pârscov, Buzău" src="https://www.google.com/maps?q=Robe%C8%99ti%2C%20P%C3%A2rscov%2C%20Buz%C4%83u&z=13&output=embed" class="w-full h-full min-h-[320px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
   </section>
 
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-merlin-darkForest text-merlin-stone py-12 px-5 sm:px-8 border-t border-white/10">
+  <footer class="bg-merlin-darkForest text-merlin-stone pt-12 pb-28 sm:pb-12 px-5 sm:px-8 border-t border-white/10">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs">
       <div>
         <p class="font-serif text-lg text-merlin-oat font-bold">Country House <span class="italic font-normal text-merlin-gold">by Merlin</span></p>
         <p class="text-[11px] text-merlin-stone/60 mt-0.5">Robești, comuna Pârscov, jud. Buzău &bull; Country living reinterpretat</p>
       </div>
 
-      <div class="flex items-center space-x-6">
+      <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
         <a href="#the-house" class="hover:text-white transition">The House</a>
         <a href="#your-weekend" class="hover:text-white transition">Your Weekend</a>
         <a href="#whats-on" class="hover:text-white transition">What’s On</a>
-        <button onclick="openMerlinStory()" class="hover:text-merlin-gold transition text-merlin-gold font-semibold">By Merlin</button>
+        <a href="merlin-story.html" class="hover:text-white transition text-merlin-gold font-semibold">By Merlin</a>
+        <a href="#faq-contact" class="hover:text-white transition">Contact</a>
       </div>
 
       <p class="text-[11px] text-merlin-stone/50">
-        &copy; 2026 Country House by Merlin. Toate drepturile rezervate.
+        &copy; <span id="year">2026</span> Country House by Merlin &bull; <a href="https://instagram.com" target="_blank" rel="noopener" class="hover:text-white">Instagram</a>
       </p>
     </div>
   </footer>
@@ -1218,91 +1394,10 @@
   <div class="sm:hidden fixed bottom-4 left-4 right-4 z-40">
     <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20Country%20House%20by%20Merlin." 
        target="_blank" rel="noopener noreferrer"
-       class="w-full py-3.5 px-6 rounded-full bg-merlin-pine/95 backdrop-blur-md text-merlin-gold font-bold text-xs uppercase tracking-wider text-center shadow-2xl border border-merlin-gold/40 flex items-center justify-center space-x-2">
-      <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.539 1.95.824 2.791.825h.002c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.766c0 5.422-4.408 9.83-9.83 9.83-1.66 0-3.262-.42-4.673-1.218L2 22l1.656-5.328C2.81 15.228 2.37 13.639 2.37 11.938 2.37 6.516 6.778 2.108 12.2 2.108s9.8 4.408 9.8 9.83z"/></svg>
+       class="w-full py-3.5 px-6 rounded-full bg-merlin-clay/95 backdrop-blur-md text-merlin-oat font-bold text-xs uppercase tracking-wider text-center shadow-2xl border border-merlin-goldLight/40 flex items-center justify-center space-x-2">
+      <svg class="w-4 h-4 text-merlin-goldLight" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.539 1.95.824 2.791.825h.002c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.77-5.766zm9.969 5.766c0 5.422-4.408 9.83-9.83 9.83-1.66 0-3.262-.42-4.673-1.218L2 22l1.656-5.328C2.81 15.228 2.37 13.639 2.37 11.938 2.37 6.516 6.778 2.108 12.2 2.108s9.8 4.408 9.8 9.83z"/></svg>
       <span>Check availability &bull; WhatsApp</span>
     </a>
-  </div>
-
-
-  <!-- ==================== 2. THE REAL LIFE OF MERLIN (FULL-SCREEN EXTENSION VIEW) ==================== -->
-  <div id="merlinStoryModal" class="fixed inset-0 z-50 bg-merlin-darkForest/95 backdrop-blur-xl text-merlin-oat overflow-y-auto hidden">
-    
-    <!-- Top Modal Header -->
-    <div class="sticky top-0 z-30 bg-merlin-darkForest/90 backdrop-blur-md border-b border-white/10 px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <span class="w-2.5 h-2.5 rounded-full bg-merlin-gold"></span>
-        <span class="font-serif text-lg font-bold tracking-wide">The Real Life of Merlin</span>
-      </div>
-      <button onclick="closeMerlinStory()" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs font-semibold uppercase tracking-wider transition">
-        &times; Închide povestea
-      </button>
-    </div>
-
-    <!-- Modal Inner Content -->
-    <div class="max-w-4xl mx-auto px-6 py-16 sm:py-20">
-      
-      <!-- Story Title -->
-      <div class="text-center mb-16">
-        <span class="text-xs uppercase tracking-widest text-merlin-gold font-semibold">Capitolul II &bull; Universul din spatele casei</span>
-        <h1 class="font-serif text-4xl sm:text-6xl font-bold tracking-tight text-white mt-2 mb-4">
-          The Real Life of Merlin
-        </h1>
-        <p class="text-sm sm:text-base text-merlin-stone font-light max-w-xl mx-auto leading-relaxed">
-          Povestea mea, munca cu branduri, antreprenoriatul și felul în care această casă de la țară a devenit ancora mea de liniște.
-        </p>
-      </div>
-
-      <!-- Chapter 1 -->
-      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
-        <span class="text-xs font-mono text-merlin-gold font-bold">01 / ANTREPRENORIAT</span>
-        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Viața între termene limită și viziune</h3>
-        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
-          Ani la rând, ritmul meu a fost dictat de proiecte complexe, telefoane fără oprire, lansări de produse și organizare de festivaluri. Am învățat ce înseamnă să construiești de la zero și cât de important este să ai un loc în care mintea să poată face pauză.
-        </p>
-        <a href="https://instagram.com" target="_blank" class="inline-flex items-center space-x-2 text-xs text-merlin-gold hover:text-white transition">
-          <span>Vezi postare din universul antreprenorial &rarr;</span>
-        </a>
-      </div>
-
-      <!-- Chapter 2 -->
-      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
-        <span class="text-xs font-mono text-merlin-gold font-bold">02 / BRANDURI & EVENIMENTE</span>
-        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Munca din spatele experiențelor memorabile</h3>
-        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
-          Fiecare detaliu contează: de la lumina unei încăperi, până la textura lenjeriei și muzica care curge în fundal. Experiența mea în crearea de evenimente a fost transpusă direct în modul în care este gândită Country House by Merlin: nimic nu este lăsat la voia întâmplării, dar totul pare firesc și relaxat.
-        </p>
-        <a href="https://instagram.com" target="_blank" class="inline-flex items-center space-x-2 text-xs text-merlin-gold hover:text-white transition">
-          <span>Vezi proiectele de pe Instagram &rarr;</span>
-        </a>
-      </div>
-
-      <!-- Chapter 3 -->
-      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
-        <span class="text-xs font-mono text-merlin-gold font-bold">03 / CĂLĂTORII ȘI OAMENI</span>
-        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Căutarea simplității</h3>
-        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
-          Am adunat inspirație din case rurale din Toscana, cabane nordice și sate ascunse din Alpi. Dar farmecul dealurilor din Buzău are o căldură unică: livezi nesfârșite, oameni simpli care te salută la poartă și un cer de noapte fără poluare luminoasă.
-        </p>
-      </div>
-
-      <!-- Chapter 4 -->
-      <div class="mb-14 p-8 rounded-3xl bg-white/5 border border-white/10">
-        <span class="text-xs font-mono text-merlin-gold font-bold">04 / DE CE ROBEȘTI, BUZĂU</span>
-        <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Country living reinterpretat</h3>
-        <p class="text-sm text-merlin-stone leading-relaxed font-light mb-4">
-          Nu am vrut o cabană izolată unde să te simți străin, ci o casă deschisă, vie, cu spațiu generos pentru prieteni, vin bun și râsete până târziu. Oricând ai nevoie de o gură de aer, porțile sunt deschise.
-        </p>
-      </div>
-
-      <!-- Close and Back to House CTA -->
-      <div class="text-center pt-8 border-t border-white/15">
-        <button onclick="closeMerlinStory()" class="px-8 py-3.5 rounded-full bg-merlin-gold text-merlin-darkForest font-bold text-xs uppercase tracking-widest hover:bg-merlin-goldLight transition">
-          Înapoi la Country House
-        </button>
-      </div>
-
-    </div>
   </div>
 
 
@@ -1327,6 +1422,76 @@
 
   <!-- ==================== JAVASCRIPT LOGIC ==================== -->
   <script>
+    // ================= CONFIGURARE RAPIDĂ =================
+    // Numărul de WhatsApp (doar cifre, cu prefix de țară). Se aplică automat tuturor butoanelor.
+    const WHATSAPP_NUMBER = '40700000000';
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+      a.href = a.href.replace(/wa\.me\/\d+/, 'wa.me/' + WHATSAPP_NUMBER);
+    });
+    // =====================================================
+
+    // --- Carusel "Afară e jumătate din casă" ---
+    (function () {
+      const root = document.getElementById('outdoorCarousel');
+      if (!root) return;
+      const track = root.querySelector('.oc-track');
+      const slides = [...root.querySelectorAll('.oc-slide')];
+      const prev = root.querySelector('.oc-prev');
+      const next = root.querySelector('.oc-next');
+      const dotsWrap = root.querySelector('.oc-dots');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const step = () => slides[1].offsetLeft - slides[0].offsetLeft;
+      const perView = () => Math.max(1, Math.round(track.clientWidth / step()));
+      const pages = () => Math.max(1, slides.length - perView() + 1);
+      const current = () => Math.round(track.scrollLeft / step());
+      const goTo = i => {
+        const max = pages() - 1;
+        if (i > max) i = 0; if (i < 0) i = max;
+        track.scrollTo({ left: i * step(), behavior: reduce ? 'auto' : 'smooth' });
+      };
+
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        for (let i = 0; i < pages(); i++) {
+          const b = document.createElement('button');
+          b.type = 'button'; b.className = 'oc-dot'; b.setAttribute('aria-label', 'Mergi la imaginea ' + (i + 1));
+          b.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(b);
+        }
+        update();
+      }
+      function update() {
+        const c = current();
+        [...dotsWrap.children].forEach((d, i) => d.classList.toggle('is-active', i === c));
+        prev.disabled = c <= 0;
+        next.disabled = c >= pages() - 1;
+      }
+
+      prev.addEventListener('click', () => goTo(current() - 1));
+      next.addEventListener('click', () => goTo(current() + 1));
+      track.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current() + 1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current() - 1); }
+      });
+      let raf; track.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); });
+      window.addEventListener('resize', buildDots);
+
+      // Autoplay la 5s, pauză la hover / atingere / focus
+      let timer = null, paused = false;
+      const start = () => { if (reduce) return; stop(); timer = setInterval(() => { if (!paused) goTo(current() + 1); }, 5000); };
+      const stop = () => clearInterval(timer);
+      root.addEventListener('mouseenter', () => paused = true);
+      root.addEventListener('mouseleave', () => paused = false);
+      root.addEventListener('focusin', () => paused = true);
+      root.addEventListener('focusout', () => paused = false);
+      track.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+      track.addEventListener('touchend', () => { setTimeout(() => paused = false, 4000); }, { passive: true });
+
+      buildDots();
+      start();
+    })();
+
     // --- Mobile Menu Toggle ---
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
@@ -1375,16 +1540,8 @@
       modal.classList.remove('flex');
     }
 
-    // --- The Real Life of Merlin Modal Logic ---
-    function openMerlinStory() {
-      document.getElementById('merlinStoryModal').classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMerlinStory() {
-      document.getElementById('merlinStoryModal').classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
+    // --- By Merlin: deschide pagina dedicată "The Real Life of Merlin" ---
+    function openMerlinStory() { window.location.href = 'merlin-story.html'; }
 
     // --- INLINE WEEKEND MOTION GRAPHIC & SOUND SYSTEM ---
     const wmCanvas = document.getElementById('weekendMotionCanvas');
@@ -1430,7 +1587,7 @@
             vx: 3 + Math.random() * 4, // road breeze speed
             vy: (Math.random() - 0.5) * 1.5,
             size: Math.random() * 3 + 1,
-            color: 'rgba(214, 166, 96, 0.5)'
+            color: 'rgba(214, 176, 124, 0.5)'
           });
         }
       } else if (currentWmState === 'reading' || currentWmState === 'firepit') {
@@ -1450,7 +1607,7 @@
         }
       } else if (currentWmState === 'walks') {
         // Falling orchard leaves & petals in the sunlight
-        const leafColors = ['rgba(200, 109, 81, 0.85)', 'rgba(227, 184, 115, 0.85)', 'rgba(109, 154, 72, 0.85)', 'rgba(245, 230, 202, 0.9)'];
+        const leafColors = ['rgba(122, 31, 46, 0.85)', 'rgba(227, 184, 115, 0.85)', 'rgba(109, 154, 72, 0.85)', 'rgba(245, 230, 202, 0.9)'];
         for (let i = 0; i < 40; i++) {
           wmParticles.push({
             x: Math.random() * w,
@@ -1557,7 +1714,7 @@
       if (scene === 'city') {
         document.getElementById('btn-sc-city').classList.add('bg-white/15', 'text-white');
         dot.className = 'w-2 h-2 rounded-full bg-red-400 animate-ping';
-        st.innerText = 'Actul 1: Pulsul Orașului & Ecrane Aglomerate';
+        st.innerText = 'Pulsul orașului & ecrane aglomerate';
         title.innerText = 'Haosul Urban';
         desc.innerText = 'Trafic bară la bară, notificări permanente și zgomot de fond continuu. Simți nevoia de o pauză?';
         prog.style.width = '25%';
@@ -1565,17 +1722,17 @@
       } else if (scene === 'transit') {
         document.getElementById('btn-sc-transit').classList.add('bg-white/15', 'text-white');
         dot.className = 'w-2 h-2 rounded-full bg-amber-400 animate-pulse';
-        st.innerText = 'Tranziție: Drumul spre Robești & Comuna Pârscov';
+        st.innerText = 'Drumul spre Robești, comuna Pârscov';
         title.innerText = 'Drumul printre Dealuri';
         desc.innerText = 'La doar 1h 45m de București. Păduri de conifere, aer răcoros de munte și cerul care se deschide.';
         prog.style.width = '55%';
         adjustAudioTone(220);
       } else if (scene === 'house') {
         document.getElementById('btn-sc-house').classList.add('bg-white/15', 'text-white');
-        dot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
-        st.innerText = 'Actul 2: Sosirea la Country House by Merlin';
-        title.innerText = 'Oază de Liniște & Lemn Cald';
-        desc.innerText = 'Cinci dormitoare, living primitor, miros de pin și șemineu. Aici timpul curge fără grabă.';
+        dot.className = 'w-2 h-2 rounded-full bg-merlin-sky animate-pulse';
+        st.innerText = 'Sosirea la Country House by Merlin';
+        title.innerText = 'Bun venit acasă, la soare';
+        desc.innerText = 'Cinci dormitoare, livadă, pergolă și o masă lungă pentru toți. Aici timpul curge fără grabă.';
         prog.style.width = '100%';
         adjustAudioTone(330);
       }
@@ -1686,6 +1843,10 @@
       document.querySelectorAll('.wm-bg').forEach(el => {
         el.classList.toggle('is-active', Number(el.dataset.wmBg) === idx);
       });
+      // Scenele de zi (casa, plimbări) folosesc text închis
+      const light = currentWmState === 'house' || currentWmState === 'walks';
+      document.getElementById('wm-stage')?.classList.toggle('wm-light', light);
+      document.getElementById('wm-vignette')?.classList.toggle('wm-light-vignette', light);
       // Soft text swap
       ['wm-title', 'wm-desc'].forEach(id => {
         const el = document.getElementById(id);

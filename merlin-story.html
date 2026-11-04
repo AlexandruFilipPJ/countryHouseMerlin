@@ -1,349 +1,269 @@
-<title>The Real Life of Merlin - Country House by Merlin</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="The story behind Country House by Merlin - entrepreneurship, travel, and the love of bringing people together.">
-<meta name="lang" content="en">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate" hreflang="ro" href="https://countryhousebymerlin.com/ro/merlin-story.html">
-<link rel="alternate" hreflang="en" href="https://countryhousebymerlin.com/merlin-story.html">
-<link rel="canonical" href="https://countryhousebymerlin.com/merlin-story.html">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-:root {
-  --bg: #faf8f6;
-  --fg: #2a2520;
-  --accent: #b8860b;
-  --muted: #8b7d75;
-  --border: #e8e3dd;
-  --card-bg: #ffffff;
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Real Life of Merlin | Country House by Merlin</title>
+  <meta name="description" content="The Real Life of Merlin – povestea din spatele Country House by Merlin: antreprenoriat, branduri și evenimente, călătorii, oameni și o casă la țară în Robești, Buzău.">
+  <meta name="theme-color" content="#F5EDE1">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Real Life of Merlin">
+  <meta property="og:description" content="Povestea din spatele Country House by Merlin.">
+  <meta property="og:image" content="assets/img/curte-panorama.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-}
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            merlin: {
+              oat: '#F5EDE1', card: '#FBF7F0', stone: '#E6D9C6',
+              clay: '#7A1F2E', wineDark: '#5E1622',
+              pine: '#2F3237', darkForest: '#26292D', charcoal: '#2B2A28',
+              gold: '#D6B07C', goldLight: '#EFDFC4',
+              sky: '#C7DBEE', skyLight: '#E4EEF7', greige: '#8C857A'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F5EDE1; color: #2B2A28; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+    ::selection { background: #7A1F2E; color: #F5EDE1; }
+    .mb-rule { display: inline-flex; align-items: center; gap: .85rem; }
+    .mb-rule::before, .mb-rule::after { content: ""; width: 2.25rem; height: 1px; background: currentColor; opacity: .45; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1); }
+    .reveal.is-in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+<body class="min-h-screen">
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1a1815;
-    --fg: #f5f1ed;
-    --accent: #d4af37;
-    --muted: #a89f97;
-    --border: #3a3530;
-    --card-bg: #2a2520;
-    color-scheme: dark;
-  }
-}
+  <!-- ==================== NAVIGAȚIE (identică cu pagina principală) ==================== -->
+  <header class="sticky top-0 z-40 w-full bg-merlin-oat/90 backdrop-blur-md border-b border-merlin-stone/80">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="group flex flex-col">
+        <span class="font-serif text-base sm:text-xl font-semibold uppercase tracking-[0.08em] sm:tracking-[0.14em] text-merlin-clay group-hover:text-merlin-wineDark transition-colors leading-none">
+          Country House <span class="normal-case italic font-normal tracking-normal">by</span> Merlin
+        </span>
+        <span class="text-[11px] sm:text-xs font-serif italic text-merlin-pine/70 tracking-wider mt-1">În armonie cu casa &bull; Robești</span>
+      </a>
 
-:root[data-theme="dark"] {
-  --bg: #1a1815;
-  --fg: #f5f1ed;
-  --accent: #d4af37;
-  --muted: #a89f97;
-  --border: #3a3530;
-  --card-bg: #2a2520;
-  color-scheme: dark;
-}
+      <nav class="hidden md:flex items-center space-x-7 text-xs font-semibold uppercase tracking-wider text-merlin-charcoal/80">
+        <a href="index.html#the-house" class="hover:text-merlin-clay transition-colors py-1">The House</a>
+        <a href="index.html#your-weekend" class="hover:text-merlin-clay transition-colors py-1">Your Weekend</a>
+        <a href="index.html#whats-on" class="hover:text-merlin-clay transition-colors py-1">What’s On</a>
+        <a href="merlin-story.html" aria-current="page" class="text-merlin-clay font-bold py-1 flex items-center space-x-1"><span>By Merlin</span><span class="w-1.5 h-1.5 rounded-full bg-merlin-clay"></span></a>
+        <a href="index.html#faq-contact" class="hover:text-merlin-clay transition-colors py-1">Contact</a>
+      </nav>
 
-* { box-sizing: border-box; }
-body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
-  line-height: 1.7;
-  margin: 0;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
+      <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20Country%20House%20by%20Merlin." target="_blank" rel="noopener noreferrer"
+         class="hidden lg:flex px-5 py-2.5 rounded-full bg-merlin-clay hover:bg-merlin-wineDark text-merlin-oat text-xs font-semibold uppercase tracking-wider transition shadow-sm items-center space-x-2">
+        <span>Check availability</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-img { max-width: 100%; height: auto; display: block; }
-
-h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
-h1 { font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; margin: 0 0 var(--spacing-md) 0; }
-h2 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; margin: var(--spacing-2xl) 0 var(--spacing-lg) 0; }
-h3 { font-size: 1.25rem; margin: var(--spacing-lg) 0 var(--spacing-sm) 0; }
-
-p { margin: 0 0 var(--spacing-md) 0; }
-
-header {
-  position: sticky;
-  top: env(safe-area-inset-top, 0px);
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  z-index: 100;
-  padding-block: var(--spacing-md);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0 0 auto;
-  height: env(safe-area-inset-top, 0px);
-  z-index: 10;
-  background: var(--bg);
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: var(--spacing-sm);
-}
-
-.logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
-.back-link {
-  color: var(--fg);
-  font-size: 0.95rem;
-}
-
-.lang-switch {
-  display: flex;
-  gap: var(--spacing-sm);
-  margin-left: auto;
-}
-
-.lang-switch a {
-  padding: 0.5rem var(--spacing-sm);
-  border-radius: 4px;
-  color: var(--fg);
-  font-size: 0.9rem;
-  transition: background 0.3s;
-}
-
-.lang-switch a.active {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.lang-switch a:hover:not(.active) {
-  background: var(--border);
-  text-decoration: none;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-block: var(--spacing-2xl);
-}
-
-section {
-  margin-bottom: var(--spacing-2xl);
-}
-
-.story-header {
-  text-align: center;
-  margin-bottom: var(--spacing-2xl);
-}
-
-.story-header p {
-  font-size: 1.1rem;
-  color: var(--muted);
-}
-
-.chapter {
-  margin-bottom: var(--spacing-2xl);
-  padding-bottom: var(--spacing-2xl);
-  border-bottom: 1px solid var(--border);
-}
-
-.chapter:last-child {
-  border-bottom: none;
-}
-
-.chapter-image {
-  width: 100%;
-  height: 300px;
-  background: var(--border);
-  border-radius: 8px;
-  margin: var(--spacing-lg) 0;
-  object-fit: cover;
-}
-
-.chapter-meta {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: var(--spacing-md);
-}
-
-.chapter p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--fg);
-}
-
-.instagram-link {
-  display: inline-block;
-  margin-top: var(--spacing-md);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background: var(--accent);
-  color: var(--bg);
-  border-radius: 4px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.instagram-link:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-footer {
-  background: var(--card-bg);
-  border-top: 1px solid var(--border);
-  padding-block: var(--spacing-xl);
-  text-align: center;
-  margin-top: var(--spacing-2xl);
-}
-
-footer p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.nav-buttons {
-  display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-2xl);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.button {
-  display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.button.secondary {
-  background: var(--border);
-  color: var(--fg);
-}
-
-h2 i {
-  color: var(--accent);
-  margin-right: var(--spacing-md);
-}
-</style>
-
-<header>
-  <div class="header-content">
-    <a href="index.html" class="back-link"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>Back to House</a>
-    <div class="lang-switch">
-      <a href="/ro/merlin-story.html">RO</a>
-      <a href="/merlin-story.html" class="active">EN</a>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 text-merlin-pine" aria-label="Deschide meniul">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
+    <div id="mobileMenu" class="hidden md:hidden px-6 pt-3 pb-6 border-b border-merlin-stone bg-merlin-oat">
+      <div class="flex flex-col space-y-3.5 text-sm font-semibold uppercase tracking-wider text-merlin-charcoal">
+        <a href="index.html#the-house" class="py-1 border-b border-merlin-stone/50">The House</a>
+        <a href="index.html#your-weekend" class="py-1 border-b border-merlin-stone/50">Your Weekend</a>
+        <a href="index.html#whats-on" class="py-1 border-b border-merlin-stone/50">What’s On</a>
+        <a href="merlin-story.html" class="py-1 border-b border-merlin-stone/50 text-merlin-clay">By Merlin</a>
+        <a href="index.html#faq-contact" class="py-1">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== INTRO ==================== -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-14 grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-7">
+        <p class="mb-rule font-serif text-sm uppercase tracking-[0.22em] text-merlin-clay">By Merlin</p>
+        <h1 class="font-serif text-5xl sm:text-7xl font-bold tracking-tight text-merlin-pine leading-[1.02] mt-4">
+          The Real Life <span class="italic font-normal text-merlin-clay">of Merlin</span>
+        </h1>
+        <p class="mt-6 text-base sm:text-lg text-merlin-charcoal/80 font-light leading-relaxed max-w-xl">
+          Antreprenoriat, branduri, evenimente, drumuri și oameni. Și o casă la țară care a început ca o pauză și a devenit un loc de întâlnire. Asta e povestea, în capitole scurte.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-wider">
+          <a href="#cap-1" class="px-3.5 py-2 rounded-full bg-merlin-card border border-merlin-stone hover:border-merlin-clay hover:text-merlin-clay transition">01 Antreprenoriat</a>
+          <a href="#cap-2" class="px-3.5 py-2 rounded-full bg-merlin-card border border-merlin-stone hover:border-merlin-clay hover:text-merlin-clay transition">02 Branduri & Evenimente</a>
+          <a href="#cap-3" class="px-3.5 py-2 rounded-full bg-merlin-card border border-merlin-stone hover:border-merlin-clay hover:text-merlin-clay transition">03 Călătorii</a>
+          <a href="#cap-4" class="px-3.5 py-2 rounded-full bg-merlin-card border border-merlin-stone hover:border-merlin-clay hover:text-merlin-clay transition">04 Oameni</a>
+          <a href="#cap-5" class="px-3.5 py-2 rounded-full bg-merlin-card border border-merlin-stone hover:border-merlin-clay hover:text-merlin-clay transition">05 Casa</a>
+        </div>
+      </div>
+      <div class="md:col-span-5 flex justify-center">
+        <div class="relative w-64 h-80 sm:w-80 sm:h-[26rem] rounded-3xl overflow-hidden shadow-2xl border-4 border-merlin-card -rotate-1">
+          <!-- ÎNLOCUIEȘTE cu portretul tău -->
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Portret Merlin" class="w-full h-full object-cover">
+          <div class="absolute bottom-3 left-3 bg-merlin-pine/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white font-mono uppercase tracking-wider">Merlin &bull; Fondator</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAPITOLE ====================
+       Fiecare capitol: fotografie, titlu, text scurt, link spre o postare de Instagram.
+       Înlocuiește href="https://instagram.com" cu linkul exact al postării. -->
+  <main class="max-w-6xl mx-auto px-5 sm:px-8 pb-10">
+
+    <!-- Capitol 1 -->
+    <article id="cap-1" class="reveal scroll-mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center py-14 border-t border-merlin-stone">
+      <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Antreprenoriat" loading="lazy" class="w-full h-full object-cover">
+      </div>
+      <div>
+        <span class="font-mono text-xs font-bold text-merlin-clay">01 / ANTREPRENORIAT</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine mt-2 mb-4">Viața între termene limită și viziune</h2>
+        <p class="text-sm sm:text-base text-merlin-charcoal/80 font-light leading-relaxed">
+          Ani la rând, ritmul meu a fost dictat de proiecte, telefoane fără oprire și lansări. Am învățat ce înseamnă să construiești de la zero și cât de important e să ai un loc unde mintea poate face pauză.
+        </p>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <span>Vezi pe Instagram</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Capitol 2 -->
+    <article id="cap-2" class="reveal scroll-mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center py-14 border-t border-merlin-stone">
+      <div class="md:order-2 aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80" alt="Branduri și evenimente" loading="lazy" class="w-full h-full object-cover">
+      </div>
+      <div class="md:order-1">
+        <span class="font-mono text-xs font-bold text-merlin-clay">02 / BRANDURI & EVENIMENTE</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine mt-2 mb-4">Detaliile care fac o seară să rămână</h2>
+        <p class="text-sm sm:text-base text-merlin-charcoal/80 font-light leading-relaxed">
+          Lumina unei încăperi, textura unei fețe de masă, muzica din fundal. Din munca cu branduri și evenimente am adus aici un singur principiu: nimic lăsat la voia întâmplării, totul firesc și relaxat.
+        </p>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <span>Vezi proiectele pe Instagram</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Citat -->
+    <blockquote class="reveal my-6 py-14 px-6 sm:px-14 rounded-3xl bg-merlin-skyLight border border-merlin-sky text-center">
+      <p class="font-serif italic text-2xl sm:text-4xl text-merlin-pine leading-snug max-w-3xl mx-auto">
+        „Nu am vrut o cabană izolată, ci o casă vie, cu loc pentru prieteni, vin bun și râsete până târziu.”
+      </p>
+      <footer class="mt-5 text-xs uppercase tracking-[0.2em] text-merlin-clay font-semibold">Merlin</footer>
+    </blockquote>
+
+    <!-- Capitol 3 -->
+    <article id="cap-3" class="reveal scroll-mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center py-14 border-t border-merlin-stone">
+      <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80" alt="Călătorii" loading="lazy" class="w-full h-full object-cover">
+      </div>
+      <div>
+        <span class="font-mono text-xs font-bold text-merlin-clay">03 / CĂLĂTORII</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine mt-2 mb-4">Ce am adus de pe drum</h2>
+        <p class="text-sm sm:text-base text-merlin-charcoal/80 font-light leading-relaxed">
+          Case rurale din Toscana, cabane nordice, sate ascunse prin Alpi. Am adunat idei peste tot, dar dealurile Buzăului au o căldură aparte: livezi, oameni care te salută la poartă și un cer de noapte plin de stele.
+        </p>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <span>Vezi pe Instagram</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Capitol 4 -->
+    <article id="cap-4" class="reveal scroll-mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center py-14 border-t border-merlin-stone">
+      <div class="md:order-2 aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Oameni" loading="lazy" class="w-full h-full object-cover">
+      </div>
+      <div class="md:order-1">
+        <span class="font-mono text-xs font-bold text-merlin-clay">04 / OAMENI</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine mt-2 mb-4">Cele mai bune momente au loc la masă</h2>
+        <p class="text-sm sm:text-base text-merlin-charcoal/80 font-light leading-relaxed">
+          Nu în săli de conferință și nici în locuri aglomerate. Momentele care contează se petrec acasă, în jurul unei mese, până târziu, cu oameni la care ții. De aici a pornit totul.
+        </p>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-merlin-clay hover:text-merlin-wineDark transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <span>Vezi pe Instagram</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Capitol 5 -->
+    <article id="cap-5" class="reveal scroll-mt-24 py-14 border-t border-merlin-stone">
+      <div class="max-w-3xl">
+        <span class="font-mono text-xs font-bold text-merlin-clay">05 / CASA DE LA ȚARĂ</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-merlin-pine mt-2 mb-4">Country living, reinterpretat</h2>
+        <p class="text-sm sm:text-base text-merlin-charcoal/80 font-light leading-relaxed">
+          Casa din Robești nu e o fugă de oraș, ci felul meu de a-l echilibra. Un loc deschis, cu cinci dormitoare și o curte în care oamenii chiar petrec timp împreună. Acum e și al vostru, pentru un weekend.
+        </p>
+      </div>
+      <div class="mt-8 rounded-3xl overflow-hidden shadow-xl">
+        <img src="assets/img/curte-panorama.jpg" alt="Curtea Country House by Merlin" loading="lazy" class="w-full h-auto">
+      </div>
+    </article>
+
+    <!-- CTA înapoi spre casă -->
+    <section class="reveal mt-6 mb-16 p-8 sm:p-12 rounded-3xl bg-merlin-darkForest text-merlin-oat flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="font-serif text-3xl sm:text-4xl font-bold">Hai să ne vedem în Robești.</p>
+        <p class="text-sm text-merlin-stone/80 font-light mt-2">Cinci dormitoare, până la zece oaspeți, un weekend al vostru.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+        <a href="index.html#the-house" class="px-7 py-3.5 rounded-full border border-white/25 hover:bg-white/10 text-xs font-semibold uppercase tracking-widest text-center transition">Explore the house</a>
+        <a href="https://wa.me/40700000000?text=Bun%C4%83%20Merlin!%20Am%20citit%20povestea%20%C8%99i%20a%C8%99%20vrea%20s%C4%83%20verific%20disponibilitatea." target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full bg-merlin-gold hover:bg-merlin-goldLight text-merlin-darkForest text-xs font-bold uppercase tracking-widest text-center transition">Check availability</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-merlin-darkForest text-merlin-stone pt-12 pb-28 sm:pb-12 px-5 sm:px-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs">
+      <p class="font-serif text-lg text-merlin-oat font-bold">Country House <span class="italic font-normal text-merlin-gold">by Merlin</span></p>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <a href="index.html#the-house" class="hover:text-white transition">The House</a>
+        <a href="index.html#your-weekend" class="hover:text-white transition">Your Weekend</a>
+        <a href="index.html#whats-on" class="hover:text-white transition">What’s On</a>
+        <a href="merlin-story.html" class="text-merlin-gold font-semibold">By Merlin</a>
+        <a href="index.html#faq-contact" class="hover:text-white transition">Contact</a>
+      </div>
+      <p class="text-[11px] text-merlin-stone/50">&copy; 2026 Country House by Merlin</p>
+    </div>
+  </footer>
+
+  <!-- Check availability permanent pe telefon -->
+  <div class="sm:hidden fixed bottom-4 left-4 right-4 z-40">
+    <a href="https://wa.me/40700000000?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20verific%20disponibilitatea%20pentru%20Country%20House%20by%20Merlin." target="_blank" rel="noopener noreferrer"
+       class="w-full py-3.5 px-6 rounded-full bg-merlin-clay/95 backdrop-blur-md text-merlin-oat font-bold text-xs uppercase tracking-wider text-center shadow-2xl border border-merlin-goldLight/40 flex items-center justify-center">
+      Check availability &bull; WhatsApp
+    </a>
   </div>
-</header>
 
-<main>
-  <section class="story-header">
-    <h1><i class="fas fa-feather"></i>The Real Life of Merlin</h1>
-    <p>Stories from entrepreneurship, events, travel, and the journey that led to this house.</p>
-  </section>
+  <script>
+    // Același număr ca în index.html
+    const WHATSAPP_NUMBER = '40700000000';
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+      a.href = a.href.replace(/wa\.me\/\d+/, 'wa.me/' + WHATSAPP_NUMBER);
+    });
 
-  <section class="chapter">
-    <h2><i class="fas fa-rocket"></i>The Journey Begins</h2>
-    <div class="chapter-image"></div>
-    <p class="chapter-meta">From urban ambitions to country roots</p>
-    <p>This story didn't start in the countryside. It started in the middle of a city, with an idea and a determination to build something meaningful. For years, I've been deeply involved in entrepreneurship, launching brands, organizing events, and working with people who share the same passion for creating experiences worth remembering.</p>
-    <p>But somewhere along the way, I realized that the best moments—the ones that actually mattered—weren't always in boardrooms or at crowded venues. They were in homes, around tables, late into the night, with people you genuinely care about. That's when the idea for this house started to take shape.</p>
-    <a href="#" class="instagram-link" onclick="return false;"><i class="fab fa-instagram" style="margin-right: 0.5rem;"></i>See Related Posts on Instagram</a>
-  </section>
-
-  <section class="chapter">
-    <h2><i class="fas fa-hammer"></i>Building Something Real</h2>
-    <div class="chapter-image"></div>
-    <p class="chapter-meta">From concept to country living</p>
-    <p>The house wasn't built overnight. It took time, conversations with people I trust, and a clear vision of what I wanted to create. Not just a rental property, but a space where something genuine could happen. A place where teams could think differently, where friends could be friends again, where celebrations felt meaningful.</p>
-    <p>Every detail was considered with intention. The layout invites gatherings. The kitchen was built for cooking together. The living spaces encourage long conversations. The rooms are comfortable, but not ostentatious. This is a home designed for real life, not Instagram perfection.</p>
-    <a href="#" class="instagram-link" onclick="return false;"><i class="fab fa-instagram" style="margin-right: 0.5rem;"></i>See Related Posts on Instagram</a>
-  </section>
-
-  <section class="chapter">
-    <h2><i class="fas fa-star"></i>The Art of Creating Experiences</h2>
-    <div class="chapter-image"></div>
-    <p class="chapter-meta">What I've learned about bringing people together</p>
-    <p>My background in events and brand building has taught me something fundamental: the best experiences happen when people feel welcomed and understood. Not overproduced. Not trying too hard. Just genuine hospitality and thoughtful curation.</p>
-    <p>Country House by Merlin reflects that philosophy. Whether you're bringing your team for a retreat, celebrating a milestone with close friends, or simply looking for a weekend away from the noise, the house adapts to what you need. We're here to facilitate, not to dictate.</p>
-    <a href="#" class="instagram-link" onclick="return false;"><i class="fab fa-instagram" style="margin-right: 0.5rem;"></i>See Related Posts on Instagram</a>
-  </section>
-
-  <section class="chapter">
-    <h2><i class="fas fa-globe"></i>Travels and Perspective</h2>
-    <div class="chapter-image"></div>
-    <p class="chapter-meta">How the world shapes your vision</p>
-    <p>I've been fortunate to travel extensively, to see how different cultures create homes, how hospitality works across continents, and what makes a space feel like somewhere people want to be. Those experiences informed how I designed this house.</p>
-    <p>From the proportions of the rooms to the way light moves through them, from the kitchen setup to the outdoor spaces—everything draws inspiration from places and people that taught me what matters in a home. It's contemporary, but rooted. Urban, but grounded. A reflection of someone who understands both city life and the longing for escape.</p>
-    <a href="#" class="instagram-link" onclick="return false;"><i class="fab fa-instagram" style="margin-right: 0.5rem;"></i>See Related Posts on Instagram</a>
-  </section>
-
-  <section class="chapter">
-    <h2><i class="fas fa-heart"></i>Why This Matters to Me</h2>
-    <div class="chapter-image"></div>
-    <p class="chapter-meta">The deeper purpose behind Country House by Merlin</p>
-    <p>At a time when we're all scattered—working remotely, scrolling endlessly, living transactionally—I wanted to create a counterpoint to that. A place where people actually show up, put their phones down, and spend real time together.</p>
-    <p>This house is a statement. It says that connection matters. That weekends matter. That the people in your life are worth your full attention. That some of the best ideas, celebrations, and memories happen when you step away from the usual noise and intentionally create space for what matters.</p>
-    <p>Whether you're here with your dearest friends, your team, or to celebrate something important, you're part of this philosophy. You're participating in something that pushes back against the ordinary.</p>
-  </section>
-
-  <section class="nav-buttons">
-    <a href="index.html" class="button"><i class="fas fa-home" style="margin-right: var(--spacing-sm);"></i>Back to House</a>
-    <a href="index.html#contact" class="button secondary"><i class="fas fa-envelope" style="margin-right: var(--spacing-sm);"></i>Get in Touch</a>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2024 Country House by Merlin. All rights reserved.</p>
-  <p style="color: var(--muted); font-size: 0.9rem; margin-top: var(--spacing-sm);">Urban escape • Country living • Weekend well spent</p>
-</footer>
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
-    if (href === '#' || href === '') {
-      e.preventDefault();
-    }
-  });
-});
-
-// Language switcher navigation
-document.querySelectorAll('.lang-switch a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const href = link.getAttribute('href');
-    if (href && href !== '#') {
-      window.location.href = href;
-    }
-  });
-});
-</script>
+    // Apariție lină a capitolelor la scroll
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 }) : null;
+    document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('is-in'));
+  </script>
+</body>
+</html>

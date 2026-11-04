@@ -1,221 +1,60 @@
-# Country House by Merlin - Website
+# Country House by Merlin – site (template)
 
-A modern, responsive static website for Country House by Merlin, built with HTML, CSS, and vanilla JavaScript. Fully multi-lingual (Romanian & English), mobile-optimized, with Dark Mode support and SEO features.
+Site static, one page, construit cu HTML + Tailwind (CDN) + JavaScript simplu. Nu are nevoie de build: se deschide `index.html` direct în browser sau se urcă pe orice hosting static (Netlify, Vercel, GitHub Pages, cPanel).
 
-## File Structure
+## Structură
 
 ```
 /
-├── index.html                 # Redirects to /ro/ (default)
-├── favicon.svg               # Website favicon
-├── robots.txt                # Search engine crawler rules
-├── sitemap.xml              # SEO sitemap
-├── ro/
-│   ├── index.html           # Main page (Romanian)
-│   └── merlin-story.html    # Story page (Romanian)
-├── en/
-│   ├── index.html           # Main page (English)
-│   └── merlin-story.html    # Story page (English)
-└── README.md                # This file
+├── index.html           # Pagina principală (one page)
+├── merlin-story.html    # The Real Life of Merlin (pagina dedicată, deschisă din By Merlin)
+├── animation.html       # Experiența full-screen „Oraș → Natură” (deschisă din index)
+├── assets/img/          # Imagini (curtea și zonele exterioare, decupate din moodboard)
+├── favicon.svg
+├── sitemap.xml, robots.txt
+├── ro/, en/             # Redirecționări vechi către pagina principală
+└── index2.html          # Versiune veche de lucru (nu e legată din site)
 ```
 
-## Features
+## Secțiunile paginii principale (conform brief-ului)
 
-✅ **Multi-Language Support** - Full RO & EN versions with language switcher  
-✅ **Mobile-Responsive** - Works on phones, tablets, and desktops  
-✅ **Dark Mode** - Auto-adapts to system theme preference  
-✅ **Icons** - Font Awesome icons throughout the site  
-✅ **SEO Optimized** - Meta tags, hreflang tags, sitemap.xml, robots.txt  
-✅ **Google Analytics Ready** - Placeholder for GA4 integration  
-✅ **Google Search Console Ready** - Verification meta tag  
-✅ **Favicon** - Custom SVG favicon  
-✅ **WhatsApp Integration** - Pre-filled messages for booking requests  
-✅ **Sticky Navigation** - Fixed header with language switcher  
-✅ **Accordion FAQs** - Click to expand/collapse  
-✅ **Mobile Menu** - Hamburger menu on small screens  
+| Meniu | Ancoră | Conținut |
+|---|---|---|
+| (hero) | – | Welcome to the house · butoanele *Explore the house* și *Check availability* (WhatsApp) |
+| The House | `#the-house` | Galerie cu filtre, curtea (bar, dining, lounge, jacuzzi, saună, vatra de foc), dotări, paleta casei, condiții de închiriere |
+| Your Weekend | `#your-weekend` | Animația oraș → natură, cele 3 experiențe (fiecare cu WhatsApp precompletat), împrejurimi și distanțe |
+| What’s On | `#whats-on` | Maximum 3 oferte: foto, date, descriere, „Include”, *Ask about this* |
+| By Merlin | `merlin-story.html` | Teaser pe pagina principală + pagina dedicată, cu capitole și linkuri Instagram |
+| Contact | `#faq-contact` | Întrebări frecvente, contact, condiții de rezervare, hartă |
 
-## Setup & Configuration
+Pe telefon, butonul **Check availability** stă fixat în partea de jos a ecranului.
 
-### 1. Set Your Domain
-Update all URLs in `sitemap.xml`:
-```xml
-<loc>https://countryhousebymerlin.com/ro/</loc>
-<!-- Replace with your actual domain -->
-```
+## Ce trebuie înlocuit înainte de publicare
 
-### 2. Google Analytics Setup
-In both `/ro/index.html` and `/en/index.html`, find:
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_ID"></script>
-<script>
-  gtag('config', 'GA_ID');  <!-- Replace GA_ID with your property ID -->
-</script>
-```
+1. **Numărul de WhatsApp**: constanta `WHATSAPP_NUMBER` din `<script>`, în `index.html` și în `merlin-story.html`. Se aplică automat tuturor butoanelor. Numărul afișat în cardul de contact se schimbă manual.
+2. **Email și Instagram**: în cardul de contact din `index.html`, plus linkurile `https://instagram.com` din capitolele `merlin-story.html`.
+3. **Fotografii**: galeria, ofertele, portretul și capitolele folosesc acum imagini Unsplash de test. Pune fotografiile în `assets/img/` și schimbă `src` (iar în galerie și argumentul din `openLightbox(...)`).
+4. **Ofertele (What’s On)**: fiecare card e un bloc HTML de sine stătător. Copiază-l sau editează-l (maximum 3).
+5. **Întrebări frecvente și condiții de rezervare**: textele sunt orientative și trebuie confirmate.
+6. **Distanțele din împrejurimi** trebuie verificate.
+7. **Domeniul** din `sitemap.xml` și `robots.txt`.
 
-Get your ID from: https://analytics.google.com
+## Paleta (din moodboard)
 
-### 3. Google Search Console
-In both `/ro/index.html` and `/en/index.html`, find:
-```html
-<meta name="google-site-verification" content="VERIFICATION_CODE">
-<!-- Replace VERIFICATION_CODE with your code -->
-```
+| Nume | Hex | Token Tailwind |
+|---|---|---|
+| Crem Cald | `#F5EDE1` | `merlin-oat` |
+| Vișiniu | `#7A1F2E` | `merlin-clay` |
+| Antracit | `#2F3237` | `merlin-pine` / `merlin-darkForest` |
+| Stejar Natur | `#D6B07C` | `merlin-gold` |
+| Baby Blue | `#C7DBEE` | `merlin-sky` |
+| Piatră Naturală | `#E6D9C6` | `merlin-stone` |
+| Grej | `#8C857A` | `merlin-greige` |
 
-Get your code from: https://search.google.com/search-console
+Tokenurile sunt definite în `tailwind.config`, în `<head>`, separat în fiecare pagină.
 
-### 4. WhatsApp Number
-In both language versions (`/ro/index.html` and `/en/index.html`):
-```javascript
-const WHATSAPP_NUMBER = '+40XXX000000'; // Replace with your WhatsApp number
-```
+Fonturi: **Cormorant Garamond** (titluri) și **Plus Jakarta Sans** (text).
 
-The number format: `+[country code][phone number]` (digits only)
+## Notă pentru producție
 
-### 5. Contact Information
-Update in both language versions (search for "Contact" section):
-- WhatsApp number
-- Email address
-- Location (already set to Robești, Buzău)
-
-## Content Customization
-
-### Images
-Replace placeholder gray boxes in all pages:
-
-**Main Page Images:**
-- `.hero-image` - Hero section banner
-- `.gallery-item` - 6 gallery photos (bedrooms, living, kitchen, terrace, etc)
-- `.by-merlin-image` - Your portrait photo
-
-**Story Page Images:**
-- `.chapter-image` - 5 chapter images
-
-To add images, use CSS background-image:
-```html
-<div class="hero-image" style="background-image: url('path/to/image.jpg'); background-size: cover;"></div>
-```
-
-Or replace `<div>` with `<img>`:
-```html
-<img src="path/to/image.jpg" alt="description" class="gallery-item">
-```
-
-### Text Content
-
-**Romanian Version (/ro/)**
-- Update all sections in `/ro/index.html`
-- Update story chapters in `/ro/merlin-story.html`
-- Add Instagram links (replace `href="#"` with actual URLs)
-- Update FAQ answers with your policies
-
-**English Version (/en/)**
-- Update all sections in `/en/index.html`
-- Update story chapters in `/en/merlin-story.html`
-- Add Instagram links (replace `href="#"` with actual URLs)
-- Update FAQ answers with your policies
-
-### Colors & Styling
-Edit the `:root` CSS block in both versions:
-```css
-:root {
-  --bg: #faf8f6;           /* Background */
-  --fg: #2a2520;           /* Text color */
-  --accent: #b8860b;       /* Buttons & links */
-  --muted: #8b7d75;        /* Secondary text */
-  --border: #e8e3dd;       /* Dividers & borders */
-  --card-bg: #ffffff;      /* Card background */
-}
-```
-
-Dark mode colors are automatically applied from the media query.
-
-### Fonts
-Default fonts (editable in `:root`):
-- **Display:** Playfair Display (Google Fonts) - headings
-- **Body:** System fonts - paragraphs and body text
-
-To change, edit `--font-display` and `--font-body` variables.
-
-## Deployment
-
-### Option 1: Standard Web Hosting
-1. Upload all files to your hosting server
-2. Ensure folder structure matches (ro/, en/ folders)
-3. Set document root to the root directory containing robots.txt
-
-### Option 2: Vercel / Netlify
-1. Connect your GitHub repository
-2. Build command: (leave blank - static site)
-3. Publish directory: (root directory)
-4. Deploy!
-
-### Option 3: GitHub Pages
-1. Create a `gh-pages` branch
-2. Upload all files
-3. Enable GitHub Pages in repo settings
-4. Your site will be at `username.github.io/countryhousebymerlin`
-
-## Testing Checklist
-
-Before launch:
-
-- [ ] Test on mobile (phone width ~400px)
-- [ ] Test on tablet (tablet width ~768px)
-- [ ] Test on desktop (wide screens)
-- [ ] Test dark mode (Windows: Settings > Personalization > Colors)
-- [ ] Test dark mode (Mac: System Preferences > General > Dark)
-- [ ] Test all language switchers
-- [ ] Test all WhatsApp buttons (replace +40XXX with real number first)
-- [ ] Test smooth scrolling navigation
-- [ ] Test FAQ accordion (click to expand)
-- [ ] Test hamburger menu on mobile
-- [ ] Verify all images load correctly
-- [ ] Check all links work
-- [ ] Test Google Analytics (check GA dashboard after 24h)
-- [ ] Submit sitemap to Google Search Console
-- [ ] Test on different browsers (Chrome, Firefox, Safari, Edge)
-
-## SEO Tips
-
-1. **Sitemap**: Automatically generated. Submit to Google Search Console.
-2. **Robots.txt**: Configured to allow crawling. Update domain if needed.
-3. **Meta Tags**: Already included for title, description, keywords, og:image
-4. **hreflang**: Configured for language alternates (helps SEO for multi-language)
-5. **Canonical Tags**: Each page has canonical URL (prevents duplicate content)
-6. **Mobile-First**: Site is mobile-responsive (Google prefers this)
-
-## Troubleshooting
-
-### Images not showing
-- Check image paths are correct
-- Use absolute URLs if relative paths don't work: `https://yoursite.com/images/photo.jpg`
-- Ensure images are in PNG, JPG, or WebP format
-
-### WhatsApp button not working
-- Verify phone number format: `+40XXXXXXXXX` (digits only)
-- Test link manually: `https://wa.me/40XXXXXXXXX`
-
-### Language switcher not working
-- Check that `/ro/` and `/en/` folders exist with correct files
-- Verify paths are correct in language switcher links
-
-### Dark mode not working
-- Tested on: Windows Settings > Personalization > Colors
-- Tested on: Mac System Preferences > General > Dark
-- Or manually test: Open DevTools > ⋯ > More tools > Rendering > Emulate CSS media feature prefers-color-scheme
-
-### Google Analytics not tracking
-- Wait 24-48 hours for first data to appear
-- Check that GA_ID is correctly entered
-- Verify Analytics property exists in Google Analytics dashboard
-
-## Support & Updates
-
-- Font Awesome Icons: https://fontawesome.com/
-- Google Fonts: https://fonts.google.com/
-- Meta Tag Generator: https://www.metatags.io/
-- Mobile Responsive Test: https://www.responsivedesignchecker.com/
-
-## License
-
-All content and design © 2024 Country House by Merlin. All rights reserved.
+Tailwind se încarcă de pe CDN (`cdn.tailwindcss.com`). Pentru prezentare e suficient. Pentru site-ul final se recomandă compilarea CSS-ului cu Tailwind CLI, pentru viteză.
