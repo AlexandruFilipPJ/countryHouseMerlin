@@ -8,7 +8,6 @@ Site static, one page, construit cu HTML + Tailwind (CDN) + JavaScript simplu. N
 /
 ├── index.html           # Pagina principală (one page)
 ├── merlin-story.html    # The Real Life of Merlin (pagina dedicată, deschisă din By Merlin)
-├── animation.html       # Experiența full-screen „Oraș → Natură” (deschisă din index)
 ├── assets/img/          # Imagini (curtea și zonele exterioare, decupate din moodboard)
 ├── favicon.svg
 ├── sitemap.xml, robots.txt
@@ -21,19 +20,23 @@ Site static, one page, construit cu HTML + Tailwind (CDN) + JavaScript simplu. N
 | Meniu | Ancoră | Conținut |
 |---|---|---|
 | (hero) | – | Welcome to the house · butoanele *Explore the house* și *Check availability* (WhatsApp) |
-| The House | `#the-house` | Galerie cu filtre, curtea (bar, dining, lounge, jacuzzi, saună, vatra de foc), dotări, paleta casei, condiții de închiriere |
-| Your Weekend | `#your-weekend` | Animația oraș → natură, cele 3 experiențe (fiecare cu WhatsApp precompletat), împrejurimi și distanțe |
-| What’s On | `#whats-on` | Maximum 3 oferte: foto, date, descriere, „Include”, *Ask about this* |
+| The House | `#the-house` | Galerie (carusel) cu filtre, curtea (carusel: bar, dining, lounge, jacuzzi, saună, vatra de foc), dotări, condiții de închiriere |
+| Your Weekend | `#your-weekend` | Cele 3 experiențe (fiecare cu WhatsApp precompletat), împrejurimi și distanțe |
+| What’s On | `#whats-on` | Maximum 3 oferte (carusel pe telefon, 3 coloane pe desktop): foto, date, descriere, „Include”, *Ask about this* |
 | By Merlin | `merlin-story.html` | Teaser pe pagina principală + pagina dedicată, cu capitole și linkuri Instagram |
 | Contact | `#faq-contact` | Întrebări frecvente, contact, condiții de rezervare, hartă |
 
 Pe telefon, butonul **Check availability** stă fixat în partea de jos a ecranului.
 
+### Galeriile foto (carusel + lightbox)
+
+Toate galeriile folosesc același carusel (`data-carousel` → `.car-track` → `.car-slide`): swipe pe telefon, drag cu mouse-ul și săgeți pe desktop, puncte de navigare. Atingerea unei poze o deschide pe tot ecranul, unde se poate glisa între poze; butonul „Înapoi” al telefonului închide galeria.
+
 ## Ce trebuie înlocuit înainte de publicare
 
 1. **Numărul de WhatsApp**: constanta `WHATSAPP_NUMBER` din `<script>`, în `index.html` și în `merlin-story.html`. Se aplică automat tuturor butoanelor. Numărul afișat în cardul de contact se schimbă manual.
 2. **Email și Instagram**: în cardul de contact din `index.html`, plus linkurile `https://instagram.com` din capitolele `merlin-story.html`.
-3. **Fotografii**: galeria, ofertele, portretul și capitolele folosesc acum imagini Unsplash de test. Pune fotografiile în `assets/img/` și schimbă `src` (iar în galerie și argumentul din `openLightbox(...)`).
+3. **Fotografii**: galeria, ofertele, portretul și capitolele folosesc acum imagini Unsplash de test. Pune fotografiile în `assets/img/` și schimbă `src` (iar în galerii și atributul `data-full` al `<figure>`, adică imaginea mare din lightbox).
 4. **Ofertele (What’s On)**: fiecare card e un bloc HTML de sine stătător. Copiază-l sau editează-l (maximum 3).
 5. **Întrebări frecvente și condiții de rezervare**: textele sunt orientative și trebuie confirmate.
 6. **Distanțele din împrejurimi** trebuie verificate.
